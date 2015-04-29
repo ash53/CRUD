@@ -1,0 +1,923 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BCC6ADA-2AB0-4CBE-AFA6-51C8C5A654FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rti.DataModel</RootNamespace>
+    <AssemblyName>Rti.DataModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>cd682846</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AIT.EF.Oracle.IdentityPatch">
+      <HintPath>.\packages\AIT.EF.Oracle.IdentityPatch.1.0.1.0\lib\net45\AIT.EF.Oracle.IdentityPatch.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>.\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACTGRP_FORWARD.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACTGRP_NAMES.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACTGRP_PERMISSION.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACTGRP_PERM_HOLD.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACTIVITY_NAMES.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACTV_ACT_CONFIG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACT_RETURN_STATES.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ALERT.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ALERT_EMAIL.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRACTIVATIONDETAIL.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRACTIVATIONEXCEPTION.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRACTIVATIONHDR.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRBILL.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRBILLEXT.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRBILL_HISTORY.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRDISCOVERY.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRDISCOVERY_VIEW1.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRDISCOVERY_VIEW3.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRDISCOVERY_VIEW4.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRPOST.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRPOSTDETAIL.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRPOSTEXT.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRPOSTWAKE.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRPOSTWAKE_DEL.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRPOST_HISTORY.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRWFWAKE.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AMRWFWAKE_DEL.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ANNOTTBL.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AR_REGION.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ATTACHMENT.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B2D.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B3D.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B4D.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BAMRBILL.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BAMRPOST.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BBILLDOC.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BILLDOC.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BILLDOCEXT.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPOSTDOC.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPRRULE.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B_LIST.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B_MAP.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CadAdminModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CadAdminModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CadAdminModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CadAdminModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CadAdminModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CHANNEL.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHANNEL_ALERT.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHANNEL_RUN_STATUS.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHANNEL_STATISTICS.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHARTMOVER_RUNSTATUS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLAUS.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CODE_TEMPLATE.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONFIG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONFIGURATION.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONTRACTWIZARDLOGGER.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONTRACTWIZARDPAYOR.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CONTRACTWIZARDQUESTION.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COURIER_INFO.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COURIER_INSTANCE.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COURIER_LOG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COURIER_RELOCATE.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COUR_WAIT_CONFIG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDRULE.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CUSTOMIZESEGMENT.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBVERSION.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEADLINE.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEADLINE_CONFIG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEF_PERM_HOLD.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEPOSITCLIENT.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DOCDETAIL_LOOKUP.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DOCLIST.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DOCTYPE_LOOKUP.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMSCAN_BATCH.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMSCAN_BATCH_CHECKOUT.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENCRYPTION_KEY.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENCTR.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENCTR_HISTORY.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERROR_MSG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ETLDRIVER.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ETL_CONFIG.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EVENT_LOG_CONFIG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FILTERHL7.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FLDINFO.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FLOW_STAT.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FTBL.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FULLBALANCE_REQUEST.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FWSYS_CONFIG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FWSYS_HOSTS.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FWSYS_PROC_CONFIG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FWSYS_SERVICES.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GROUPATTRIBUTE.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GROUP_DEFINITION.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HCA_CONVERSION_REF.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HCA_GED_INDICATOR.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HCA_MISSING_RUN.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HIST_CONFIG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HL7_ATTRIBUTES.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HL7_DOCTYPREF.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HL7_EDLOG.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HL7_EREGI_ACCTCODE.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HL7_FACPROFILE.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HL7_FILELOAD.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HL7_FILESPLITINFO.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HL7_FTP_CONFIG.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HL7_HCA_CHART_FILTER.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HL7_MSG.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HL7_MSGINFO.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IfamModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IfamModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IfamModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IfamModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IfamModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="IFAM_CONFIG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IMAGEINFO_USERS.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IMPORT_ACC_DTL.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IMPORT_CLIENT_LKUP.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IMPORT_DFT_DTL.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IMPORT_DFT_HDR.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IMPORT_LOGFILE.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LAST_PROCESSED_EDLOG.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LDAP_CONFIG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MACHINE_DATA.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAP.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAP_ACT.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAP_ACT_INST.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAP_DATA.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAP_INSTANCES.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAP_NAMES.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MESSAGE.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NODE.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODSACC.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODSEVN.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODSGT1.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODSIN1.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODSMSH.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODSNK1.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODSPID.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODSPV1.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODS_HL7MSG.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ODS_HL7MSG_FLAT.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OPTION_DEFINITION.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PATIENT_VOLUME.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERMISSION.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERMISSION_HOLD.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERSON.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLSQL_PROFILER_DATA.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLSQL_PROFILER_RUNS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLSQL_PROFILER_UNITS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLX_ACCESS_ALLOW.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLX_ACCESS_DENY.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTBD.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTDETAIL.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTDETAIL_STATUS_LOOKUP.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTDOC.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTDOCEXT.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTDOC_STATUS_LOOKUP.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTWAKE.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POSTWAKE_DEL.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PREFERENCE.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROCESS_STATUS_LOOKUP.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QUEST_SL_COLLECTION_DEFINITION.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEST_SL_COLLECTION_DEF_REPOS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEST_SL_QUERY_DEFINITIONS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEST_SL_QUERY_DEF_REPOSITORY.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEST_SL_REPOSITORY_SQLAREA.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEST_SL_REPOSITORY_TRANS_INFO.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEST_SL_REPOS_BIND_VALUES.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEST_SL_REPOS_LAB_DETAILS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEST_SL_REPOS_PICK_DETAILS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEST_SL_REPOS_ROOT.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEST_SL_REPOS_SGA_DETAILS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEST_SL_REPOS_SGA_STATISTICS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEST_SL_SQLAREA.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="REASON_LOOKUP.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ROSTER_TYPE_LOOKUP.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ROUTE.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTIBD.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTICLIENT.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTIHIST.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTIWAKE.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTI_ACCOUNTABILITY_MAP.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTI_ACCTSCENARIO.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTI_BATCHINFO.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTI_BATCHLOG.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTI_EXCEPTION_CODE.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTI_FILETYPE.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTI_IPA_MAP.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTI_MISSING_CODE.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTI_OPTIONS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTI_RULE.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTI_RULES.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RTI_STATUS.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RtTransBrokerAdminModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RtTransBrokerAdminModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RtTransBrokerAdminModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RtTransBrokerAdminModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RtTransBrokerAdminModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="RTTRANS_HL7_FTP_CONFIG.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RULE_CONTROL.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SCAN_LOG.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SCRIPT.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SERIAL_CONFIG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SERIAL_IDS.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SOURCETYPE_LOOKUP.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPLIT.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQLN_PROF_ANB.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQLN_PROF_PROFILES.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQLN_PROF_RUNS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQLN_PROF_SESS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQLN_PROF_UNITS.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQLN_PROF_UNIT_HASH.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STARTRULE_LOOKUP.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STAT_CONFIG.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STGACC.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STGEVN.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STGGT1.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STGIN1.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STGMSH.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STGNK1.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STGPID.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STGPV1.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABINFO.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABLE_INFO.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEMPLATE.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEST_DESTINATION.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEST_IDFILTER.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEST_SOURCE.cs">
+      <DependentUpon>RtTransBrokerAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TORRGRIDS_TBL.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOWERIMPORT.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOWERIMPORTCLIENT.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TowerModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TowerModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TowerModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TowerModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TowerModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TTBL.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USERATTRIBUTE.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER_GROUPS.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER_GROUP_NAMES.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VARIABLE.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WFWAKE.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WFWAKE_DEL.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_CHAR128.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_CURRENCY.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_DATETIME.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_FLOAT64.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_INT32.cs">
+      <DependentUpon>IfamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_INVENTORY.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WF_PRODUCTIVITY.cs">
+      <DependentUpon>TowerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WORKFLOW_STATUS_LOOKUP.cs">
+      <DependentUpon>CadAdminModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="CadAdminModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CadAdminModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CadAdminModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CadAdminModel.Context.cs</LastGenOutput>
+      <DependentUpon>CadAdminModel.edmx</DependentUpon>
+    </None>
+    <None Include="CadAdminModel.edmx.diagram">
+      <DependentUpon>CadAdminModel.edmx</DependentUpon>
+    </None>
+    <None Include="CadAdminModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CadAdminModel.cs</LastGenOutput>
+      <DependentUpon>CadAdminModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="IfamModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>IfamModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="IfamModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IfamModel.Context.cs</LastGenOutput>
+      <DependentUpon>IfamModel.edmx</DependentUpon>
+    </None>
+    <None Include="IfamModel.edmx.diagram">
+      <DependentUpon>IfamModel.edmx</DependentUpon>
+    </None>
+    <None Include="IfamModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IfamModel.cs</LastGenOutput>
+      <DependentUpon>IfamModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="TowerModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TowerModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="RtTransBrokerAdminModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RtTransBrokerAdminModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="RtTransBrokerAdminModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RtTransBrokerAdminModel.Context.cs</LastGenOutput>
+      <DependentUpon>RtTransBrokerAdminModel.edmx</DependentUpon>
+    </None>
+    <None Include="RtTransBrokerAdminModel.edmx.diagram">
+      <DependentUpon>RtTransBrokerAdminModel.edmx</DependentUpon>
+    </None>
+    <None Include="RtTransBrokerAdminModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RtTransBrokerAdminModel.cs</LastGenOutput>
+      <DependentUpon>RtTransBrokerAdminModel.edmx</DependentUpon>
+    </None>
+    <None Include="TowerModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TowerModel.Context.cs</LastGenOutput>
+      <DependentUpon>TowerModel.edmx</DependentUpon>
+    </None>
+    <None Include="TowerModel.edmx.diagram">
+      <DependentUpon>TowerModel.edmx</DependentUpon>
+    </None>
+    <None Include="TowerModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TowerModel.cs</LastGenOutput>
+      <DependentUpon>TowerModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\AIT.EF.Oracle.IdentityPatch.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project=".\packages\AIT.EF.Oracle.IdentityPatch.1.0.1.0\build\AIT.EF.Oracle.IdentityPatch.targets" Condition="Exists('.\packages\AIT.EF.Oracle.IdentityPatch.1.0.1.0\build\AIT.EF.Oracle.IdentityPatch.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('.\packages\AIT.EF.Oracle.IdentityPatch.1.0.1.0\build\AIT.EF.Oracle.IdentityPatch.targets')" Text="$([System.String]::Format('$(ErrorText)', '.\packages\AIT.EF.Oracle.IdentityPatch.1.0.1.0\build\AIT.EF.Oracle.IdentityPatch.targets'))" />
+  </Target>
+  <!-- To modify your build process,  add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

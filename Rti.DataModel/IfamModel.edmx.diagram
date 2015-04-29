@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="512db5a414b447c18d95f0c8fb9b2478" Name="Diagram1" >
+        <EntityTypeShape EntityType="IfamModel.ACT_RETURN_STATES" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IfamModel.ACTGRP_NAMES" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IfamModel.ACTIVITY_NAMES" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="IfamModel.ACTV_ACT_CONFIG" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="IfamModel.CLAUS" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IfamModel.COUR_WAIT_CONFIG" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IfamModel.COURIER_INFO" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="IfamModel.COURIER_INSTANCE" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="IfamModel.COURIER_LOG" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IfamModel.DEADLINE_CONFIG" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="IfamModel.EVENT_LOG_CONFIG" Width="1.5" PointX="8.75" PointY="9.75" />
+        <EntityTypeShape EntityType="IfamModel.FWSYS_CONFIG" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IfamModel.FWSYS_HOSTS" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="IfamModel.FWSYS_SERVICES" Width="1.5" PointX="4.75" PointY="11.75" />
+        <EntityTypeShape EntityType="IfamModel.HIST_CONFIG" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IfamModel.IFAM_CONFIG" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="IfamModel.LDAP_CONFIG" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="IfamModel.LOGIN" Width="1.5" PointX="12.75" PointY="12.75" />
+        <EntityTypeShape EntityType="IfamModel.MACHINE_DATA" Width="1.5" PointX="6.75" PointY="13.75" />
+        <EntityTypeShape EntityType="IfamModel.MAP" Width="1.5" PointX="8.75" PointY="13.75" />
+        <EntityTypeShape EntityType="IfamModel.MAP_ACT" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IfamModel.MAP_INSTANCES" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="IfamModel.MAP_NAMES" Width="1.5" PointX="14.75" PointY="3.75" />
+        <EntityTypeShape EntityType="IfamModel.NODE" Width="1.5" PointX="14.75" PointY="7.75" />
+        <EntityTypeShape EntityType="IfamModel.SERIAL_CONFIG" Width="1.5" PointX="14.75" PointY="10.75" />
+        <EntityTypeShape EntityType="IfamModel.SERIAL_IDS" Width="1.5" PointX="14.75" PointY="13.75" />
+        <EntityTypeShape EntityType="IfamModel.STAT_CONFIG" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IfamModel.TABLE_INFO" Width="1.5" PointX="2.75" PointY="16.75" />
+        <EntityTypeShape EntityType="IfamModel.USER_GROUP_NAMES" Width="1.5" PointX="4.75" PointY="16.75" />
+        <EntityTypeShape EntityType="IfamModel.USER" Width="1.5" PointX="16.75" PointY="5.75" />
+        <EntityTypeShape EntityType="IfamModel.VARIABLE" Width="1.5" PointX="16.75" PointY="10.75" />
+        <EntityTypeShape EntityType="IfamModel.ACTGRP_FORWARD" Width="1.5" PointX="10.75" PointY="16.75" />
+        <EntityTypeShape EntityType="IfamModel.ACTGRP_PERM_HOLD" Width="1.5" PointX="16.75" PointY="14.75" />
+        <EntityTypeShape EntityType="IfamModel.ACTGRP_PERMISSION" Width="1.5" PointX="6.75" PointY="17.75" />
+        <EntityTypeShape EntityType="IfamModel.CONFIG" Width="1.5" PointX="12.75" PointY="17.75" />
+        <EntityTypeShape EntityType="IfamModel.DBVERSION" Width="1.5" PointX="14.75" PointY="17.75" />
+        <EntityTypeShape EntityType="IfamModel.DEADLINE" Width="1.5" PointX="16.75" PointY="17.75" />
+        <EntityTypeShape EntityType="IfamModel.DEF_PERM_HOLD" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IfamModel.ERROR_MSG" Width="1.5" PointX="18.75" PointY="3.75" />
+        <EntityTypeShape EntityType="IfamModel.FLOW_STAT" Width="1.5" PointX="18.75" PointY="6.75" />
+        <EntityTypeShape EntityType="IfamModel.FWSYS_PROC_CONFIG" Width="1.5" PointX="18.75" PointY="9.75" />
+        <EntityTypeShape EntityType="IfamModel.MAP_ACT_INST" Width="1.5" PointX="18.75" PointY="12.75" />
+        <EntityTypeShape EntityType="IfamModel.MAP_DATA" Width="1.5" PointX="18.75" PointY="15.75" />
+        <EntityTypeShape EntityType="IfamModel.PERMISSION" Width="1.5" PointX="0.75" PointY="19.75" />
+        <EntityTypeShape EntityType="IfamModel.PERMISSION_HOLD" Width="1.5" PointX="2.75" PointY="19.75" />
+        <EntityTypeShape EntityType="IfamModel.PLX_ACCESS_ALLOW" Width="1.5" PointX="8.75" PointY="19.75" />
+        <EntityTypeShape EntityType="IfamModel.PLX_ACCESS_DENY" Width="1.5" PointX="18.75" PointY="19.75" />
+        <EntityTypeShape EntityType="IfamModel.ROUTE" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="IfamModel.RTI_STATUS" Width="1.5" PointX="20.75" PointY="3.75" />
+        <EntityTypeShape EntityType="IfamModel.RULE_CONTROL" Width="1.5" PointX="4.75" PointY="20.75" />
+        <EntityTypeShape EntityType="IfamModel.SPLIT" Width="1.5" PointX="20.75" PointY="7.75" />
+        <EntityTypeShape EntityType="IfamModel.USER_GROUPS" Width="1.5" PointX="20.75" PointY="10.75" />
+        <EntityTypeShape EntityType="IfamModel.WF_CHAR128" Width="1.5" PointX="10.75" PointY="20.75" />
+        <EntityTypeShape EntityType="IfamModel.WF_CURRENCY" Width="1.5" PointX="12.75" PointY="20.75" />
+        <EntityTypeShape EntityType="IfamModel.WF_DATETIME" Width="1.5" PointX="20.75" PointY="13.75" />
+        <EntityTypeShape EntityType="IfamModel.WF_FLOAT64" Width="1.5" PointX="20.75" PointY="16.75" />
+        <EntityTypeShape EntityType="IfamModel.WF_INT32" Width="1.5" PointX="20.75" PointY="19.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://FlowareUtil.rti.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://FlowareUtil.rti.com" targetNamespace="http://FlowareUtil.rti.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://FlowareUtil.rti.com">
+      <xsd:element name="createWorkItem">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="aAct" type="xsd:string" />
+            <xsd:element name="aTowId" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createWorkItemResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="createWorkItemReturn" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="createWorkItemResponse">
+    <wsdl:part name="parameters" element="impl:createWorkItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="createWorkItemRequest">
+    <wsdl:part name="parameters" element="impl:createWorkItem" />
+  </wsdl:message>
+  <wsdl:portType name="FlowareWebServiceManager">
+    <wsdl:operation name="createWorkItem">
+      <wsdl:input name="createWorkItemRequest" message="impl:createWorkItemRequest" />
+      <wsdl:output name="createWorkItemResponse" message="impl:createWorkItemResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FlowareWebServiceManagerSoapBinding" type="impl:FlowareWebServiceManager">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="createWorkItem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createWorkItemRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createWorkItemResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FlowareWebServiceManagerService">
+    <wsdl:port name="FlowareWebServiceManager" binding="impl:FlowareWebServiceManagerSoapBinding">
+      <wsdlsoap:address location="http://rtiflowebtest.rti.com:8080/FlowareUtilWS/services/FlowareWebServiceManager" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

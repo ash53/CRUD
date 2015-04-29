@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<IdentityRoot>
+  <!-- Add identity entries here. Syntax:
+  <EDMX Name="path_to_edmx_file_relative_to_project_folder_without_leading_backslash">
+    <IdentityEntry Table="table_name" Column="column_name"/>
+  </EDMX>
+  -->
+  <EDMX Name="TowerModel.edmx">
+    <IdentityEntry Table="POSTDETAIL" Column="POSTDETAIL_ID"/>
+	  <IdentityEntry Table="RTICLIENT" Column="RTICLIENT_ID"/>
+    <IdentityEntry Table="POSTDOC" Column="TOWID"/>
+  </EDMX>
+  
+  <EDMX Name="CadAdminModel.edmx">
+    <IdentityEntry Table="EMSCAN_BATCH" Column="EMSCAN_BATCH_ID"/>
+	  <IdentityEntry Table="RTI_FILETYPE" Column="RTI_FILETYPE_ID"/>
+  	<IdentityEntry Table="RTI_ACCTSCENARIO" Column="RTI_ACCTSCENARIO_ID"/>
+  	<IdentityEntry Table="HL7_FTP_CONFIG" Column="HL7_FTP_CONFIG_ID"/>
+	  <IdentityEntry Table="TOWERIMPORT" Column="TOWERIMPORT_ID"/>
+	  <IdentityEntry Table="TOWERIMPORTCLIENT" Column="TOWERIMPORTCLIENT_ID"/>
+  </EDMX>
+  
+  <EDMX Name="RtTransBrokerAdminModel.edmx">
+    <IdentityEntry Table="FILTERHL7" Column="FILTER_ID"/>
+  	<IdentityEntry Table="ETL_CONFIG" Column="ETLCONFIG_ID"/>
+	  <IdentityEntry Table="CUSTOMIZESEGMENT" Column="CUSTOMIZESEGMENTS_ID"/>
+	  <IdentityEntry Table="RTTRANS_HL7_FTP_CONFIG" Column="HL7_FTP_CONFIG_ID"/>
+  </EDMX>
+  
+  
+</IdentityRoot>

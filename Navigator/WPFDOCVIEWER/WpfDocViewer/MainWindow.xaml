@@ -1,0 +1,333 @@
+﻿<Window x:Class="WpfDocViewer.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:sys="clr-namespace:System;assembly=mscorlib"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+		xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+		xmlns:mt="clr-namespace:GalaSoft.MvvmLight.Ioc;assembly=GalaSoft.MvvmLight.Extras"
+		xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+        xmlns:local="clr-namespace:WpfDocViewer.Model"
+		Title="the Navigator" Height="880" Width="840" SizeChanged="Window_SizeChanged"
+		x:Name="Heisenberg"
+		Icon="./Images/navigator.ico"
+		DataContext="ViewModel.MainViewModel" Background="#FFACD0EE" WindowStartupLocation="CenterScreen" WindowState="Maximized" FontFamily="Tunga" FontSize="14">
+    <Grid>
+        <!---Ribbon Code below only -->
+        <Ribbon x:Name="RibbonWin" SelectedIndex="0">
+            <!-- Help Pane, located at the right-hand side -->
+            <Ribbon.HelpPaneContent>
+                <RibbonButton SmallImageSource="Images\help.png" Click="RibbonButton_Click_2"/>
+            </Ribbon.HelpPaneContent>
+            <!-- Quick Access Toolbar - located at the upper-left corner -->
+            <Ribbon.QuickAccessToolBar>
+                <RibbonQuickAccessToolBar>
+                    <RibbonButton x:Name ="Save" SmallImageSource="Images\save.png" />
+                    <RibbonSplitButton x:Name ="Undo" SmallImageSource="Images\undo.png">
+                        <RibbonSplitMenuItem Header="Undo 1" />
+                        <RibbonSplitMenuItem Header="Undo 2" />
+                        <RibbonSplitMenuItem Header="Undo 3" />
+                    </RibbonSplitButton>
+                    <RibbonSplitButton x:Name="Redo" SmallImageSource="Images\redo.png" >
+                        <RibbonSplitMenuItem Header="Redo 1" />
+                        <RibbonSplitMenuItem Header="Redo 2" />
+                    </RibbonSplitButton>
+                    <RibbonMenuButton LargeImageSource="Images\paste.png" Label="Paste" KeyTip="V">
+                        <RibbonMenuItem ImageSource="Images\paste.png" Command="Paste" Header="Keep Text Only" KeyTip="T"/>
+                        <RibbonMenuItem ImageSource="Images\paste.png" Header="Paste Special..." Command="Paste" KeyTip="S"/>
+                    </RibbonMenuButton>
+                    <RibbonButton SmallImageSource="Images\cut.png" Command="Cut" Label="Cut" KeyTip="X" />
+                    <RibbonButton SmallImageSource="Images\copy.png" Command="Copy" Label="Copy" KeyTip="C" />
+                    <RibbonButton SmallImageSource="Images\format_painter.png" Label="Format Painter" KeyTip="FP" />
+                </RibbonQuickAccessToolBar>
+            </Ribbon.QuickAccessToolBar>
+            <!-- Application Menu, located at the left-hand side (down arrow) -->
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu x:Name="QuickMainOptions" SmallImageSource="Images\options.png" HorizontalAlignment="Left" Label="Options" ToolTip="Configure Options and Settings" KeyTip="W" Width="90" Height="23" >
+                    <RibbonApplicationMenuItem x:Name="Options" Header="Options" ImageSource="Images\configuration 1.png" Click="Options_Click"/>
+                    <RibbonApplicationMenuItem x:Name="HelpMe" ImageSource="Images\tag.png" Header="About" ToolTip="Version Information"  Click="HelpMe_Click" HorizontalAlignment="Left" />
+                    <RibbonApplicationMenuItem x:Name="Exit" Header="Exit" ImageSource="Images\quit.png" Click="Exit_Click"/>
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+            <!-- Ribbon Tab #1: Home -->
+            <RibbonTab Header="Documents" KeyTip="H" MouseLeftButtonUp="MenuHome">
+                <!-- Home  group-->
+                <RibbonGroup x:Name="MainOption" Header="---Import---">
+                    <RibbonButton x:Name="ImportButton" LargeImageSource="Images\add.png" Label="Add" Click="MenuImport_Click" ToolTip="Create an IDM Document" KeyTip="C" >
+                        <RibbonMenuButton  Label="ColorSheet" ToolTip="Create an Internal Request" KeyTip="V">
+                            <RibbonMenuItem ImageSource="Images\paste.png" Header="Green Sheet(Posting)" KeyTip="T"/>
+                            <RibbonMenuItem ImageSource="Images\paste.png" Header="Blue Sheet(Correspondence)" KeyTip="S"/>
+                        </RibbonMenuButton>
+                    </RibbonButton>
+                </RibbonGroup>
+                <RibbonGroup x:Name="MyWork" Header="----IDM----">
+                    <RibbonButton x:Name="AppendButton" LargeImageSource="Images\ISync_icon.png" Label="Update" Click="MenuAppend_Click" ToolTip="Modify an existing IDM Document" KeyTip="X" />
+                </RibbonGroup>
+                <RibbonGroup x:Name="Import" Header="---Delete---">
+                    <RibbonButton x:Name="DeleteButton" LargeImageSource="Images\128.png" Label="Delete" Click="DeleteButton_Click"  ToolTip="Delete an existing IDM Document" Width="75" KeyTip="X" />
+                </RibbonGroup>
+                <RibbonGroup x:Name="SGroup"   Header="---Search---">
+                    <RibbonButton Label="Find Docs" LargeImageSource="Images\search-icon-th.png" x:Name="FindButton" Width="75" Click="FindButton_Click" />
+                </RibbonGroup>
+                <RibbonGroup Header="---Match---">
+                    <RibbonButton x:Name="MatchButton" Label="Match" LargeImageSource="Images\_match-32.png" Height="70" Width="75" Click="AssemblyScreen_Click"/>
+                </RibbonGroup>
+            </RibbonTab>
+            <!-- Ribbon Tab #2: -->
+            <RibbonTab Header="Work" x:Name="WorkTab">
+                <RibbonGroup x:Name="WorkGroup" Header="My Work">
+                    <RibbonButton x:Name="WorkButton" Label="My Work" LargeImageSource="Images\Folder-Icon-Open-small.png" />
+                </RibbonGroup>
+                <RibbonGroup x:Name="FindGroup" Header="WorkFlow">
+                    <RibbonButton x:Name="FindWork" Label="Find Work" LargeImageSource="Images\search-icon-th.png" Click="FindWork_Click"/>
+                </RibbonGroup>
+                <RibbonGroup x:Name="AddGroup" Header="Add Work">
+                    <RibbonButton x:Name="AddWork" Label="Add Work" LargeImageSource="Images\add.png" Click="AddWork_Click"/>
+                </RibbonGroup>
+            </RibbonTab>
+            <!-- Ribbon Tab #3: -->
+            <RibbonTab Header="Users" KeyTip="L" MouseLeftButtonUp="MenuMatchChecks">
+                <RibbonGroup x:Name="OpenUserExperience" Header="Experience">
+                    <RibbonButton x:Name="UserExp" LargeImageSource="Images\personal.png" Label="User EXP" KeyTip="S" Click="AssemblyScreen_Click" Height="Auto"/>
+                </RibbonGroup>
+                <RibbonGroup x:Name="ThreadManager" Header="Threads" Margin="0">
+                    <RibbonMenuButton LargeImageSource="Images\dashboard.png" Label="Manage Threads"  />
+                </RibbonGroup>
+                <RibbonGroup x:Name="AssemblyGroup" Header="Settings">
+                    <RibbonMenuButton LargeImageSource="Images\options.png" Label="WAM Settings"  />
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab x:Name="PracticeTab" Header="Practices" KeyTip="L">
+                <RibbonGroup Header="Practices" >
+                    <RibbonButton x:Name="HospitalistButton" Label="Hospitalists" LargeImageSource="Images\HOSPITAL.png" />
+                    <RibbonButton x:Name="PracticeButton" Label="Practices" LargeImageSource="Images\3_hospital.png" />
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="Payors">
+                <RibbonGroup Header="Payors">
+                    <RibbonButton Label="Payors" LargeImageSource="Images\check-icon.png" />
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="Quick Search" KeyTip="I" >
+                <RibbonGroup x:Name="QuickSearch" Header="QuickSearch">
+                    <TextBox x:Name="QuickSearchValue" Text="{DynamicResource SearchValue}" Width="100" Margin="0,0,0,0"  HorizontalAlignment="Left"  FontStyle="Oblique" FontWeight="Bold" Background="#FFDFE9F5" TextAlignment="Center" Foreground="#FF555C64" TextChanged="QuickSearchValue_TextChanged" />
+                    <ComboBox x:Name="QuickSearchBy"  ItemsSource="{StaticResource ComboBoxItems}" SelectedIndex="0" Width="100" IsReadOnly="True" SelectedItem="{DynamicResource SearchType}" BorderThickness="0">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFDFE9F5" Offset="0.354"/>
+                                <GradientStop Color="#FFDFE9F5" Offset="0.639"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <RibbonButton x:Name="MenuQuickSearch" LargeImageSource="Images\web_search.png" Label="Quick Search" Click="MenuQuickSearch_Click" Width="100" />
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="...">
+                <RibbonGroup Header="More">
+                    <RibbonButton Label="More" LargeImageSource="Images\Cat-Black.png" />
+                </RibbonGroup>
+
+            </RibbonTab>
+
+        </Ribbon>
+        <Label x:Name="VersionInfo" VerticalContentAlignment="Top" FontSize="10" FontWeight="Bold"  Height="22" Width="93" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+        <Popup x:Name="popCartContents"  IsOpen="{Binding Path=(local:MatchingChecksCollection.OpenPopUp), Mode=TwoWay}" 
+               PopupAnimation="Fade" HorizontalOffset="770" VerticalOffset="-2000"
+                Opacity="0.3" StaysOpen="True" Margin="643,159,-105,524" >
+            <i:Interaction.Behaviors>
+                <local:MouseDragPopupBehavior/>
+            </i:Interaction.Behaviors>
+            <Border BorderBrush="#FF0B3B73" BorderThickness="1">
+                <Grid Height="178" Width="379"  Background="#FFACD0EE">
+                    <Button Name="ClosePopup" Click="Close_Popup"  Background="#FFACD0EE" HorizontalAlignment="Right"  Width="23" Margin="0,10,0,145" >
+                        <Image Source="/Images/Close_Box_Red.png" Height="23" Width="19" RenderTransformOrigin="0.526,0.067"/>
+                    </Button>
+                    <DataGrid Name="dataGrid1"	          
+		          AlternationCount="2"
+		          AutoGenerateColumns="False"
+		          ItemsSource="{Binding MatchingChecksObservableCollection, Source={x:Static local:MatchingChecksCollection.Instance}}" 
+		          MinRowHeight="26"
+                  SelectedIndex="{Binding SelectedRow}" Height="127" Width="377" Margin="0,35,-2,16" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="35"
+				                    Binding="{Binding Practice}"
+				                    Header="Practice" />
+                            <DataGridTextColumn Width="60"
+				                    Binding="{Binding CheckNumber}"
+				                    Header="Check Number" />
+                            <DataGridTextColumn Width="100"
+				                    Binding="{Binding Docno}"
+				                    Header="Docno" />
+                            <DataGridTextColumn Width="80"
+				                    Binding="{Binding CheckAmount}"
+				                    Header="Check Amount" />
+                            <DataGridTextColumn Width="50"
+				                    Binding="{Binding Doctype}"
+				                    Header="Doc Type" />
+                            <DataGridTextColumn Width="50"
+				                    Binding="{Binding Docdetail}"
+				                    Header="Doc Detail" />
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                </Grid>
+            </Border>
+        </Popup>
+        <Button x:Name="ShoppingCart" Height="85" Width="110" Margin="0,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" BorderBrush="#FF707070" Click="ShoppingCart_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFECF2F9" Offset="0.571"/>
+                    <GradientStop Color="White" Offset="0.013"/>
+                    <GradientStop Color="#FFACD0EE" Offset="0.176"/>
+                    <GradientStop Color="#FFACD0EE" Offset="0.09"/>
+                </LinearGradientBrush>
+
+            </Button.Background>
+            <StackPanel Height="85" Width="61">
+                <Image Source="Images\shopping-cart-icon-128.png" Height="47" Width="52" Margin="4,0,5,0" />
+                <TextBlock Text="{Binding Path=(local:MatchingChecksCollection.CartCount), Mode=OneWay}" FontWeight="Bold" TextAlignment="Center" Height="16" />
+                <!--TextBlock Text="{Binding CartCount, Source={x:Static local:MatchingChecksCollection.Instance}, Mode=TwoWay}" FontWeight="Bold" TextAlignment="Center" Height="16" /-->
+                <TextBlock Text="Cash Items" FontSize="11" TextAlignment="Center"/>
+            </StackPanel>
+            <Button.ToolTip>
+                <DataGrid Name="dgCartContents" ItemsSource="{Binding MatchingChecksObservableCollection, Source={x:Static local:MatchingChecksCollection.Instance}}" AutoGenerateColumns="True" CanUserAddRows="False" />
+                <!--DataGrid Name="dgCartContents" ItemsSource="{Binding x:Static Model.MatchingChecksCollection.MatchingChecksObservableCollection}" AutoGenerateColumns="True" CanUserAddRows="False" /-->
+            </Button.ToolTip>
+        </Button>
+
+        <Border CornerRadius="3,3,3,3" BorderBrush="#FFA5A5A5" BorderThickness="1,1,1,1" Margin="0,145,5,5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1270" />
+
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+                <Expander Grid.Row="1" Grid.Column="0" IsExpanded="False" x:Name="Expander1" Style="{DynamicResource OutlookStyleExpanderStyle}" Visibility="Hidden">
+                    <Expander.Header>
+                        <WrapPanel HorizontalAlignment="Right" Margin="450,0,0,0">
+                            <TextBlock Name="headerText1" Text="" FontWeight="Bold" FontSize="20" />
+                            <TextBlock Text="                                                                      "/>
+
+                            <Button Name="ExpandButtonMin" Background="#FFACD0EE" Click="ExpandButtonMin_Click" HorizontalAlignment="Right" >
+                                <Image Source="/Images/Minimize_Box_Blue.png" Height="30" Width="30"/>
+                            </Button>
+                            <Button Name="ExpandButtonMax" Background="#FFACD0EE" Click="ExpandButtonMax_Click"  HorizontalAlignment="Right" >
+                                <Image Source="/Images/maximize.png" Height="30" Width="30"/>
+                            </Button>
+                            <Button Name="ExpandButtonClose" Background="#FFACD0EE" Click="ExpandButton1_Click" HorizontalAlignment="Right" >
+                                <Image Source="/Images/Close_Box_Red.png" Height="30" Width="30" />
+                            </Button>
+                        </WrapPanel>
+                    </Expander.Header>
+                    <ContentControl Grid.Row="1" x:Name="contentControl1" Content="{Binding ContentControlOne}" Margin="0,0,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                </Expander>
+                <Expander Grid.Row="2" Grid.Column="0" IsExpanded="False" x:Name="Expander2" Style="{DynamicResource OutlookStyleExpanderStyle}"  Visibility="Hidden" >
+                    <Expander.Header>
+                        <WrapPanel HorizontalAlignment="Right" Margin="450,0,0,0">
+                            <TextBlock Name="headerText2" Text="" FontWeight="Bold" FontSize="20" />
+                            <TextBlock Text="                                                                      "/>
+                            <Button Name="ExpandButtonMin2" Background="#FFACD0EE" Click="ExpandButtonMin2_Click" HorizontalAlignment="Right" >
+                                <Image Source="/Images/Minimize_Box_Blue.png" Height="30" Width="30" />
+                            </Button>
+                            <Button Name="ExpandButtonMax2" Background="#FFACD0EE" Click="ExpandButtonMax2_Click"  HorizontalAlignment="Right" >
+                                <Image Source="/Images/maximize.png" Height="30" Width="30" />
+                            </Button>
+                            <Button Name="ExpandButtonClose2" Background="#FFACD0EE" Click="ExpandButtonClose2_Click" HorizontalAlignment="Right" >
+                                <Image Source="/Images/Close_Box_Red.png" Height="30" Width="30" />
+                            </Button>
+                        </WrapPanel>
+                    </Expander.Header>
+                    <ContentControl Grid.Row="2" x:Name="contentControl2" Content="{Binding ContentControlTwo}" Margin="0,0,0,0" />
+                </Expander>
+                <Expander Grid.Row="3" Grid.Column="0" IsExpanded="False" x:Name="Expander3" Style="{DynamicResource OutlookStyleExpanderStyle}" Visibility="Hidden">
+                    <Expander.Header>
+                        <WrapPanel HorizontalAlignment="Right" Margin="450,0,0,0">
+                            <TextBlock Name="headerText3" Text="" FontWeight="Bold" FontSize="20" />
+                            <TextBlock Text="                                                                      "/>
+
+                            <Button Name="ExpandButtonMin3" Background="#FFACD0EE" Click="ExpandButtonMin3_Click" HorizontalAlignment="Right" >
+                                <Image Source="/Images/Minimize_Box_Blue.png" Height="30" Width="30" />
+                            </Button>
+                            <Button Name="ExpandButtonMax3" Background="#FFACD0EE" Click="ExpandButtonMax3_Click"  HorizontalAlignment="Right" >
+                                <Image Source="/Images/maximize.png" Height="30" Width="30" />
+                            </Button>
+                            <Button Name="ExpandButtonClose3" Background="#FFACD0EE" Click="ExpandButtonClose3_Click" HorizontalAlignment="Right" >
+                                <Image Source="/Images/Close_Box_Red.png" Height="30" Width="30" />
+                            </Button>
+                        </WrapPanel>
+                    </Expander.Header>
+                    <ContentControl Grid.Row="3" x:Name="contentControl3" Content="{Binding ContentControlThree}" Margin="0,0,0,0" />
+                </Expander>
+                <Expander Grid.Row="4" Grid.Column="0" IsExpanded="False"  x:Name="Expander4" Style="{DynamicResource OutlookStyleExpanderStyle}" Visibility="Hidden">
+                    <Expander.Header>
+                        <WrapPanel HorizontalAlignment="Right" Margin="450,0,0,0">
+                            <TextBlock Name="headerText4" Text="" FontWeight="Bold" FontSize="20" />
+                            <TextBlock Text="                                                                      "/>
+
+                            <Button Name="ExpandButtonMin4" Background="#FFACD0EE" Click="ExpandButtonMin4_Click" HorizontalAlignment="Right" >
+                                <Image Source="/Images/Minimize_Box_Blue.png" Height="30" Width="30" />
+                            </Button>
+                            <Button Name="ExpandButtonMax4" Background="#FFACD0EE" Click="ExpandButtonMax4_Click"  HorizontalAlignment="Right" >
+                                <Image Source="/Images/maximize.png" Height="30" Width="30" />
+                            </Button>
+                            <Button Name="ExpandButtonClose4" Background="#FFACD0EE" Click="ExpandButtonClose4_Click" HorizontalAlignment="Right" >
+                                <Image Source="/Images/Close_Box_Red.png" Height="30" Width="30" />
+                            </Button>
+                        </WrapPanel>
+                    </Expander.Header>
+                    <ContentControl Grid.Row="4" Grid.Column="0" x:Name="contentControl4" Content="{Binding ContentControlFour}" Margin="0,0,0,0" />
+                </Expander>
+                <Expander Grid.Row="5"  IsExpanded="False"  x:Name="Expander5" Style="{DynamicResource OutlookStyleExpanderStyle}" Visibility="Hidden">
+                    <Expander.Header>
+                        <WrapPanel HorizontalAlignment="Right" Margin="450,0,0,0">
+                            <TextBlock Name="headerText5" Text="" FontWeight="Bold" FontSize="20" />
+                            <TextBlock Text="                                                                      "/>
+
+                            <Button Name="ExpandButtonMin5" Background="#FFACD0EE" Click="ExpandButtonMin5_Click" HorizontalAlignment="Right" >
+                                <Image Source="/Images/Minimize_Box_Blue.png" Height="30" Width="30" />
+                            </Button>
+                            <Button Name="ExpandButtonMax5" Background="#FFACD0EE" Click="ExpandButtonMax5_Click"  HorizontalAlignment="Right" >
+                                <Image Source="/Images/maximize.png" Height="30" Width="30" />
+                            </Button>
+                            <Button Name="ExpandButtonClose5" Background="#FFACD0EE" Click="ExpandButtonClose5_Click" HorizontalAlignment="Right" >
+                                <Image Source="/Images/Close_Box_Red.png" Height="30" Width="30" />
+                            </Button>
+                        </WrapPanel>
+                    </Expander.Header>
+                    <ContentControl Grid.Row="5" Grid.Column="0" x:Name="contentControl5" Content="{Binding ContentControlFive}" Margin="0,0,0,0" />
+                </Expander>
+                <Expander Grid.Row="6"  IsExpanded="False"  x:Name="Expander6" Style="{DynamicResource OutlookStyleExpanderStyle}" Visibility="Hidden">
+                    <Expander.Header>
+                        <WrapPanel HorizontalAlignment="Right" Margin="450,0,0,0">
+                            <TextBlock Name="headerText6" Text="" FontWeight="Bold" FontSize="20" />
+                            <TextBlock Text="                                                                      "/>
+
+                            <Button Name="ExpandButtonMin6" Background="#FFACD0EE" Click="ExpandButtonMin6_Click" HorizontalAlignment="Right" >
+                                <Image Source="/Images/Minimize_Box_Blue.png" Height="30" Width="30" />
+                            </Button>
+                            <Button Name="ExpandButtonMax6" Background="#FFACD0EE" Click="ExpandButtonMax6_Click"  HorizontalAlignment="Right" >
+                                <Image Source="/Images/maximize.png" Height="30" Width="30" />
+                            </Button>
+                            <Button Name="ExpandButtonClose6" Background="#FFACD0EE" Click="ExpandButtonClose6_Click" HorizontalAlignment="Right" >
+                                <Image Source="/Images/Close_Box_Red.png" Height="30" Width="30" />
+                            </Button>
+                        </WrapPanel>
+                    </Expander.Header>
+                    <ContentControl Grid.Row="6" Grid.Column="0" x:Name="contentControl6" Content="{Binding ContentControlSix}" Margin="0,0,0,0" />
+                </Expander>
+                <WindowsFormsHost x:Name="MainWindowsFormsHost1" Visibility="Hidden" HorizontalAlignment="Left" Height="49" Margin="445,35,0,0" Grid.Row="1" VerticalAlignment="Top" Width="97"/>
+                <ContentControl Grid.Column="1" x:Name="contentControlRight" Content="{Binding ContentControlRight}" Grid.RowSpan="6" Margin="0,0,0,0" />
+                <GridSplitter  Grid.Column="1" Background="#FFDFE9F5" HorizontalAlignment="Left" Grid.RowSpan="7"  Width="5" Margin="0,0,0,-790"/>
+            </Grid>
+        </Border>
+    </Grid>
+
+</Window>

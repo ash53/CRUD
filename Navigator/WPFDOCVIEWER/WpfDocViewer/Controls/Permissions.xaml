@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="WpfDocViewer.Controls.Permissions"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WpfDocViewer.Controls"
+             mc:Ignorable="d" Height="744" Width="630.225"
+             ScrollViewer.VerticalScrollBarVisibility="Auto">
+    <UserControl.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF7998AC" Offset="0.604"/>
+            <GradientStop Color="White" Offset="0.148"/>
+        </LinearGradientBrush>
+    </UserControl.Background>
+    <Grid Margin="0,0,0,0" Height="740" >
+        <Border BorderBrush="#FF7998AC" BorderThickness="10" CornerRadius="10" HorizontalAlignment="Left" Height="182" Margin="87,97,0,0" VerticalAlignment="Top" Width="501" >
+            <Label Content="IDM Permissions " HorizontalAlignment="Left" Height="34" Margin="9,-10,0,0" VerticalAlignment="Top" Width="170" FontFamily="Tunga" FontSize="18" FontWeight="Bold" FontStyle="Italic" />
+
+        </Border>
+        <TextBox x:Name="txtImport_Copy" HorizontalAlignment="Left" Height="20" Margin="116,166,0,0" TextWrapping="Wrap" Text="{Binding IDMCanImport}" VerticalAlignment="Top" Width="68" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <Label Content="Annotations Permissions " HorizontalAlignment="Left" Height="30" Margin="184,182,0,0" VerticalAlignment="Top" Width="169" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Import Enabled  " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="129" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic" Margin="184,160,0,0"/>
+        <Label Content="Export Enabled " HorizontalAlignment="Left" Height="30" Margin="183,208,0,0" VerticalAlignment="Top" Width="169" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Printing Enabled " HorizontalAlignment="Left" Height="30" Margin="183,234,0,0" VerticalAlignment="Top" Width="145" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox x:Name="txtImport_Copy1" HorizontalAlignment="Left" Height="20" Margin="116,189,0,0" TextWrapping="Wrap" Text="{Binding IDMCanAnnotate}" VerticalAlignment="Top" Width="68" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <TextBox x:Name="txtExport" HorizontalAlignment="Left" Height="20" Margin="116,213,0,0" TextWrapping="Wrap" Text="{Binding IDMCanExport}" VerticalAlignment="Top" Width="68" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <TextBox x:Name="txtPrint" HorizontalAlignment="Left" Height="20" Margin="116,238,0,0" TextWrapping="Wrap" Text="{Binding IDMCanPrint}" VerticalAlignment="Top" Width="68" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <Border BorderBrush="#FF9ABDDA" BorderThickness="10" CornerRadius="10" HorizontalAlignment="Left" Height="175" Margin="87,321,0,0" VerticalAlignment="Top" Width="508" >
+            <Label Content="Assembly Permissions " HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="170" FontFamily="Tunga" FontSize="18" FontWeight="Bold" FontStyle="Italic" Margin="10,0,0,0" />
+
+        </Border>
+        <TextBox x:Name="txtAssemblyCanView" HorizontalAlignment="Left" Height="21" Margin="361,372,0,0" TextWrapping="Wrap" Text="{Binding AssemblyCanView}" VerticalAlignment="Top" Width="67" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <Label Content="Can Delete Match " HorizontalAlignment="Left" Height="30" Margin="443,395,0,0" VerticalAlignment="Top" Width="169" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="View Allowed " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="129" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic" Margin="443,368,0,0"/>
+        <Label Content="Can Pend Match " HorizontalAlignment="Left" Height="30" Margin="443,425,0,0" VerticalAlignment="Top" Width="169" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Can Commit Match " HorizontalAlignment="Left" Height="30" Margin="443,455,0,0" VerticalAlignment="Top" Width="145" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox x:Name="txtAssemblyCanDelete" HorizontalAlignment="Left" Height="21" Margin="361,399,0,0" TextWrapping="Wrap" Text="{Binding AssemblyCanDelete}" VerticalAlignment="Top" Width="67" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <TextBox x:Name="txtAssemblyCanMatch" HorizontalAlignment="Left" Height="21" Margin="361,429,0,0" TextWrapping="Wrap" Text="{Binding AssemblyCanMatch}" VerticalAlignment="Top" Width="67" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <TextBox x:Name="txtAssemblyCanCommit" HorizontalAlignment="Left" Height="21" Margin="361,459,0,0" TextWrapping="Wrap" Text="{Binding AssemblyCanCommit}" VerticalAlignment="Top" Width="67" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <Border BorderBrush="#FF89B2D4" BorderThickness="10" CornerRadius="10" HorizontalAlignment="Left" Height="192" Margin="87,540,0,0" VerticalAlignment="Top" Width="508" >
+            <Label Content="WF Experience " HorizontalAlignment="Left" Height="34" Margin="0,9,0,0" VerticalAlignment="Top" Width="248" FontFamily="Tunga" FontSize="18" FontWeight="Bold" FontStyle="Italic" />
+        </Border>
+        <TextBox x:Name="txtWorkFlowSupervisor" HorizontalAlignment="Left" Height="25" Margin="144,592,0,0" TextWrapping="Wrap" Text="{Binding WorkFlowSupervisor}" VerticalAlignment="Top" Width="153" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <Label Content="Auto Viewer Turned On " HorizontalAlignment="Left" Height="30" Margin="226,618,0,0" VerticalAlignment="Top" Width="169" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Supervisor Name " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="114" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic" Margin="302,587,0,0"/>
+        <Label Content="Is Supervisor " HorizontalAlignment="Left" Height="30" Margin="226,648,0,0" VerticalAlignment="Top" Width="169" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox x:Name="txtWorkFlowCanAutoView" HorizontalAlignment="Left" Height="21" Margin="144,622,0,0" TextWrapping="Wrap" Text="{Binding WorkFlowCanAutoView}" VerticalAlignment="Top" Width="67" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <TextBox x:Name="txtWorkFlowIsSupervisor" HorizontalAlignment="Left" Height="21" Margin="144,652,0,0" TextWrapping="Wrap" Text="{Binding WorkFlowIsSupervisor}" VerticalAlignment="Top" Width="67" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <Rectangle Fill="#FF7998AC" HorizontalAlignment="Left" Height="53" Margin="-1,-1,0,0" Stroke="Black" VerticalAlignment="Top" Width="631"/>
+        <Label x:Name="title" Content="User Credential Authorization" HorizontalAlignment="Left" Height="52" Margin="34,0,0,0" VerticalAlignment="Top" Width="413" FontSize="22" FontFamily="Euphemia" FontWeight="Bold"/>
+        <Rectangle Fill="#FFC0C0EE" Height="3" Margin="10,86,0,0" Stroke="Black" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FFC0C0EE" Height="3" Margin="10,313,0,0" Stroke="Black" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FFC0C0EE" Height="3" Margin="10,532,0,0" Stroke="Black" VerticalAlignment="Top"/>
+        <Label Content="Windows Username: " HorizontalAlignment="Left" Height="29" Margin="10,57,0,0" VerticalAlignment="Top" Width="132" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Username:  marklane Assembly CrossReference " HorizontalAlignment="Left" Height="29" Margin="10,284,0,0" VerticalAlignment="Top" Width="309" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Username:  marklane Wf experience Login Successful " HorizontalAlignment="Left" Height="29" Margin="10,503,0,0" VerticalAlignment="Top" Width="337" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Can Modify Image" HorizontalAlignment="Left" Height="30" Margin="416,167,0,0" VerticalAlignment="Top" Width="126" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox Name="txtCanModify" HorizontalAlignment="Left" Height="22" Margin="333,169,0,0" TextWrapping="Wrap" Text="{Binding IDMCanModify}" VerticalAlignment="Top" Width="68" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11"/>
+        <Label Content="Can Append Image" HorizontalAlignment="Left" Height="30" Margin="416,191,0,0" VerticalAlignment="Top" Width="126" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox x:Name="txtCanAppend" HorizontalAlignment="Left" Height="20" Margin="333,196,0,0" TextWrapping="Wrap" Text="{Binding IDMCanAppend}" VerticalAlignment="Top" Width="68" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11"/>
+        <Label Content="Annotation Group Setting" HorizontalAlignment="Left" Height="30" Margin="416,214,0,0" VerticalAlignment="Top" Width="156" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic" />
+        <TextBox x:Name="txtIDMAnnotateGroup" HorizontalAlignment="Left" Height="20" Margin="333,219,0,0" TextWrapping="Wrap" Text="{Binding IDMAnnotateGroup}" VerticalAlignment="Top" Width="68" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11"/>
+        <Label Content="All Annotations Setting" HorizontalAlignment="Left" Height="30" Margin="416,238,0,0" VerticalAlignment="Top" Width="156" FontWeight="Bold" FontStyle="Italic" FontFamily="Tunga" FontSize="14" />
+        <TextBox x:Name="txtIDMAnnotateAll" HorizontalAlignment="Left" Height="20" Margin="333,244,0,0" TextWrapping="Wrap" Text="{Binding IDMAnnotateAll}" VerticalAlignment="Top" Width="68" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11"/>
+        <Label Content="Default IDM Application" HorizontalAlignment="Left" Height="30" Margin="406,131,0,0" VerticalAlignment="Top" Width="156" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox x:Name="txtIDMDefaultApplication" HorizontalAlignment="Left" Height="25" Margin="313,135,0,0" TextWrapping="Wrap" Text="{Binding IDMDefaultApplication}" VerticalAlignment="Top" Width="93" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <Label Content="IDM Group" HorizontalAlignment="Left" Height="30" Margin="208,131,0,0" VerticalAlignment="Top" Width="94" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic" />
+        <TextBox x:Name="txtIDMGroup" HorizontalAlignment="Left" Height="25" Margin="116,135,0,0" TextWrapping="Wrap" Text="{Binding IDMGroup}" VerticalAlignment="Top" Width="92" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <TextBox x:Name="txtIsSupervisor" HorizontalAlignment="Left" Height="21" Margin="121,399,0,0" TextWrapping="Wrap" Text="{Binding AssemblyIsSupervisor}" VerticalAlignment="Top" Width="97" RenderTransformOrigin="0.821,0.524" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <Label Content="Is Supervisor " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="129" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic" Margin="223,397,0,0" />
+        <TextBox x:Name="txtAssemblyExperience" HorizontalAlignment="Left" Height="21" Margin="121,372,0,0" TextWrapping="Wrap" Text="{Binding AssemblyExperience}" VerticalAlignment="Top" Width="97" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <Label Content="Assembly Experience " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="129" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic" Margin="218,368,0,0"/>
+        <Label Name="lblWindowsName" Content="{Binding WindowsUsername}" HorizontalAlignment="Left" Height="34" Margin="144,52,0,0" VerticalAlignment="Top" Width="184"/>
+        <TextBox x:Name="txtSupervisorID" HorizontalAlignment="Left" Height="23" Margin="121,427,0,0" TextWrapping="Wrap" Text="{Binding AssemblySupervisorID}" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.821,0.524" FontFamily="Tunga" FontWeight="Bold" IsEnabled="False" FontSize="11" />
+        <Label Content="Supervisor Name" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="129" FontFamily="Tunga" FontSize="14" FontWeight="Bold" FontStyle="Italic" Margin="223,425,0,0" />
+
+    </Grid>
+</UserControl>

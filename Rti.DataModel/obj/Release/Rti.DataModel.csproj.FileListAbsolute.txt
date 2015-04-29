@@ -1,0 +1,11 @@
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.DataModel\bin\Release\Rti.DataModel.dll.config
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.DataModel\bin\Release\Rti.DataModel.dll
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.DataModel\bin\Release\Rti.DataModel.pdb
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.DataModel\bin\Release\AIT.EF.Oracle.IdentityPatch.dll
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.DataModel\bin\Release\EntityFramework.dll
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.DataModel\bin\Release\log4net.dll
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.DataModel\bin\Release\EntityFramework.xml
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.DataModel\bin\Release\log4net.xml
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.DataModel\obj\Release\Rti.DataModel.csprojResolveAssemblyReference.cache
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.DataModel\obj\Release\Rti.DataModel.dll
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.DataModel\obj\Release\Rti.DataModel.pdb

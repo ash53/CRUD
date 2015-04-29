@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B47E43E-29DA-479A-A3D8-AF2BED427114}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rti.InternalInterfaces</RootNamespace>
+    <AssemblyName>Rti.InternalInterfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContracts\EmbillzAccountInformation.cs" />
+    <Compile Include="DataContracts\Filters.cs" />
+    <Compile Include="DataContracts\IDGInputParams.cs" />
+    <Compile Include="DataContracts\IDGOutMessage.cs" />
+    <Compile Include="DataContracts\Login.cs" />
+    <Compile Include="DataContracts\NavC2p.cs" />
+    <Compile Include="DataContracts\NavImage.cs" />
+    <Compile Include="DataContracts\NavPostBd.cs" />
+    <Compile Include="DataContracts\NavPostDetail.cs" />
+    <Compile Include="DataContracts\NavR2p.cs" />
+    <Compile Include="DataContracts\NavServiceInfo.cs" />
+    <Compile Include="DataContracts\NavWorkFlowItem.cs" />
+    <Compile Include="DataContracts\ProcNoteResult.cs" />
+    <Compile Include="DataContracts\RPCInMessage.cs" />
+    <Compile Include="DataContracts\RPCOutMessage.cs" />
+    <Compile Include="DataContracts\SearchAccountsAttributes.cs" />
+    <Compile Include="DataContracts\UpdR2PInputParams.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceContracts\IEagleIqGatewayService.cs" />
+    <Compile Include="ServiceContracts\IReportingService.cs" />
+    <Compile Include="ServiceContracts\IDocumentManagerService.cs" />
+    <Compile Include="ServiceContracts\IRequestManagerService.cs" />
+    <Compile Include="ServiceContracts\IAccountManagerService.cs" />
+    <Compile Include="ServiceContracts\IAdministrationService.cs" />
+    <Compile Include="ServiceProxies\AdministrationServiceClient.cs" />
+    <Compile Include="ServiceProxies\DocumentManagerServiceClient.cs" />
+    <Compile Include="ServiceProxies\EagleIqGatewayClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rti.DataModel\Rti.DataModel.csproj">
+      <Project>{6bcc6ada-2ab0-4cbe-afa6-51c8c5a654fb}</Project>
+      <Name>Rti.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rti\Rti.csproj">
+      <Project>{7143739e-b054-42b6-a474-87f0f8adb666}</Project>
+      <Name>Rti</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

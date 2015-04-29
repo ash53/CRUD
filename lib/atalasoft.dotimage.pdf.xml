@@ -1,0 +1,1352 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Atalasoft.dotImage.Pdf</name>
+    </assembly>
+    <members>
+        <member name="T:Atalasoft.Imaging.Codec.Pdf.JpegToPdfPageEventArgs">
+            <summary>
+            Represents data present when a JPEG image has been acquired and is about to
+            be translated into a PDF page.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.JpegToPdfPageEventArgs.pageBorder">
+            <summary>
+            The border around the image on the page in PDF page units (1/72 of an inch).
+            </summary>
+            <remarks>
+            <para>Default value is 0.</para>
+            <para>This property is initialized to the value of PageBorder in the sender.
+            If client code changes this value, it will be reflected in the output PDF
+            but will not affect the sender.</para>
+            </remarks>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.JpegToPdfPageEventArgs.pageSize">
+            <summary>
+            The size of the resulting page in PDF page units (1/72 of an inch).
+            </summary>
+            <remarks>
+            <para>This property is initialized to the calculated page size for this
+            image.  If client code changes this value, it will be reflected in the
+            output PDF but will not affect the sender.</para>
+            </remarks>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.JpegToPdfPageEventArgs.#ctor(System.IO.Stream,System.Drawing.SizeF)">
+            <summary>
+            Constructs a new JpegToPdfPageEventArgs class.
+            </summary>
+            <param name="stm">
+            The stream that contains the JPEG to be encoded.
+            </param>
+            <param name="imageSize">
+            The size of the image in PDF units.
+            </param>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfPageEventArgs.PageBorder">
+            <summary>
+            The border around the image on the page in PDF page units (1/72 of an inch).
+            </summary>
+            <remarks>
+            <para>Default value is 0.</para>
+            <para>This property is initialized to the value of PageBorder in the sender.
+            If client code changes this value, it will be reflected in the output PDF
+            but will not affect the sender.</para>
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfPageEventArgs.PageSize">
+            <summary>
+            The size of the resulting page in PDF page units (1/72 of an inch).
+            </summary>
+            <remarks>
+            <para>This property is initialized to the calculated page size for this
+            image.  If client code changes this value, it will be reflected in the
+            output PDF but will not affect the sender.</para>
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfPageEventArgs.ImageSize">
+            <summary>
+            Gets the size of the image in PDF page units (1/72 of an inch).
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfPageEventArgs.SizeMode">
+            <summary>
+            Sets or gets how the image will sit in the page.
+            </summary>
+            <remarks>
+            If client code changes this value, it will be reflected in the output PDF
+            but will not affect the sender.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfPageEventArgs.Stream">
+            <summary>
+            Gets the stream that contains the JPEG image being translated.
+            </summary>
+            <remarks>
+            The Position of the stream will be 0.  If any stream access is done, the
+            Position must be returned to 0.
+            </remarks>
+        </member>
+        <member name="T:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder">
+            <summary>
+            This class is used to convert one or more JPEG files into a single PDF
+            document.  This is a lossless process: JPEG image data is rewritten directly
+            into the output PDF without decoding/re-encoding it.
+            </summary>
+            <!-- Failed to insert some or all of included XML --><include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.Pdf~Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder&quot;]/*"/>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.pageBorder">
+            <summary>
+            Gets or sets the amount of border space around the image in PDF Page Units.
+            </summary>
+            <value>
+            Set to a value greater than 0, this will create a page with a blank border
+            around the image in PDF Page units (72<SUP>nds</SUP> of an inch).
+            </value>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.pageSize">
+            <summary>
+            <para>Gets or sets the size of the PDF pages in PDF Page Units. </para>
+            <para>PDF uses an internal resolution of 72dpi, so an 8.5 x 11 inch page
+            would be 612 x 792 pixels.</para>
+            </summary>
+            <value>
+            The size of the PDF pages in PDF Page Units.
+            </value>
+            <remarks>
+            This value is only used if <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode"/> is FitToPage.
+            </remarks>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.#ctor">
+            <summary>
+            Constructs a new JpegToPdfEncoder object.
+            </summary>
+            <overloads>
+            <!-- Failed to insert some or all of included XML --><include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.Pdf~Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder~_ctor&quot;]/*"/>
+            </overloads>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.Save(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            Save the single JPEG image into a single page PDF document.
+            </summary>
+            <!-- Failed to insert some or all of included XML --><include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.Pdf~Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder~Save(Stream,Stream)&quot;]/*"/>
+            <param name="outputStream">
+            The stream where the PDF document will be saved.
+            </param>
+            <param name="sourceStream">
+            A stream containing a source JPEG image
+            </param>
+            <overloads>
+            Saves the supplied JPEG stream or streams to the give output stream.
+            </overloads>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.Save(System.IO.Stream,System.Collections.Generic.IEnumerable{System.IO.Stream})">
+            <summary>
+            Saves the set of JPEG images into a single multipage PDF document.
+            </summary>
+            <!-- Failed to insert some or all of included XML --><include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.Pdf~Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder~Save(Stream,IEnumerable{Stream})&quot;]/*"/>
+            <param name="outputStream">
+            The stream where the PDF document will be saved.
+            </param>
+            <param name="streams">
+            An enumerable set of streams that represent JPEG images.
+            </param>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder._selfPrintingPdfShrinkToFit">
+            The following property was tested and shown not to work in Adobe Acrobat 8.0.  
+            Leave commented out untill supported by a future version of Acrobat.
+        </member>
+        <member name="E:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.JpegAquired">
+            <summary>
+            This event is used to indicate that a JPEG image has been acquired and is
+            ready to be embedded within a PDF.
+            </summary>
+            <remarks>
+            By modifying the elements of the JpegToPdfPageEventArgs, client code can
+            change the output page size, size mode or border on a page-by-page basis.
+            </remarks>
+            <!-- Failed to insert some or all of included XML --><include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.Pdf~Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder~JpegAquired_EV&quot;]/*"/>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.CreateSelfPrintingPdf">
+            <summary>
+            Gets or sets a boolean indicating if the output PDF file should be
+            self-printing
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.BookmarkTree">
+            <summary>
+            Sets or gets a tree of Bookmarks to set for the PDF document created by the <see cref="M:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.Save(System.IO.Stream,System.IO.Stream)"/> method.
+            </summary>
+            <!-- Failed to insert some or all of included XML --><include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.Pdf~Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder~BookmarkTree&quot;]/*"/>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.PageBorder">
+            <summary>
+            Gets or sets the amount of border space around the image in PDF Page Units.
+            </summary>
+            <value>
+            Set to a value greater than 0, this will create a page with a blank border
+            around the image in PDF Page units (72<SUP>nds</SUP> of an inch).
+            </value>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.PageSize">
+            <summary>
+            Gets or sets the size of the PDF pages in PDF Page Units.
+            </summary>
+            <value>
+            The size of the PDF pages in PDF Page Units.
+            </value>
+            <remarks>
+            <para>PDF uses an internal resolution of 72dpi, so an 8.5 x 11 inch page
+            would be 612 x 792 pixels.</para>
+            This value is only used if <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode"/> is FitToPage.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.SizeMode">
+            <summary>
+            Gets or sets the page size mode for this PDF.
+            </summary>
+            <value>
+            The page size mode for this PDF.
+            </value>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.Metadata">
+            <summary>
+            Gets or sets the metadata information used for this PDF.
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.UserPassword">
+            <summary>
+            Sets or gets a user password to use for the document.  Default value is null
+            (no password).
+            </summary>
+            <remarks>
+            <para>PDF documents have two passwords associated with them, a user password
+            and an owner password.  If an encrypted document is opened by a conforming
+            reader using the owner password, then the security Permissions are ignored. 
+            If an encrypted document is opened by a conforming reader using the user
+            password, then the security Permissions are enforced.  When a document is
+            created with only one password or one unique password, it is considered the
+            same as having only an owner password.</para>
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.OwnerPassword">
+            <summary>
+            Sets or gets an owner password to use for the document.  Default value is
+            null (no password).
+            </summary>
+            <remarks>
+            <para>PDF documents have two passwords associated with them, a user password
+            and an owner password.  If an encrypted document is opened by a conforming
+            reader using the owner password, then the security Permissions are ignored. 
+            If an encrypted document is opened by a conforming reader using the user
+            password, then the security Permissions are enforced.  When a document is
+            created with only one password or one unique password, it is considered the
+            same as having only an owner password.</para>
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.Permissions">
+            <value>
+            Sets or gets the set of allowable actions for this PDF.
+            </value>
+            <remarks>
+            PdfAccessPermissions refer to permissions that are allowed within a PDF
+            document.  Permissions are granted by allowing actions rather than
+            preventing them.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.EncryptMetadata">
+            <summary>
+            Sets or gets a boolean indicating that metadata should be encrypted. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.JpegToPdfEncoder.ErrorRecovery">
+            <summary>
+            Sets or gets how to recover from errors.
+            </summary>
+            <remarks>
+            JPEG streams a scanned to pull out meta information, such as size and
+            resolution (if present).  If this operation fails, the conversion process
+            can either be aborted or the failing image can be skipped without affecting
+            the output.
+            </remarks>
+        </member>
+        <member name="T:Atalasoft.Imaging.Codec.Pdf.PdfCompressionType">
+            <summary>
+            The type of compression used on the image data.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfCompressionType.None">
+            <summary>
+            No compression.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfCompressionType.CcittGroup4">
+            <summary>
+            <para>Uses CCITT Group4 Fax compression on the image data.  </para>
+            <para>This can only be used on 1-bit images.  If you attempt to use this
+            compression on an image of another type, it will default to
+            <STRONG>Auto</STRONG> compression mode.</para>
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfCompressionType.Jpeg">
+            <summary>
+            <para>The image is saved as a JPEG.  You may also want to set the <see cref="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.JpegQuality"/> of the <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfEncoder"/>. </para>
+            </summary>
+            <remarks>
+            This can only be used for 8-bit grayscale, 24-bit and CMYK images.  If
+            you attempt to use this compression with any other image format, it will use
+            <STRONG>Auto</STRONG> instead.
+            </remarks>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfCompressionType.Deflate">
+            <summary>
+            Uses Deflate compression on the image data.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfCompressionType.Auto">
+            <summary>
+            This will tell the PdfEncoder to automatically determine which compression
+            to use.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfCompressionType.Jbig2">
+            <summary>
+            Use Jbig2 compression on the image data.  This compression is only
+            available for 1 bit per pixel images.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfCompressionType.Jpeg2000">
+            <summary>
+            Use Jpeg2000 compression on the image data.  This setting works only
+            for RGB color or grayscale images.
+            </summary>
+        </member>
+        <member name="T:Atalasoft.Imaging.Codec.Pdf.PdfCodecCompression">
+            <summary>
+            PdfCodecCompression is a container class that encapsulates compression
+            settings for a PDF image.
+            </summary>
+            <remarks>
+            This container class is passed via the
+            SetEncoderCompression event.  Clients of the event can retrieve the
+            compression settings for an image being compressed by a
+            MultiFramedImageEncoder and can change them on the fly if needed.
+            </remarks>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfCodecCompression._jpegQuality">
+            <summary>
+            Gets or sets the quality level of the Jpeg as it's encoded to a file.  Valid
+            values are 1 - 100 with a default value of 80.
+            </summary>
+            <remarks>
+            The lower the quality, the smaller the filesize.  A good range of values is
+            between 70 and 95.
+            </remarks>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfCodecCompression._jpeg2000CompressionFactor">
+            <summary>
+            Gets a value representing the compression factor to use for Jpeg2000
+            compression.
+            </summary>
+            <remarks>
+            This value is an approximation of the compression factor as a percentage of
+            the original image size.  A value of 10.0 should approximate a compressed
+            image that is 10% of the size of the original image.
+            </remarks>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfCodecCompression.#ctor(Atalasoft.Imaging.Codec.Pdf.PdfCompressionType)">
+            <summary>
+            Constructs a new PdfCodecCompression object with the specified
+            PdfCompressionType.
+            </summary>
+            <param name="type">
+            A value specifying one of the standard PDF compressions.
+            </param>
+            <overloads>
+            Constructs a new PdfCodecCompression object
+            </overloads>
+            <remarks>
+            This class is normally constructed by the PdfEncoder object prior to firing
+            the SetEncoderCompression event.  Clients rarely, if ever, need to construct
+            this object on their own.
+            </remarks>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfCodecCompression.#ctor(Atalasoft.Imaging.Codec.Pdf.PdfCompressionType,System.Int32)">
+            <summary>
+            Constructs a new PdfCodecCompression object with the specified
+            PdfCompressionType and default  quality.
+            </summary>
+            <param name="type">
+            A value specifying one of the standard PDF compressions.
+            </param>
+            <param name="jpegQuality">
+            A value between 0 and 100 specifying jpeg quality.  1 is best compression
+            and least quality, 100 is least compression and best quality.
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfCodecCompression.#ctor(Atalasoft.Imaging.Codec.Pdf.PdfCompressionType,System.Double)">
+            <summary>
+            Constructs a new PdfCodecCompression object with the specified
+            PdfCompressionType and default Jpeg2000 compression factor.
+            </summary>
+            <param name="type">
+            A value specifying one of the standard PDF compressions.
+            </param>
+            <param name="jpeg2000CompressionFactor">
+            Specifies the jpeg2000 compression factor to use when the type is
+            PdfCompressionType.Jpeg2000.
+            </param>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfCodecCompression.Compression">
+            <summary>
+            Gets a value representing one of the standard PDF compression values.
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfCodecCompression.JpegQuality">
+            <summary>
+            Gets or sets the quality level of the Jpeg as it's encoded to a file.  Valid
+            values are 1 - 100 with a default value of 80.
+            </summary>
+            <remarks>
+            The lower the quality, the smaller the filesize.  A good range of values is
+            between 70 and 95.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfCodecCompression.Jpeg2000CompressionFactor">
+            <summary>
+            Gets a value representing the compression factor to use for Jpeg2000
+            compression.
+            </summary>
+            <remarks>
+            This value is an approximation of the compression factor as a percentage of
+            the original image size.  A value of 10.0 should approximate a compressed
+            image that is 10% of the size of the original image.
+            </remarks>
+        </member>
+        <member name="T:Atalasoft.Imaging.Codec.Pdf.PdfImage">
+            <summary>
+            Contains information about a single image or file to be added to the PDF.
+            </summary>
+            <remarks>
+            This object is used for more low level control when saving a PDF image using
+            the <STRONG>PdfEncoder</STRONG>.
+            </remarks>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfImage.image">
+            <summary>
+            Gets the AtalaImage that will be saved to the PDF.
+            </summary>
+            <value>
+            The AtalaImage that will be saved to the PDF.
+            </value>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfImage.fileName">
+            <value>
+            The filename of an image to be saved to PDF.
+            </value>
+            <summary>
+            Gets the filename of an image to be saved to PDF.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfImage.compression">
+            <summary>
+            Gets the compression used on the image data.
+            </summary>
+            <value>
+            The compression used on the image data.
+            </value>
+            <remarks>
+            If you specify a compression that is unsupported for a specific image, it
+            will be replaced with a compatible compression.
+            </remarks>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfImage.frame">
+            <summary>
+            Gets the frame of image to be saved from either a filename or a stream.  -1
+            indicates that this image represents every image in the stream or file.
+            </summary>
+            <value>
+            The frame of image to be saved from either a filename or a stream.  -1
+            indicates that this image represents every image in the stream or file.
+            </value>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfImage.stream">
+            <summary>
+            Gets the stream containing an image to be saved into PDF
+            </summary>
+            <value>
+            The stream containing an image to be saved into PDF.
+            </value>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfImage.#cctor">
+            <summary>
+            Creates an instance of PdfImage.
+            </summary>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfImage.#ctor(Atalasoft.Imaging.AtalaImage,Atalasoft.Imaging.Codec.Pdf.PdfCompressionType)">
+            <summary>
+            Creates a new instance of PdfImage specifying image and compression.
+            </summary>
+            <param name="image">The AtalaImage to add to the document.</param>
+            <param name="compression">The PdfCompressionType to use when saving the image.</param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfImage.#ctor(System.String,System.Int32,Atalasoft.Imaging.Codec.Pdf.PdfCompressionType)">
+            <summary>
+            Creates a new instance of PdfImage specifying fileName, frameIndex and compression.
+            </summary>
+            <param name="fileName">The full path and filename of an image to add to the document.</param>
+            <param name="frameIndex">The page index for multipage TIFF images.  Set to -1 for all frames.</param>
+            <param name="compression">The PdfCompressionType to use when saving the image.</param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfImage.#ctor(System.IO.Stream,System.Int32,Atalasoft.Imaging.Codec.Pdf.PdfCompressionType)">
+            <summary>
+            <para>Creates an instance of PdfImage specifying stream, frameIndex and
+            compression.</para>
+            </summary>
+            <param name="stream">
+            A stream object containing an image
+            </param>
+            <param name="frameIndex">
+            The frame index to use for multipage TIFF images.  Setting this to -1 will
+            save every page to the PDF.
+            </param>
+            <param name="compression">
+            The type of compression to use on the image data.
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfImage.ValidEncoder(Atalasoft.Imaging.Codec.Pdf.PdfCompressionType)">
+            <summary>
+            Checks an compression to make sure it's supported for PDF encoding.
+            </summary>
+            <param name="compression">The PdfCompressionType to validate.</param>
+            <returns>True if the compression is supported.</returns>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfImage.Image">
+            <summary>
+            Gets the AtalaImage that will be saved to the PDF.
+            </summary>
+            <value>
+            The AtalaImage that will be saved to the PDF.
+            </value>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfImage.FileName">
+            <summary>
+            Gets the filename or url for the image.
+            </summary>
+            <value>
+            The filename of an image to be saved to PDF.
+            </value>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfImage.Compression">
+            <summary>
+            Gets the compression used on the image data.
+            </summary>
+            <value>
+            The compression used on the image data.
+            </value>
+            <remarks>
+            If you specify a compression that is unsupported for a specific image, it
+            will be replaced with a compatible compression.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfImage.Frame">
+            <summary>
+            Gets the frame of image to be saved from either a filename or a stream.  -1
+            indicates that this image represents every image in the stream or file.
+            </summary>
+            <value>
+            The frame of image to be saved from either a filename or a stream.  -1
+            indicates that this image represents every image in the stream or file.
+            </value>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfImage.Stream">
+            <summary>
+            Gets the stream containing an image to be saved into PDF
+            </summary>
+            <value>
+            The stream containing an image to be saved into PDF.
+            </value>
+        </member>
+        <member name="T:Atalasoft.Imaging.Codec.Pdf.PdfImageCollection">
+            <summary>
+            Contains a collection of <STRONG>PdfImage</STRONG> objects to be saved to
+            PDF.
+            </summary>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfImageCollection.#ctor">
+            <summary>
+            Creates an instance of <STRONG>PdfImageCollection</STRONG>.
+            </summary>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfImageCollection.Add(Atalasoft.Imaging.Codec.Pdf.PdfImage)">
+            <summary>
+            Adds a <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfImage"/> to the collection.
+            </summary>
+            <param name="image">
+            The <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfImage"/> to add.
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfImageCollection.Remove(Atalasoft.Imaging.Codec.Pdf.PdfImage)">
+            <summary>
+            Remove a specified PdfImage from the collection.
+            </summary>
+            <param name="image">
+            The PdfImage to remove.
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfImageCollection.Insert(System.Int32,Atalasoft.Imaging.Codec.Pdf.PdfImage)">
+            <summary>
+            Inserts a PdfImage into this collection at the specified index.
+            </summary>
+            <param name="index">
+            The index to insert into.
+            </param>
+            <param name="image">
+            The PdfImage to insert.
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfImageCollection.IndexOf(Atalasoft.Imaging.Codec.Pdf.PdfImage)">
+            <summary>
+            Returns the index of the specified PdfImage.
+            </summary>
+            <returns>
+            Returns the zero based index of the collection, or -1 if the item doesn't
+            exist.
+            </returns>
+            <param name="image">
+            The PdfImage to search for.
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfImageCollection.Contains(Atalasoft.Imaging.Codec.Pdf.PdfImage)">
+            <summary>
+            Returns true if a PdfImage is located in the collection.
+            </summary>
+            <returns>
+            True if the PdfImage exists, otherwise false.
+            </returns>
+            <param name="image">
+            The PdfImage to search for.
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfImageCollection.CopyTo(Atalasoft.Imaging.Codec.Pdf.PdfImage[])">
+            <overloads>
+            Copies the current PdfCollection into an array.
+            </overloads>
+        </member>
+        <member name="T:Atalasoft.Imaging.Codec.Pdf.AssemblyFinder">
+            <summary>
+            Finds assemblies (even if you are using nunit)
+            </summary>
+        </member>
+        <member name="T:Atalasoft.Imaging.Codec.Pdf.PdfMetadata">
+            <summary>
+            Contains general information about the PDF file.
+            </summary>
+            <remarks><para>If the strings in metadata contain a parentheses or backslash,
+            the character must be escaped with a backslash.</para><para>
+            PDF Metadata is used in the <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfEncoder"/> to indicate information
+            such as Author, Creator, Keywords, etc.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.title">
+            <value>
+            The document's title.
+            </value>
+            <summary>
+            Gets or sets the document's title.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.author">
+            <summary>
+            Gets or sets the author of this PDF.
+            </summary>
+            <value>
+            The author of this PDF.
+            </value>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.subject">
+            <summary>
+            Gets or sets the subject of the document.
+            </summary>
+            <value>
+            The subject of the document.
+            </value>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.keywords">
+            <value>
+            Keywords associated with the document.
+            </value>
+            <summary>
+            Gets or sets keywords associated with the document.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.creator">
+            <value>
+            The application that created the original document if the document was
+            converted to PDF from another format.
+            </value>
+            <summary>
+            Gets or sets the application that created the original document if the
+            document was converted to PDF from another format.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.producer">
+            <value>
+            The name of the application that produced this document if the document was
+            converted to PDF from another format.
+            </value>
+            <summary>
+            Gets or sets the name of the application that produced this document if the
+            document was converted to PDF from another format.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.creationDate">
+            <summary>
+            Gets or sets the creation date of this PDF.
+            </summary>
+            <value>
+            The creation date of this PDF.
+            </value>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Creates a new instance of PdfMetadata specifying title, author, subject,
+            keywords, creator, producer, creationDate and modifiedDate.
+            </summary>
+            <param name="title">
+            The document's title.
+            </param>
+            <param name="author">
+            The author of this PDF.
+            </param>
+            <param name="subject">
+            The subject of the document.
+            </param>
+            <param name="keywords">
+            Keywords associated with the document.
+            </param>
+            <param name="creator">
+            The application that created the original document if the document was
+            converted to PDF from another format.
+            </param>
+            <param name="producer">
+            The name of the application that produced this document if the document was
+            converted to PDF from another format.
+            </param>
+            <param name="creationDate">
+            The creation date of this PDF.
+            </param>
+            <param name="modifiedDate">
+            The date and time the document was most recently modified.
+            </param>
+            <summary>
+            Creates a new instance of PdfMetadata.
+            </summary>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.#ctor">
+            <summary>
+            Creates a new instance of PdfMetadata.
+            </summary>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.GenerateObjectCode(System.Int32)">
+            <summary>
+            Generates the object code for the PDF.
+            </summary>
+            <param name="objectNumber">The object number used to reference this item in the document.</param>
+            <returns>The object code or an empty string if no data was specified.</returns>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.Title">
+            <value>
+            The document's title.
+            </value>
+            <summary>
+            Gets or sets the document's title.
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.Author">
+            <summary>
+            Gets or sets the author of this PDF.
+            </summary>
+            <value>
+            The author of this PDF.
+            </value>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.Subject">
+            <summary>
+            Gets or sets the subject of the document.
+            </summary>
+            <value>
+            The subject of the document.
+            </value>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.Keywords">
+            <value>
+            Keywords associated with the document.
+            </value>
+            <summary>
+            Gets or sets keywords associated with the document.
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.Creator">
+            <value>
+            The application that created the original document if the document was
+            converted to PDF from another format.
+            </value>
+            <summary>
+            Gets or sets the application that created the original document if the
+            document was converted to PDF from another format.
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.Producer">
+            <value>
+            The name of the application that produced this document if the document was
+            converted to PDF from another format.
+            </value>
+            <summary>
+            Gets or sets the name of the application that produced this document if the
+            document was converted to PDF from another format.
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.CreationDate">
+            <summary>
+            Gets or sets the creation date of this PDF.
+            </summary>
+            <value>
+            The creation date of this PDF.
+            </value>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfMetadata.ModifiedDate">
+            <value>
+            The date and time the document was most recently modified.
+            </value>
+            <summary>
+            Gets or sets the date and time the document was most recently modified.
+            </summary>
+        </member>
+        <member name="T:Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode">
+            <summary>
+            Used to set the page <see cref="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.SizeMode"/> of a PDF document
+            created with <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfEncoder"/>.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode.FitToImage">
+            <summary>
+            This will cause each page to be resized to the size of the image, plus any
+            <see cref="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.PageBorder"/>.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode.FitToPage">
+            <summary>
+            This will make each page in the PDF the same <see cref="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.PageSize"/>.  If an image is too large to fit in the page,
+            it will be rendered smaller in order to fit.  If the image is smaller than
+            the page, it will be centered.
+            </summary>
+        </member>
+        <member name="T:Atalasoft.Imaging.Codec.Pdf.PdfEncoder">
+            <summary>
+            An <see cref="T:Atalasoft.Imaging.Codec.ImageEncoder"/> that will write one or more images to a PDF file.
+            </summary>
+            <!-- Failed to insert some or all of included XML --><include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.Pdf~Atalasoft.Imaging.Codec.Pdf.PdfEncoder&quot;]/*"/>
+            <remarks>
+            <para>To use the <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfEncoder"/>, simply pass an instance of the
+            <STRONG>PdfEncoder</STRONG> to the <see cref="M:Atalasoft.Imaging.Workspace.Save(System.String,Atalasoft.Imaging.Codec.ImageEncoder,System.Int32)"/> or <see cref="M:Atalasoft.Imaging.AtalaImage.Save(System.IO.Stream,Atalasoft.Imaging.Codec.ImageEncoder,Atalasoft.Imaging.ProgressEventHandler)"/> method and it will save all images from the Images
+            Property of the  <STRONG> Workspsace</STRONG>    object into the PDF File. 
+            To compose a  multipage   PDF document from images not in memory all at
+            once, or at a specified compression format, follow the steps in the example
+            above.</para>
+            <para> DotImage Document Imaging is required for PDF Encode
+            functionality.</para>
+            </remarks>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.metadata">
+            <summary>
+            Gets or sets the metadata information used for this PDF.
+            </summary>
+            <value>
+            The metadata information used for this PDF.
+            </value>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.sizeMode">
+            <summary>
+            Gets or sets the page size mode for this PDF.
+            </summary>
+            <value>
+            The page size mode for this PDF.
+            </value>
+            <remarks>
+            FitToImage will cause the page to be sized to fit the image, while FitToPage
+            will cause the image to be fit to the page.  See <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode"/> for more detail.
+            </remarks>
+            <seealso cref="T:Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode"/>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.pageBorder">
+            <summary>
+            Gets or sets the amount of border space around the image in PDF Page Units.
+            </summary>
+            <value>
+            Set to a value greater than 0, this will create a page with a blank border
+            around the image in PDF Page units (72<SUP>nds</SUP> of an inch).
+            </value>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.jpegQuality">
+            <value>
+            The Jpeg quality used when the image compression is set to Jpeg.
+            </value>
+            <summary>
+            Gets or sets the JPEG quality used when the image compression is set to
+            Jpeg.
+            </summary>
+            <remarks>
+            Valid values are from 0 to 100.
+            </remarks>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.pageSize">
+            <summary>
+            <para>Gets or sets the size of the PDF pages in PDF Page Units. </para>
+            <para>PDF uses an internal resolution of 72dpi, so an 8.5 x 11 inch page
+            would be 612 x 792 pixels.</para>
+            </summary>
+            <value>
+            The size of the PDF pages in PDF Page Units.
+            </value>
+            <remarks>
+            This value is only used if <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode"/> is FitToPage.
+            </remarks>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.xmp">
+            <summary>
+            Gets or sets a byte array containing XMP data.
+            </summary>
+            <value>
+            A byte array containing XMP data.
+            </value>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfEncoder._documentType">
+            <summary>
+            Specifies the type of PDF document that will be produced, including PDF-A.
+            </summary>
+            <value>
+            A value indicating the type of PDF document that will be produced.
+            </value>
+            <remarks>
+            <para>The default value is PdfDocumentType.Default which allows the encoder
+            the greatest latitude in creating PDF files.</para>
+            <para>When using PDFA1b, the user must provide appropriate ColorSpaces for
+            all images. </para>
+            </remarks>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.useAdvancedImageCompression">
+            <summary>
+            Allows the PdfEncoder to use JPEG2000 or JBIG2 image compression for color
+            and black and white documents respectively.
+            </summary>
+            <remarks>
+            Documents created with advanced image compression are typically smaller than
+            without, but may not be openable by all versions of Acrobat and will not
+            meet PDF/A compliance.  When set to true, this is considered a request to
+            use the DotImage Jpeg2000 encoder for color images and the DotImage JBig2
+            encoder.  These codecs are used only if the associated assemblies are
+            present and if the encoders are licensed.
+            </remarks>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.#ctor">
+            <summary>
+            Creates a new instance of PdfEncoder.
+            </summary>
+            <overloads>
+            Creates a PdfEncoder object.
+            </overloads>
+            <remarks>
+            As of DotImage 7.0 it is possible to create PDF-A/1b compliant documents by
+            setting the DocumentType property in the PdfEncoder object.
+            </remarks>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.#ctor(Atalasoft.Imaging.Codec.Pdf.PdfMetadata)">
+            <summary>
+            Creates a new instance of PdfEncoder specifying metadata.
+            </summary>
+            <param name="metadata">The metadata for this PDF file.</param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.#ctor(Atalasoft.PdfDoc.PdfDocumentType)">
+            <summary>
+            Creates a new instance of PdfEncoder specifying the document type.
+            </summary>
+            <param name="docType">
+            The document type for the resulting PDF
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.#ctor(Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode,System.Drawing.Size,System.Int32,Atalasoft.Imaging.Codec.Pdf.PdfMetadata)">
+            <summary>
+            Creates a new instance of PdfEncoder specifying sizeMode, pageSize, pageBorder and metadata.
+            </summary>
+            <param name="sizeMode">The size method used when creating the page.</param>
+            <param name="pageSize">The page size in pixels.</param>
+            <param name="pageBorder">The page border used for this image.</param>
+            <param name="metadata">The metadata for this PDF file.</param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.#ctor(Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode,System.Drawing.Size,System.Int32,Atalasoft.Imaging.Codec.Pdf.PdfMetadata,Atalasoft.PdfDoc.PdfDocumentType)">
+            <summary>
+            Creates a new instance of PdfEncoder specifying sizeMode, pageSize,
+            pageBorder, metadata and document type.
+            </summary>
+            <param name="sizeMode">
+            The size method used when creating the page.
+            </param>
+            <param name="pageSize">
+            The page size in pixels.
+            </param>
+            <param name="pageBorder">
+            The page border used for this image.   Set to a value greater than 0, this
+            will create a page with a blank border around the image in PDF Page units
+            (72<SUP>nds</SUP> of an inch).
+            </param>
+            <param name="metadata">
+            The metadata for this PDF file.
+            </param>
+            <param name="docType">
+            The document type for the resulting PDF
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.#ctor(System.Int32,Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode,System.Drawing.Size,System.Int32,Atalasoft.Imaging.Codec.Pdf.PdfMetadata)">
+            <summary>
+            Creates an instance of PdfEncoder specifying jpegQuality, sizeMode,
+            pageSize, pageBorder and metadata.
+            </summary>
+            <param name="jpegQuality">
+            The Jpeg quality used when the image compression is set to Jpeg.   The value
+            can range from 1 to 100 where 1 provides the best compression, but least
+            image quality and 100 provides the least compression, but best image
+            quality.
+            </param>
+            <param name="sizeMode">
+            The size method used when creating the page.
+            </param>
+            <param name="pageSize">
+            The page size in pixels.
+            </param>
+            <param name="pageBorder">
+            The page border used for this image.   Set to a value greater than 0, this
+            will create a page with a blank border around the image in PDF Page units
+            (72<sup>nds</sup> of an inch).
+            </param>
+            <param name="metadata">
+            The metadata for this PDF file.
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.Save(System.IO.Stream,Atalasoft.Imaging.AtalaImage,Atalasoft.Imaging.ProgressEventHandler)">
+            <summary>
+            Saves an image to a PDF file.
+            </summary>
+            <param name="stream">The stream to write the PDF into.</param>
+            <param name="image">The AtalaImage to save.</param>
+            <param name="progress">The event handler used for progress events.</param>
+            <returns>The number of bytes written.</returns>
+            <remarks>
+            Uses the default compression (Auto) when saving individual images.
+            </remarks>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.Save(System.IO.Stream,Atalasoft.Imaging.AtalaImage,Atalasoft.Imaging.Codec.Pdf.PdfCompressionType,Atalasoft.Imaging.ProgressEventHandler)">
+            <summary>
+            Creates a single page PDF file from the specified image and compression.
+            </summary>
+            <returns>
+            The number of bytes written to the output stream.
+            </returns>
+            <param name="stream">
+            The stream to write the PDF file into.  This stream must be seekable.
+            </param>
+            <param name="image">
+            The <see cref="T:Atalasoft.Imaging.AtalaImage"/> to encode.
+            </param>
+            <param name="compression">
+            The standard PDF compression to use on the image in the PDF.
+            </param>
+            <param name="progress">
+            The progress delegate.  Can be set to <STRONG>null</STRONG>
+            (<STRONG>Nothing</STRONG> in Visual Basic).
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.Save(System.IO.Stream,Atalasoft.Imaging.Codec.Pdf.PdfImage,Atalasoft.Imaging.ProgressEventHandler)">
+            <summary>
+            Creates a single or multipage page PDF file from the specified
+            <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfImage"/> object.
+            </summary>
+            <returns>
+            <para>The number of bytes written to the output stream.</para>
+            </returns>
+            <param name="stream">
+            The stream to write the PDF file into.  This stream must be seekable.
+            </param>
+            <param name="image">
+            The <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfImage"/> to encode.
+            </param>
+            <param name="progress">
+            The progress delegate.  Can be set to <STRONG>null</STRONG>
+            (<STRONG>Nothing</STRONG> in Visual Basic).
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.Save(System.IO.Stream,Atalasoft.Imaging.ImageCollection,Atalasoft.Imaging.ProgressEventHandler)">
+            <summary>
+            Saves all of the images in an ImageCollection to a PDF file.
+            </summary>
+            <param name="stream">The stream to write the PDF into. This stream must be seekable.</param>
+            <param name="images">An ImageCollection containing all of the images to save.</param>
+            <returns>The number of bytes written.</returns>
+            <param name="progress">
+            The progress delegate.  Can be set to <STRONG>null</STRONG>
+            (<STRONG>Nothing</STRONG> in Visual Basic).
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.Save(System.IO.Stream,Atalasoft.Imaging.Codec.Pdf.PdfImageCollection,Atalasoft.Imaging.ProgressEventHandler)">
+            <summary>
+            Saves one or more images to a PDF file.
+            </summary>
+            <param name="stream">The stream to save the PDF into. This stream must be seekable.</param>
+            <returns>The number of bytes written.</returns>
+            <param name="images">
+            The <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfImageCollection"/> containing images to save.
+            </param>
+            <param name="progress">
+            The progress delegate.  Can be set to <STRONG>null</STRONG>
+            (<STRONG>Nothing</STRONG> in Visual Basic).
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.Save(System.IO.Stream,Atalasoft.Imaging.ImageSource,Atalasoft.Imaging.ProgressEventHandler)">
+            <summary>
+            Saves all of the images in an ImageSource to a PDF file.  Only one Image of the ImageSource
+            is in memory at any one time.
+            </summary>
+            <returns>
+            The number of bytes written to the output stream.
+            </returns>
+            <param name="stream">
+            The stream to write the PDF file into.  This stream must be seekable.
+            </param>
+            <param name="images">
+            An image source representing a set of images to be written to the PDF
+            Document.
+            </param>
+            <param name="progress">
+            The progress delegate.  Can be set to <STRONG>null</STRONG>
+            (<STRONG>Nothing</STRONG> in Visual Basic).
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.Save(System.IO.Stream,Atalasoft.Imaging.Codec.Pdf.IPdfImages,Atalasoft.Imaging.ProgressEventHandler)">
+            <summary>
+            Saves all of the images in an ImageSource to a PDF file.
+            </summary>
+            <param name="stream">The stream to write the PDF into.</param>
+            <param name="pdfImages">An ImageSource containing all of the images to save.</param>
+            <param name="progress">The event handler used for progress events.</param>
+            <returns>The number of bytes written.</returns>
+        </member>
+        <member name="F:Atalasoft.Imaging.Codec.Pdf.PdfEncoder._selfPrintingPdfShrinkToFit">
+            The following property was tested and shown not to work in Adobe Acrobat 8.0.  
+            Leave commented out untill supported by a future version of Acrobat.
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.ToByteArray(Atalasoft.Imaging.AtalaImage,Atalasoft.Imaging.ProgressEventHandler)">
+            <summary>
+            Saves a single image as a PDF to a byte array.
+            </summary>
+            <param name="image">
+            The image to save.
+            </param>
+            <param name="progress">
+            The progress delegate.  Can be set to <strong>null</strong>
+            (<strong>Nothing</strong> in Visual Basic).
+            </param>
+            <overloads>
+            Saves the Pdf to a byte array.
+            </overloads>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.ToByteArray(Atalasoft.Imaging.ImageCollection,Atalasoft.Imaging.ProgressEventHandler)">
+            <summary>
+            Save an <STRONG>ImageCollection</STRONG> as PDF to a byte array.
+            </summary>
+            <param name="images">
+            The ImageCollection to save.
+            </param>
+            <param name="progress">
+            The progress delegate.  Can be set to <STRONG>null</STRONG>
+            (<STRONG>Nothing</STRONG> in Visual Basic).
+            </param>
+        </member>
+        <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.ToByteArray(Atalasoft.Imaging.Codec.Pdf.PdfImageCollection,Atalasoft.Imaging.ProgressEventHandler)">
+            <summary>
+            Saves a <STRONG>PdfImageCollection</STRONG> as PDF to a byte array.
+            </summary>
+            <param name="images">
+            The PdfImageCollection to save.
+            </param>
+            <param name="progress">
+            The progress delegate.  Can be set to <STRONG>null</STRONG>
+            (<STRONG>Nothing</STRONG> in Visual Basic).
+            </param>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.Xmp">
+            <summary>
+            Gets or sets a byte array containing XMP data.
+            </summary>
+            <value>
+            A byte array containing XMP data.
+            </value>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.PageBorder">
+            <summary>
+            Gets or sets the amount of border space around the image in PDF Page Units.
+            </summary>
+            <value>
+            Set to a value greater than 0, this will create a page with a blank border
+            around the image in PDF Page units (72<SUP>nds</SUP> of an inch).
+            </value>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.PageSize">
+            <summary>
+            <para>Gets or sets the size of the PDF pages in PDF Page Units. </para>
+            <para>PDF uses an internal resolution of 72dpi, so an 8.5 x 11 inch page
+            would be 612 x 792 pixels.</para>
+            </summary>
+            <value>
+            The size of the PDF pages in PDF Page Units.
+            </value>
+            <remarks>
+            This value is only used if <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode"/> is FitToPage.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.SizeMode">
+            <summary>
+            Gets or sets the page size mode for this PDF.
+            </summary>
+            <value>
+            The page size mode for this PDF.
+            </value>
+            <remarks>
+            FitToImage will cause the page to be sized to fit the image, while FitToPage
+            will cause the image to be fit to the page.  See <see cref="T:Atalasoft.Imaging.Codec.Pdf.PdfPageSizeMode"/> for more detail.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.Metadata">
+            <summary>
+            Gets or sets the metadata information used for this PDF.
+            </summary>
+            <value>
+            The metadata information used for this PDF.
+            </value>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.JpegQuality">
+            <value>The Jpeg quality used when the image compression is set to Jpeg.</value>
+            <summary>
+            Gets or sets the JPEG quality used when the image compression is set to
+            Jpeg.
+            </summary>
+            <remarks>
+            Valid values are from 0 to 100.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.UserPassword">
+            <summary>
+            Sets or gets a user password to use for the document.  Default value is null
+            (no password).
+            </summary>
+            <remarks>
+            <para>PDF documents have two passwords associated with them, a user password
+            and an owner password.  If an encrypted document is opened by a conforming
+            reader using the owner password, then the security Permissions are ignored. 
+            If an encrypted document is opened by a conforming reader using the user
+            password, then the security Permissions are enforced.  When a document is
+            created with only one password or one unique password, it is considered the
+            same as having only an owner password.</para>
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.OwnerPassword">
+            <remarks>
+            <para>PDF documents have two passwords associated with them, a user password
+            and an owner password.  If an encrypted document is opened by a conforming
+            reader using the owner password, then the security Permissions are ignored. 
+            If an encrypted document is opened by a conforming reader using the user
+            password, then the security Permissions are enforced.  When a document is
+            created with only one password or one unique password, it is considered the
+            same as having only an owner password.</para>
+            </remarks>
+            <summary>
+            Sets or gets an owner password to use for the document.  Default value is
+            null (no password).
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.Permissions">
+            <summary>
+            Sets or gets the set of allowable actions for this PDF.
+            </summary>
+            <remarks>
+            PdfAccessPermissions refer to permissions that are allowed within a PDF
+            document.  Permissions are granted by allowing actions rather than
+            preventing them.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.EncryptMetadata">
+            <summary>
+            Sets or gets a boolean indicating that metadata should be encrypted. 
+            Default is false.
+            </summary>
+            <remarks>
+            When a PDF document is encrypted, nearly all embedded strings and stream
+            data are encrypted.  Metadata strings do not have to be encrypted.  This
+            allows indexing software to retrieve metadata without needing to know
+            document passwords.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.SupportedPixelFormats">
+            <summary>
+            Returns an array of the legal pixel formats accepted by the PdfEncoder.
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.DocumentType">
+            <summary>
+            Specifies the type of PDF document that will be produced, including PDF-A.
+            </summary>
+            <value>
+            A value indicating the type of PDF document that will be produced.
+            </value>
+            <remarks>
+            <para>The default value is PdfDocumentType.Default which allows the encoder
+            the greatest latitude in creating PDF files.</para>
+            <para>When using PDFA1b, the user must provide appropriate ColorSpaces for
+            all images. </para>
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.UseAdvancedImageCompression">
+            <summary>
+            Allows the PdfEncoder to use JPEG2000 or JBIG2 image compression for color
+            and black and white documents respectively.
+            </summary>
+            <remarks>
+            Documents created with advanced image compression are typically smaller than
+            without, but may not be openable by all versions of Acrobat and will not
+            meet PDF/A compliance.  When set to true, this is considered a request to
+            use the DotImage Jpeg2000 encoder for color images and the DotImage JBig2
+            encoder.  These codecs are used only if the associated assemblies are
+            present and if the encoders are licensed.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.BookmarkTree">
+            <summary>
+            Gets or sets the PDF bookmark tree that will be used with this document. 
+            Default value is null (no tree).
+            </summary>
+            <!-- Failed to insert some or all of included XML --><include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.Pdf~Atalasoft.Imaging.Codec.Pdf.PdfEncoder~BookmarkTree&quot;]/*"/>
+        </member>
+        <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfEncoder.CreateSelfPrintingPdf">
+            <summary>
+            Gets or sets a boolean indicating if the output PDF file should be
+            self-printing
+            </summary>
+            <remarks>
+            When set to true, PDF files generated will contain an JavaScript action that
+            requests the PDF document viewer to print the document after opening.  This
+            has the effect of creating a self-printing document.  The user can typically
+            cancel this operation.
+            </remarks>
+        </member>
+    </members>
+</doc>

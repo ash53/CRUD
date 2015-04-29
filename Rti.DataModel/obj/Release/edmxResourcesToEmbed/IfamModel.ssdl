@@ -1,0 +1,1254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACT_RETURN_STATES">
+    <Key>
+      <PropertyRef Name="ACT_RETSTATE_ID" />
+    </Key>
+    <Property Name="ACT_RETSTATE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="RETURN_STATE" Type="char" MaxLength="31" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.ACTGRP_FORWARD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ACTGRP_FORWARD">
+    <Key>
+      <PropertyRef Name="FORWARD_FROM" />
+      <PropertyRef Name="ACTGRP_NAME_ID" />
+      <PropertyRef Name="FORWARD_TO" />
+    </Key>
+    <Property Name="FORWARD_FROM" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACTGRP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="FORWARD_TO" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ACTGRP_NAMES">
+    <Key>
+      <PropertyRef Name="ACTGRP_NAME_ID" />
+    </Key>
+    <Property Name="ACTGRP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACTGRP_NAME" Type="char" MaxLength="75" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.ACTGRP_PERM_HOLD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ACTGRP_PERM_HOLD">
+    <Key>
+      <PropertyRef Name="ACTGRP_NAME_ID" />
+      <PropertyRef Name="MAP_NAME_ID" />
+      <PropertyRef Name="ACT_NAME" />
+    </Key>
+    <Property Name="ACTGRP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME" Type="char" MaxLength="31" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.ACTGRP_PERMISSION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ACTGRP_PERMISSION">
+    <Key>
+      <PropertyRef Name="ACTGRP_NAME_ID" />
+      <PropertyRef Name="MAP_NAME_ID" />
+      <PropertyRef Name="ACT_NAME_ID" />
+    </Key>
+    <Property Name="ACTGRP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ACTIVITY_NAMES">
+    <Key>
+      <PropertyRef Name="ACT_NAME_ID" />
+    </Key>
+    <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME" Type="char" MaxLength="31" Nullable="false" />
+    <Property Name="ACT_TYPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_ATTR" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DEFAULT_PRIORITY" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME_CMD" Type="char" MaxLength="31" Nullable="false" />
+    <Property Name="TIME_STAMP" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="NBR_RETURN_STATES" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="FW" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ACTV_ACT_CONFIG">
+    <Key>
+      <PropertyRef Name="SERV_ID" />
+    </Key>
+    <Property Name="SERV_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACTIVE_ON" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_ACTIVE_RUN" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DEF_PORT_NUM" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLAUSES">
+    <Key>
+      <PropertyRef Name="CLAUSE_ID" />
+    </Key>
+    <Property Name="CLAUSE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="SEQUENCE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CLAUSE_STATUS" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACCESS_NAME" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="RETURN_STATE" Type="char" MaxLength="31" Nullable="false" />
+    <Property Name="CONDITION" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="char" MaxLength="119" Nullable="false" />
+    <Property Name="MEMBER_TYPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LOCK_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACCESS_TYPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACCESS_OPERATION" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACCESS_NAME_STATUS" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="RETURN_STATE_USAGE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACTION_TYPE" Type="number" Precision="38" Scale="0" />
+    <Property Name="ACTION_CMD" Type="char" MaxLength="119" />
+    <Property Name="ACTION_DATA" Type="char" MaxLength="119" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.CONFIG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CONFIG">
+    <Key>
+      <PropertyRef Name="CF_SEC_NAME" />
+      <PropertyRef Name="CF_SUB_SEC_NAME" />
+    </Key>
+    <Property Name="CF_SEC_NAME" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="CF_SUB_SEC_NAME" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="CF_VALUE" Type="char" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="COUR_WAIT_CONFIG">
+    <Key>
+      <PropertyRef Name="SERV_ID" />
+    </Key>
+    <Property Name="SERV_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CRR_WAIT_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DEF_PORT_NUM" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COURIER_INFO">
+    <Key>
+      <PropertyRef Name="COURIER_ID" />
+    </Key>
+    <Property Name="COURIER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LOG_CONTROL" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="RESERVED_1" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="RESERVED_2" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="RESERVED_3" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PLX_RSERVC1" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC2" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC3" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC4" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC5" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC6" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC7" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC8" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC9" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC10" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC11" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC12" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC13" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC14" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC15" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC16" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC17" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC18" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC19" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVC20" Type="char" MaxLength="1" />
+    <Property Name="PLX_RSERVI1" Type="number" Precision="15" Scale="0" />
+    <Property Name="PLX_RSERVI2" Type="number" Precision="15" Scale="0" />
+    <Property Name="DESCRIPTION" Type="char" MaxLength="119" Nullable="false" />
+    <Property Name="REFERENCE" Type="char" MaxLength="119" Nullable="false" />
+    <Property Name="TOP_MAP_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COURIER_INSTANCE">
+    <Key>
+      <PropertyRef Name="COURIER_INST_ID" />
+    </Key>
+    <Property Name="COURIER_INST_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="COURIER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PRIORITY" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="STATUS" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PARENT_COURIER" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="SPLIT_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_INST_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="NODE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PREV_MAP_INST_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PREV_NODE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="EVENT_CODE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="RENDEZVOUS_NODE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="USER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LOGIN_HANDLE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CREATE_DATE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="REQUEST_DATE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="IN_ACT_DATE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PRIORITY_INCREMENT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="RETURN_STATE" Type="char" MaxLength="31" Nullable="false" />
+    <Property Name="ACT_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LIST_START_USER" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LIST_START_TYPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LIST_START_USRGRP" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LIST_CONT_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="RETURN_VALUE" Type="char" MaxLength="119" Nullable="false" />
+    <Property Name="SERV_ID" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="COURIER_LOG">
+    <Key>
+      <PropertyRef Name="TRANSACTION_NO" />
+    </Key>
+    <Property Name="TRANSACTION_NO" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="COURIER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="COURIER_INST_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="NODE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="RETURN_STATE" Type="char" MaxLength="31" Nullable="false" />
+    <Property Name="USER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MACH_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="IN_ACT_DATE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="REQUEST_DATE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="RETURN_DATE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ROOT_LOGIN" Type="char" MaxLength="15" />
+    <Property Name="USER_TAG" Type="char" MaxLength="63" />
+    <Property Name="MAP_NAME" Type="char" MaxLength="31" />
+    <Property Name="ACT_NAME" Type="char" MaxLength="31" />
+    <Property Name="USER_NAME" Type="char" MaxLength="15" />
+    <Property Name="MACH_NAME" Type="char" MaxLength="19" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.DBVERSION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DBVERSION">
+    <Key>
+      <PropertyRef Name="VERSION_NUM" />
+    </Key>
+    <Property Name="VERSION_NUM" Type="char" MaxLength="31" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.DEADLINE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DEADLINE">
+    <Key>
+      <PropertyRef Name="COURIER_ID" />
+      <PropertyRef Name="DEADLINE" />
+      <PropertyRef Name="DEADLINE_ACTION" />
+      <PropertyRef Name="PRIORITY_INCREMENT" />
+      <PropertyRef Name="ACTION_COMPLETED" />
+    </Key>
+    <Property Name="DEADLINE_ID" Type="number" Precision="15" Scale="0" />
+    <Property Name="COURIER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DEADLINE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DEADLINE_ACTION" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PRIORITY_INCREMENT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACTION_COMPLETED" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DEADLINE_CMD" Type="char" MaxLength="255" />
+    <Property Name="DEADLINE_STRING" Type="char" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="DEADLINE_CONFIG">
+    <Key>
+      <PropertyRef Name="SERV_ID" />
+    </Key>
+    <Property Name="SERV_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DDLN_ON" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CURR_DDLN" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PRIORITY_INC" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_PRIORITY" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DEF_PORT_NUM" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.DEF_PERM_HOLD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DEF_PERM_HOLD">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="MAP_NAME_ID" />
+      <PropertyRef Name="ACT_NAME" />
+    </Key>
+    <Property Name="USER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME" Type="char" MaxLength="31" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.ERROR_MSG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ERROR_MSG">
+    <Key>
+      <PropertyRef Name="LANG_ID" />
+      <PropertyRef Name="ERR_ID" />
+      <PropertyRef Name="MSG_TYPE" />
+      <PropertyRef Name="ERR_MSG" />
+    </Key>
+    <Property Name="LANG_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ERR_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MSG_TYPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ERR_MSG" Type="char" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EVENT_LOG_CONFIG">
+    <Key>
+      <PropertyRef Name="SERV_ID" />
+    </Key>
+    <Property Name="SERV_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LOG_LEVEL" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="COUNTRY_CODE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DISK_LOG_CAP" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DEBUG_FILE" Type="char" MaxLength="255" />
+    <Property Name="LOG_FILE" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="DEF_PORT_NUM" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.FLOW_STAT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FLOW_STAT">
+    <Key>
+      <PropertyRef Name="FLOW_STAT_STR" />
+      <PropertyRef Name="FLOW_STAT_CNT_STR" />
+    </Key>
+    <Property Name="FLOW_STAT_STR" Type="char" MaxLength="39" Nullable="false" />
+    <Property Name="FLOW_STAT_CNT_STR" Type="char" MaxLength="39" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FWSYS_CONFIG">
+    <Key>
+      <PropertyRef Name="DOMAIN_ID" />
+    </Key>
+    <Property Name="DOMAIN_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_MIFAM_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_CIFAM_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_PROC_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_DDLN_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_SYSMON_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_STAT_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_SRC_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="TRANS_MEM_KEY" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="TRANS_SEM_KEY" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="SYS_STATE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CURR_MIFAM_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CURR_CIFAM_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CURR_PROC_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CURR_DDLN_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CURR_SYSMON_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CURR_STAT_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CURR_SRC_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DAP_FORMULA" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="DAP_PRIOR_INC" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DAP_COUR_THRESH" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CONFIG_FILE" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="FW_DBNAME" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="IFSM_LOG_FILE" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="DEF_AGENT_PORT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="JDBC_URL" Type="char" MaxLength="1023" Nullable="false" />
+    <Property Name="JDBC_DRIVER" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="MAX_NIMBED_STR" Type="char" MaxLength="39" Nullable="false" />
+    <Property Name="FMK_STR" Type="char" MaxLength="39" />
+    <Property Name="SERIAL_STR" Type="char" MaxLength="39" Nullable="false" />
+    <Property Name="VERSION" Type="char" MaxLength="39" Nullable="false" />
+    <Property Name="CTLINFO_INTVAL" Type="number" Precision="15" Scale="0" />
+  </EntityType>
+  <EntityType Name="FWSYS_HOSTS">
+    <Key>
+      <PropertyRef Name="HOST_ID" />
+    </Key>
+    <Property Name="HOST_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="HOST_NAME" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="IP_ADDR" Type="char" MaxLength="31" Nullable="false" />
+    <Property Name="ACTIVE_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="BIN_PATH" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="DISP_DEV" Type="char" MaxLength="255" />
+    <Property Name="MIFAM_NAME" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="MAX_EXEC_RESP_TIME" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_SHUT_RESP_TIME" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_RESP_TIME" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PWD_AUTH_TYPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PWD_AUTH_FILE" Type="char" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.FWSYS_PROC_CONFIG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FWSYS_PROC_CONFIG">
+    <Key>
+      <PropertyRef Name="HOST_ID" />
+      <PropertyRef Name="HOST_NAME" />
+      <PropertyRef Name="PROC_NAME" />
+      <PropertyRef Name="SYSMON_HOST" />
+      <PropertyRef Name="LOG_FILE" />
+    </Key>
+    <Property Name="HOST_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="HOST_NAME" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="PROC_NAME" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="SYSMON_HOST" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="LOG_FILE" Type="char" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FWSYS_SERVICES">
+    <Key>
+      <PropertyRef Name="SERV_ID" />
+    </Key>
+    <Property Name="SERV_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="HOST_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="SERV_PID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="SERV_TYPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DOMAIN_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="STATE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="NEXT_STATE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="NEXT_STATE_TIME" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CMD" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CMD_TIME" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="STATUS" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PERSISTENCE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="R_PID" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HIST_CONFIG">
+    <Key>
+      <PropertyRef Name="SERV_ID" />
+    </Key>
+    <Property Name="SERV_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="HIST_ON" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="HIST_INTERVAL" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DEF_PORT_NUM" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'IFAM.HIST_CONTROL' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="HIST_CONTROL">
+          <Property Name="HIST_SEQ" Type="number" Precision="15" Scale="0" />
+          <Property Name="HIST_HRS" Type="number" Precision="15" Scale="0" />
+          <Property Name="HIST_MINS" Type="number" Precision="15" Scale="0" />
+          <Property Name="HIST_DATE" Type="date" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'IFAM.HIST_MAP' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="HIST_MAP">
+          <Property Name="HIST_SEQ" Type="number" Precision="15" Scale="0" />
+          <Property Name="MAP_NAME" Type="char" MaxLength="31" />
+          <Property Name="MAP_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="USERS" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_AVAILABLE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_IN_USE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_FRIED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_SUSPENDED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_ZOMBIE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_WIP" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_WAITING" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_RETURNED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_CREATED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_KILLED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_PEAK" Type="number" Precision="15" Scale="0" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'IFAM.HIST_MAPACT' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="HIST_MAPACT">
+          <Property Name="HIST_SEQ" Type="number" Precision="15" Scale="0" />
+          <Property Name="MAP_NAME" Type="char" MaxLength="31" />
+          <Property Name="ACT_NAME" Type="char" MaxLength="31" />
+          <Property Name="ACT_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="USERS" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_AVAILABLE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_IN_USE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_FRIED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_SUSPENDED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_ZOMBIE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_WIP" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_WAITING" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_RETURNED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_CREATED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_KILLED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_PEAK" Type="number" Precision="15" Scale="0" />
+          <Property Name="AVL_ACT_STD" Type="number" Precision="15" Scale="0" />
+          <Property Name="AVL_ACT_MEAN" Type="number" Precision="15" Scale="0" />
+          <Property Name="AVL_ACT_LONG" Type="number" Precision="15" Scale="0" />
+          <Property Name="AVL_ACT_SHORT" Type="number" Precision="15" Scale="0" />
+          <Property Name="ACT_AVL_STD" Type="number" Precision="15" Scale="0" />
+          <Property Name="ACT_AVL_MEAN" Type="number" Precision="15" Scale="0" />
+          <Property Name="ACT_AVL_LONG" Type="number" Precision="15" Scale="0" />
+          <Property Name="ACT_AVL_SHORT" Type="number" Precision="15" Scale="0" />
+          <Property Name="SUS_ACT_STD" Type="number" Precision="15" Scale="0" />
+          <Property Name="SUS_ACT_MEAN" Type="number" Precision="15" Scale="0" />
+          <Property Name="SUS_ACT_LONG" Type="number" Precision="15" Scale="0" />
+          <Property Name="SUS_ACT_SHORT" Type="number" Precision="15" Scale="0" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'IFAM.HIST_SYSACT' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="HIST_SYSACT">
+          <Property Name="HIST_SEQ" Type="number" Precision="15" Scale="0" />
+          <Property Name="MAP_NAME" Type="char" MaxLength="31" />
+          <Property Name="ACT_NAME" Type="char" MaxLength="31" />
+          <Property Name="ACT_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="USERS" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_AVAILABLE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_IN_USE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_FRIED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_SUSPENDED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_ZOMBIE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_WIP" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_WAITING" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_RETURNED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_CREATED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_KILLED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_PEAK" Type="number" Precision="15" Scale="0" />
+          <Property Name="AVL_ACT_STD" Type="number" Precision="15" Scale="0" />
+          <Property Name="AVL_ACT_MEAN" Type="number" Precision="15" Scale="0" />
+          <Property Name="AVL_ACT_LONG" Type="number" Precision="15" Scale="0" />
+          <Property Name="AVL_ACT_SHORT" Type="number" Precision="15" Scale="0" />
+          <Property Name="ACT_AVL_STD" Type="number" Precision="15" Scale="0" />
+          <Property Name="ACT_AVL_MEAN" Type="number" Precision="15" Scale="0" />
+          <Property Name="ACT_AVL_LONG" Type="number" Precision="15" Scale="0" />
+          <Property Name="ACT_AVL_SHORT" Type="number" Precision="15" Scale="0" />
+          <Property Name="SUS_ACT_STD" Type="number" Precision="15" Scale="0" />
+          <Property Name="SUS_ACT_MEAN" Type="number" Precision="15" Scale="0" />
+          <Property Name="SUS_ACT_LONG" Type="number" Precision="15" Scale="0" />
+          <Property Name="SUS_ACT_SHORT" Type="number" Precision="15" Scale="0" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'IFAM.HIST_SYSTEM' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="HIST_SYSTEM">
+          <Property Name="HIST_SEQ" Type="number" Precision="15" Scale="0" />
+          <Property Name="USERS" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_AVAILABLE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_IN_USE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_FRIED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_SUSPENDED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_ZOMBIE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_WIP" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_WAITING" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_RETURNED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_CREATED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_KILLED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_PEAK" Type="number" Precision="15" Scale="0" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'IFAM.HIST_USER' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="HIST_USER">
+          <Property Name="HIST_SEQ" Type="number" Precision="15" Scale="0" />
+          <Property Name="USER_NAME" Type="char" MaxLength="15" />
+          <Property Name="USER_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="MAP_NAME" Type="char" MaxLength="31" />
+          <Property Name="CURR_MAP_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="ACT_NAME" Type="char" MaxLength="31" />
+          <Property Name="CURR_ACT_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="CURR_ACT_NAME_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="LOGIN_HANDLE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_IN_USE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_RECEIVED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_RETURNED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_CREATED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_KILLED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_SUSPENDED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_FRIED" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_ZOMBIE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_WIP" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_WAITING" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_AVAILABLE" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_PEAK" Type="number" Precision="15" Scale="0" />
+          <Property Name="COURIERS_CHKD_OUT" Type="number" Precision="15" Scale="0" />
+          <Property Name="LOGIN_TIME" Type="number" Precision="15" Scale="0" />
+          <Property Name="MAP_START" Type="number" Precision="15" Scale="0" />
+          <Property Name="LAST_MAP_TIME" Type="number" Precision="15" Scale="0" />
+          <Property Name="ACTIVITY_START" Type="number" Precision="15" Scale="0" />
+          <Property Name="LAST_ACTIVITY_TIME" Type="number" Precision="15" Scale="0" />
+        </EntityType>-->
+  <EntityType Name="IFAM_CONFIG">
+    <Key>
+      <PropertyRef Name="SERV_ID" />
+    </Key>
+    <Property Name="SERV_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="IFAM_TYPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CIFAM_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="USER_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CRR_LOG_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LOG_HANDLE_BASE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DATALIST_SEC_CHK" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="TRACE_FILE" Type="char" MaxLength="255" />
+    <Property Name="MAX_RUN_TIME" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CURRENCY_PREC" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MORE_ROWS_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DEF_PORT_NUM" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="COMP_UPD_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LDAP_CONFIG">
+    <Key>
+      <PropertyRef Name="SERV_ID" />
+    </Key>
+    <Property Name="SERV_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DEF_AUTH" Type="char" MaxLength="31" Nullable="false" />
+    <Property Name="HOST_NAME" Type="char" MaxLength="255" />
+    <Property Name="PORT_NUM" Type="number" Precision="15" Scale="0" />
+    <Property Name="SCOPE" Type="char" MaxLength="31" />
+    <Property Name="BASE" Type="char" MaxLength="255" />
+    <Property Name="SEARCH_FILT" Type="char" MaxLength="255" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'IFAM.LOG_TEXT' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="LOG_TEXT">
+          <Property Name="COUNTRY_CODE" Type="number" Precision="15" Scale="0" />
+          <Property Name="EVENT_CODE" Type="number" Precision="15" Scale="0" />
+          <Property Name="AUDIENCE_TYPE" Type="number" Precision="15" Scale="0" />
+          <Property Name="EVENT_TEXT_FORMAT" Type="char" MaxLength="255" />
+        </EntityType>-->
+  <EntityType Name="LOGIN">
+    <Key>
+      <PropertyRef Name="LOGIN_HANDLE" />
+    </Key>
+    <Property Name="LOGIN_HANDLE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="USER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MACH_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LOGIN_TIME" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="SERV_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="TIME_STAMP" Type="number" Precision="15" Scale="0" />
+  </EntityType>
+  <EntityType Name="MACHINE_DATA">
+    <Key>
+      <PropertyRef Name="MACH_ID" />
+    </Key>
+    <Property Name="MACH_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MACH_NAME" Type="char" MaxLength="19" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAP">
+    <Key>
+      <PropertyRef Name="MAP_ID" />
+    </Key>
+    <Property Name="MAP_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_VERSION" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_STATE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="START_NODE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="TIME_STAMP" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ERROR_ACTIVITY_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAP_ACT">
+    <Key>
+      <PropertyRef Name="ACT_ID" />
+    </Key>
+    <Property Name="ACT_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_STATUS" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PRIORITY" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_ATTR" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.MAP_ACT_INST' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MAP_ACT_INST">
+    <Key>
+      <PropertyRef Name="MAP_NAME_ID" />
+      <PropertyRef Name="ACT_NAME_ID" />
+      <PropertyRef Name="MAP_ID" />
+    </Key>
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.MAP_DATA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MAP_DATA">
+    <Key>
+      <PropertyRef Name="MAP_ID" />
+      <PropertyRef Name="MAP_DATA_TYPE" />
+      <PropertyRef Name="MAP_DATA_SIZE" />
+      <PropertyRef Name="TIME_STAMP" />
+      <PropertyRef Name="LOCK_FLAG" />
+    </Key>
+    <Property Name="MAP_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_DATA_TYPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_DATA_SIZE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="TIME_STAMP" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LOCK_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="char" MaxLength="59" />
+    <Property Name="MAP_DATA_BLOB" Type="blob" />
+  </EntityType>
+  <EntityType Name="MAP_INSTANCES">
+    <Key>
+      <PropertyRef Name="MAP_INST_ID" />
+    </Key>
+    <Property Name="MAP_INST_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PARENT_MAP_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PARENT_NODE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="PARENT_MAP_INST_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="TOP_MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MAP_NAMES">
+    <Key>
+      <PropertyRef Name="MAP_NAME_ID" />
+    </Key>
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_NAME" Type="char" MaxLength="31" Nullable="false" />
+    <Property Name="MAP_LOGIN" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LATEST_VERSION" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="RETAIN_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="FW" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="COMMIT_LH" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NODE">
+    <Key>
+      <PropertyRef Name="NODE_ID" />
+    </Key>
+    <Property Name="NODE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="NODE_TYPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LINK_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="USER_NODE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.PERMISSION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PERMISSION">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="MAP_NAME_ID" />
+      <PropertyRef Name="ACT_NAME_ID" />
+      <PropertyRef Name="ACTGRP_NAME_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACTGRP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="COUNTER" Type="number" Precision="15" Scale="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.PERMISSION_HOLD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PERMISSION_HOLD">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="MAP_NAME_ID" />
+      <PropertyRef Name="ACT_NAME" />
+    </Key>
+    <Property Name="USER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME" Type="char" MaxLength="31" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'IFAM.PLAN_TABLE' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="PLAN_TABLE">
+          <Property Name="STATEMENT_ID" Type="varchar2" MaxLength="30" />
+          <Property Name="TIMESTAMP" Type="date" />
+          <Property Name="REMARKS" Type="varchar2" MaxLength="80" />
+          <Property Name="OPERATION" Type="varchar2" MaxLength="30" />
+          <Property Name="OPTIONS" Type="varchar2" MaxLength="30" />
+          <Property Name="OBJECT_NODE" Type="varchar2" MaxLength="128" />
+          <Property Name="OBJECT_OWNER" Type="varchar2" MaxLength="30" />
+          <Property Name="OBJECT_NAME" Type="varchar2" MaxLength="30" />
+          <Property Name="OBJECT_INSTANCE" Type="number" Precision="38" Scale="0" />
+          <Property Name="OBJECT_TYPE" Type="varchar2" MaxLength="30" />
+          <Property Name="OPTIMIZER" Type="varchar2" MaxLength="255" />
+          <Property Name="SEARCH_COLUMNS" Type="number" Precision="38" Scale="0" />
+          <Property Name="ID" Type="number" Precision="38" Scale="0" />
+          <Property Name="PARENT_ID" Type="number" Precision="38" Scale="0" />
+          <Property Name="POSITION" Type="number" Precision="38" Scale="0" />
+          <Property Name="COST" Type="number" Precision="38" Scale="0" />
+          <Property Name="CARDINALITY" Type="number" Precision="38" Scale="0" />
+          <Property Name="BYTES" Type="number" Precision="38" Scale="0" />
+          <Property Name="OTHER_TAG" Type="varchar2" MaxLength="255" />
+          <Property Name="PARTITION_START" Type="varchar2" MaxLength="255" />
+          <Property Name="PARTITION_STOP" Type="varchar2" MaxLength="255" />
+          <Property Name="PARTITION_ID" Type="number" Precision="38" Scale="0" />
+          <Property Name="OTHER" Type="long" />
+          <Property Name="DISTRIBUTION" Type="varchar2" MaxLength="30" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.PLX_ACCESS_ALLOW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PLX_ACCESS_ALLOW">
+    <Key>
+      <PropertyRef Name="ACCESS_ID" />
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="GRP_ID" />
+    </Key>
+    <Property Name="ACCESS_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="USER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="GRP_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.PLX_ACCESS_DENY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PLX_ACCESS_DENY">
+    <Key>
+      <PropertyRef Name="ACCESS_ID" />
+      <PropertyRef Name="USER_ID" />
+      <PropertyRef Name="GRP_ID" />
+    </Key>
+    <Property Name="ACCESS_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="USER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="GRP_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.ROUTE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ROUTE">
+    <Key>
+      <PropertyRef Name="NODE_ID" />
+      <PropertyRef Name="RETURN_STATE" />
+      <PropertyRef Name="NEXT_NODE_ID" />
+    </Key>
+    <Property Name="NODE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="RETURN_STATE" Type="char" MaxLength="31" Nullable="false" />
+    <Property Name="NEXT_NODE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.RTI_STATUS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RTI_STATUS">
+    <Key>
+      <PropertyRef Name="MAP" />
+      <PropertyRef Name="ACTIVITY" />
+      <PropertyRef Name="AVAILABLE" />
+      <PropertyRef Name="INUSE" />
+      <PropertyRef Name="FRIED" />
+      <PropertyRef Name="SUSP" />
+      <PropertyRef Name="ZOMBIE" />
+      <PropertyRef Name="WIP" />
+      <PropertyRef Name="TOTAL" />
+    </Key>
+    <Property Name="MAP" Type="varchar2" MaxLength="31" Nullable="false" />
+    <Property Name="ACTIVITY" Type="varchar2" MaxLength="31" Nullable="false" />
+    <Property Name="AVAILABLE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="INUSE" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="FRIED" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="SUSP" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ZOMBIE" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="WIP" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="TOTAL" Type="number" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.RULE_CONTROL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RULE_CONTROL">
+    <Key>
+      <PropertyRef Name="LOCK_FLAG" />
+    </Key>
+    <Property Name="LOCK_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SERIAL_CONFIG">
+    <Key>
+      <PropertyRef Name="SERV_ID" />
+    </Key>
+    <Property Name="SERV_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DEF_PORT_NUM" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SERIAL_IDS">
+    <Key>
+      <PropertyRef Name="SERIAL_ID" />
+    </Key>
+    <Property Name="SERIAL_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CURRENT_ID" Type="number" Precision="38" Scale="0" />
+    <Property Name="CACHING_FACTOR" Type="number" Precision="38" Scale="0" />
+    <Property Name="TRANSACTION_NO" Type="number" Precision="38" Scale="0" />
+    <Property Name="STATUS" Type="number" Precision="38" Scale="0" />
+    <Property Name="RESERVED1" Type="number" Precision="38" Scale="0" />
+    <Property Name="RESERVED2" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.SPLIT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SPLIT">
+    <Key>
+      <PropertyRef Name="SPLIT_ID" />
+      <PropertyRef Name="NODE_ID" />
+    </Key>
+    <Property Name="SPLIT_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="NODE_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'IFAM.SQLN_EXPLAIN_PLAN' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SQLN_EXPLAIN_PLAN">
+          <Property Name="STATEMENT_ID" Type="varchar2" MaxLength="30" />
+          <Property Name="TIMESTAMP" Type="date" />
+          <Property Name="REMARKS" Type="varchar2" MaxLength="80" />
+          <Property Name="OPERATION" Type="varchar2" MaxLength="30" />
+          <Property Name="OPTIONS" Type="varchar2" MaxLength="30" />
+          <Property Name="OBJECT_NODE" Type="varchar2" MaxLength="128" />
+          <Property Name="OBJECT_OWNER" Type="varchar2" MaxLength="30" />
+          <Property Name="OBJECT_NAME" Type="varchar2" MaxLength="30" />
+          <Property Name="OBJECT_INSTANCE" Type="number" Precision="38" Scale="0" />
+          <Property Name="OBJECT_TYPE" Type="varchar2" MaxLength="30" />
+          <Property Name="OPTIMIZER" Type="varchar2" MaxLength="255" />
+          <Property Name="SEARCH_COLUMNS" Type="number" Precision="38" Scale="0" />
+          <Property Name="ID" Type="number" Precision="38" Scale="0" />
+          <Property Name="PARENT_ID" Type="number" Precision="38" Scale="0" />
+          <Property Name="POSITION" Type="number" Precision="38" Scale="0" />
+          <Property Name="COST" Type="number" Precision="38" Scale="0" />
+          <Property Name="CARDINALITY" Type="number" Precision="38" Scale="0" />
+          <Property Name="BYTES" Type="number" Precision="38" Scale="0" />
+          <Property Name="OTHER_TAG" Type="varchar2" MaxLength="255" />
+          <Property Name="PARTITION_START" Type="varchar2" MaxLength="255" />
+          <Property Name="PARTITION_STOP" Type="varchar2" MaxLength="255" />
+          <Property Name="PARTITION_ID" Type="number" Precision="38" Scale="0" />
+          <Property Name="OTHER" Type="long" />
+          <Property Name="DISTRIBUTION" Type="varchar2" MaxLength="30" />
+        </EntityType>-->
+  <EntityType Name="STAT_CONFIG">
+    <Key>
+      <PropertyRef Name="SERV_ID" />
+    </Key>
+    <Property Name="SERV_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_MAP_STAT_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_MACT_STAT_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_SACT_STAT_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAX_USER_STAT_CNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="STAT_ON" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="STAT_MEM_KEY" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="STAT_MEM_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="STAT_QKEY" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="STAT_QID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="CRITICAL" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="FLUSH_FILE" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="STAT_DBNAME" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="STAT_NAME" Type="char" MaxLength="31" Nullable="false" />
+    <Property Name="DEF_PORT_NUM" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'IFAM.SYSTEM_LOG' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SYSTEM_LOG">
+          <Property Name="COUNTRY_CODE" Type="number" Precision="15" Scale="0" />
+          <Property Name="LOG_ENTRY_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="EVENT_TIME" Type="number" Precision="15" Scale="0" />
+          <Property Name="MACH_NAME" Type="char" MaxLength="19" />
+          <Property Name="LOGIN_NAME" Type="char" MaxLength="15" />
+          <Property Name="LOGIN_HANDLE" Type="number" Precision="15" Scale="0" />
+          <Property Name="PROCESS_ID" Type="number" Precision="15" Scale="0" />
+          <Property Name="VENDOR_NAME" Type="char" MaxLength="30" />
+          <Property Name="MODULE_NAME" Type="char" MaxLength="24" />
+          <Property Name="LINE_NUMBER" Type="char" MaxLength="6" />
+          <Property Name="MAP_NAME" Type="char" MaxLength="31" />
+          <Property Name="ACT_NAME" Type="char" MaxLength="31" />
+          <Property Name="EVENT_CODE" Type="number" Precision="15" Scale="0" />
+          <Property Name="EVENT_HINTS" Type="number" Precision="15" Scale="0" />
+          <Property Name="VAR_DATA" Type="char" MaxLength="255" />
+        </EntityType>-->
+  <EntityType Name="TABLE_INFO">
+    <Key>
+      <PropertyRef Name="TABLE_NAME_ID" />
+    </Key>
+    <Property Name="TABLE_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="BUS_TABLE_NAME" Type="char" MaxLength="31" Nullable="false" />
+    <Property Name="CLEANUP_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USER_GROUP_NAMES">
+    <Key>
+      <PropertyRef Name="USERGRP_ID" />
+    </Key>
+    <Property Name="USERGRP_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="USERGRP_NAME" Type="char" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.USER_GROUPS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="USER_GROUPS">
+    <Key>
+      <PropertyRef Name="USERGRP_ID" />
+      <PropertyRef Name="USERGRP_MBR_TYPE" />
+      <PropertyRef Name="USERGRP_MBR_ID" />
+    </Key>
+    <Property Name="USERGRP_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="USERGRP_MBR_TYPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="USERGRP_MBR_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LOGIN_NAME" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="PASSWORD" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="FIRST_NAME" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="MIDDLE_NAME" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="LAST_NAME" Type="char" MaxLength="19" Nullable="false" />
+    <Property Name="MAP_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACT_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LOGIN_LIMIT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LOGIN_COUNT" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DELETE_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACCESS_LEVEL" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAP_PRIVILEGE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="USER_STATUS" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="LOCK_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="MAIL_ADDRESS" Type="char" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VARIABLES">
+    <Key>
+      <PropertyRef Name="VARIABLE_NAME_ID" />
+    </Key>
+    <Property Name="VARIABLE_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="VARIABLE_NAME" Type="char" MaxLength="31" Nullable="false" />
+    <Property Name="SCOPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DATATYPE" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="ACCESS_LEVEL" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="char" MaxLength="119" Nullable="false" />
+    <Property Name="LOCK_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="VALUE_LOCK_FLAG" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="BUS_TABLE_NAME" Type="char" MaxLength="31" />
+    <Property Name="BUS_COLUMN_NAME" Type="char" MaxLength="19" />
+    <Property Name="LENGTH" Type="number" Precision="15" Scale="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.WF_CHAR128' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WF_CHAR128">
+    <Key>
+      <PropertyRef Name="VARIABLE_NAME_ID" />
+      <PropertyRef Name="COURIER_ID" />
+      <PropertyRef Name="VARIABLE_VALUE" />
+    </Key>
+    <Property Name="VARIABLE_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="COURIER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="VARIABLE_VALUE" Type="char" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.WF_CURRENCY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WF_CURRENCY">
+    <Key>
+      <PropertyRef Name="VARIABLE_NAME_ID" />
+      <PropertyRef Name="COURIER_ID" />
+      <PropertyRef Name="VARIABLE_VALUE" />
+    </Key>
+    <Property Name="VARIABLE_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="COURIER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="VARIABLE_VALUE" Type="number" Precision="15" Scale="2" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.WF_DATETIME' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WF_DATETIME">
+    <Key>
+      <PropertyRef Name="VARIABLE_NAME_ID" />
+      <PropertyRef Name="COURIER_ID" />
+      <PropertyRef Name="VARIABLE_VALUE" />
+    </Key>
+    <Property Name="VARIABLE_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="COURIER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="VARIABLE_VALUE" Type="char" MaxLength="19" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.WF_FLOAT64' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WF_FLOAT64">
+    <Key>
+      <PropertyRef Name="VARIABLE_NAME_ID" />
+      <PropertyRef Name="COURIER_ID" />
+      <PropertyRef Name="VARIABLE_VALUE" />
+    </Key>
+    <Property Name="VARIABLE_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="COURIER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="VARIABLE_VALUE" Type="number" Precision="38" Scale="19" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IFAM.WF_INT32' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WF_INT32">
+    <Key>
+      <PropertyRef Name="VARIABLE_NAME_ID" />
+      <PropertyRef Name="COURIER_ID" />
+      <PropertyRef Name="VARIABLE_VALUE" />
+    </Key>
+    <Property Name="VARIABLE_NAME_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="COURIER_ID" Type="number" Precision="15" Scale="0" Nullable="false" />
+    <Property Name="VARIABLE_VALUE" Type="number" Precision="15" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="StoreContainer">
+    <EntitySet Name="ACT_RETURN_STATES" EntityType="Self.ACT_RETURN_STATES" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="ACTGRP_NAMES" EntityType="Self.ACTGRP_NAMES" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="ACTIVITY_NAMES" EntityType="Self.ACTIVITY_NAMES" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="ACTV_ACT_CONFIG" EntityType="Self.ACTV_ACT_CONFIG" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="CLAUSES" EntityType="Self.CLAUSES" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="COUR_WAIT_CONFIG" EntityType="Self.COUR_WAIT_CONFIG" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="COURIER_INFO" EntityType="Self.COURIER_INFO" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="COURIER_INSTANCE" EntityType="Self.COURIER_INSTANCE" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="COURIER_LOG" EntityType="Self.COURIER_LOG" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="DEADLINE_CONFIG" EntityType="Self.DEADLINE_CONFIG" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="EVENT_LOG_CONFIG" EntityType="Self.EVENT_LOG_CONFIG" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="FWSYS_CONFIG" EntityType="Self.FWSYS_CONFIG" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="FWSYS_HOSTS" EntityType="Self.FWSYS_HOSTS" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="FWSYS_SERVICES" EntityType="Self.FWSYS_SERVICES" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="HIST_CONFIG" EntityType="Self.HIST_CONFIG" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="IFAM_CONFIG" EntityType="Self.IFAM_CONFIG" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="LDAP_CONFIG" EntityType="Self.LDAP_CONFIG" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="LOGIN" EntityType="Self.LOGIN" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="MACHINE_DATA" EntityType="Self.MACHINE_DATA" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="MAP" EntityType="Self.MAP" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="MAP_ACT" EntityType="Self.MAP_ACT" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="MAP_INSTANCES" EntityType="Self.MAP_INSTANCES" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="MAP_NAMES" EntityType="Self.MAP_NAMES" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="NODE" EntityType="Self.NODE" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="SERIAL_CONFIG" EntityType="Self.SERIAL_CONFIG" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="SERIAL_IDS" EntityType="Self.SERIAL_IDS" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="STAT_CONFIG" EntityType="Self.STAT_CONFIG" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="TABLE_INFO" EntityType="Self.TABLE_INFO" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="USER_GROUP_NAMES" EntityType="Self.USER_GROUP_NAMES" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="VARIABLES" EntityType="Self.VARIABLES" Schema="IFAM" store:Type="Tables" />
+    <EntitySet Name="ACTGRP_FORWARD" EntityType="Self.ACTGRP_FORWARD" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"ACTGRP_FORWARD"."FORWARD_FROM" AS "FORWARD_FROM", 
+"ACTGRP_FORWARD"."ACTGRP_NAME_ID" AS "ACTGRP_NAME_ID", 
+"ACTGRP_FORWARD"."FORWARD_TO" AS "FORWARD_TO"
+FROM "IFAM"."ACTGRP_FORWARD" "ACTGRP_FORWARD"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ACTGRP_PERM_HOLD" EntityType="Self.ACTGRP_PERM_HOLD" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"ACTGRP_PERM_HOLD"."ACTGRP_NAME_ID" AS "ACTGRP_NAME_ID", 
+"ACTGRP_PERM_HOLD"."MAP_NAME_ID" AS "MAP_NAME_ID", 
+"ACTGRP_PERM_HOLD"."ACT_NAME" AS "ACT_NAME"
+FROM "IFAM"."ACTGRP_PERM_HOLD" "ACTGRP_PERM_HOLD"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ACTGRP_PERMISSION" EntityType="Self.ACTGRP_PERMISSION" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"ACTGRP_PERMISSION"."ACTGRP_NAME_ID" AS "ACTGRP_NAME_ID", 
+"ACTGRP_PERMISSION"."MAP_NAME_ID" AS "MAP_NAME_ID", 
+"ACTGRP_PERMISSION"."ACT_NAME_ID" AS "ACT_NAME_ID"
+FROM "IFAM"."ACTGRP_PERMISSION" "ACTGRP_PERMISSION"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CONFIG" EntityType="Self.CONFIG" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"CONFIG"."CF_SEC_NAME" AS "CF_SEC_NAME", 
+"CONFIG"."CF_SUB_SEC_NAME" AS "CF_SUB_SEC_NAME", 
+"CONFIG"."CF_VALUE" AS "CF_VALUE"
+FROM "IFAM"."CONFIG" "CONFIG"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DBVERSION" EntityType="Self.DBVERSION" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"DBVERSION"."VERSION_NUM" AS "VERSION_NUM"
+FROM "IFAM"."DBVERSION" "DBVERSION"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DEADLINE" EntityType="Self.DEADLINE" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"DEADLINE"."DEADLINE_ID" AS "DEADLINE_ID", 
+"DEADLINE"."COURIER_ID" AS "COURIER_ID", 
+"DEADLINE"."DEADLINE" AS "DEADLINE", 
+"DEADLINE"."DEADLINE_ACTION" AS "DEADLINE_ACTION", 
+"DEADLINE"."PRIORITY_INCREMENT" AS "PRIORITY_INCREMENT", 
+"DEADLINE"."ACTION_COMPLETED" AS "ACTION_COMPLETED", 
+"DEADLINE"."DEADLINE_CMD" AS "DEADLINE_CMD", 
+"DEADLINE"."DEADLINE_STRING" AS "DEADLINE_STRING"
+FROM "IFAM"."DEADLINE" "DEADLINE"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DEF_PERM_HOLD" EntityType="Self.DEF_PERM_HOLD" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"DEF_PERM_HOLD"."USER_ID" AS "USER_ID", 
+"DEF_PERM_HOLD"."MAP_NAME_ID" AS "MAP_NAME_ID", 
+"DEF_PERM_HOLD"."ACT_NAME" AS "ACT_NAME"
+FROM "IFAM"."DEF_PERM_HOLD" "DEF_PERM_HOLD"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ERROR_MSG" EntityType="Self.ERROR_MSG" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"ERROR_MSG"."LANG_ID" AS "LANG_ID", 
+"ERROR_MSG"."ERR_ID" AS "ERR_ID", 
+"ERROR_MSG"."MSG_TYPE" AS "MSG_TYPE", 
+"ERROR_MSG"."ERR_MSG" AS "ERR_MSG"
+FROM "IFAM"."ERROR_MSG" "ERROR_MSG"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FLOW_STAT" EntityType="Self.FLOW_STAT" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"FLOW_STAT"."FLOW_STAT_STR" AS "FLOW_STAT_STR", 
+"FLOW_STAT"."FLOW_STAT_CNT_STR" AS "FLOW_STAT_CNT_STR"
+FROM "IFAM"."FLOW_STAT" "FLOW_STAT"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FWSYS_PROC_CONFIG" EntityType="Self.FWSYS_PROC_CONFIG" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"FWSYS_PROC_CONFIG"."HOST_ID" AS "HOST_ID", 
+"FWSYS_PROC_CONFIG"."HOST_NAME" AS "HOST_NAME", 
+"FWSYS_PROC_CONFIG"."PROC_NAME" AS "PROC_NAME", 
+"FWSYS_PROC_CONFIG"."SYSMON_HOST" AS "SYSMON_HOST", 
+"FWSYS_PROC_CONFIG"."LOG_FILE" AS "LOG_FILE"
+FROM "IFAM"."FWSYS_PROC_CONFIG" "FWSYS_PROC_CONFIG"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MAP_ACT_INST" EntityType="Self.MAP_ACT_INST" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"MAP_ACT_INST"."MAP_NAME_ID" AS "MAP_NAME_ID", 
+"MAP_ACT_INST"."ACT_NAME_ID" AS "ACT_NAME_ID", 
+"MAP_ACT_INST"."MAP_ID" AS "MAP_ID"
+FROM "IFAM"."MAP_ACT_INST" "MAP_ACT_INST"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MAP_DATA" EntityType="Self.MAP_DATA" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"MAP_DATA"."MAP_ID" AS "MAP_ID", 
+"MAP_DATA"."MAP_DATA_TYPE" AS "MAP_DATA_TYPE", 
+"MAP_DATA"."MAP_DATA_SIZE" AS "MAP_DATA_SIZE", 
+"MAP_DATA"."TIME_STAMP" AS "TIME_STAMP", 
+"MAP_DATA"."LOCK_FLAG" AS "LOCK_FLAG", 
+"MAP_DATA"."DESCRIPTION" AS "DESCRIPTION", 
+"MAP_DATA"."MAP_DATA_BLOB" AS "MAP_DATA_BLOB"
+FROM "IFAM"."MAP_DATA" "MAP_DATA"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PERMISSION" EntityType="Self.PERMISSION" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"PERMISSION"."USER_ID" AS "USER_ID", 
+"PERMISSION"."MAP_NAME_ID" AS "MAP_NAME_ID", 
+"PERMISSION"."ACT_NAME_ID" AS "ACT_NAME_ID", 
+"PERMISSION"."ACTGRP_NAME_ID" AS "ACTGRP_NAME_ID", 
+"PERMISSION"."COUNTER" AS "COUNTER"
+FROM "IFAM"."PERMISSION" "PERMISSION"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PERMISSION_HOLD" EntityType="Self.PERMISSION_HOLD" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"PERMISSION_HOLD"."USER_ID" AS "USER_ID", 
+"PERMISSION_HOLD"."MAP_NAME_ID" AS "MAP_NAME_ID", 
+"PERMISSION_HOLD"."ACT_NAME" AS "ACT_NAME"
+FROM "IFAM"."PERMISSION_HOLD" "PERMISSION_HOLD"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PLX_ACCESS_ALLOW" EntityType="Self.PLX_ACCESS_ALLOW" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"PLX_ACCESS_ALLOW"."ACCESS_ID" AS "ACCESS_ID", 
+"PLX_ACCESS_ALLOW"."USER_ID" AS "USER_ID", 
+"PLX_ACCESS_ALLOW"."GRP_ID" AS "GRP_ID"
+FROM "IFAM"."PLX_ACCESS_ALLOW" "PLX_ACCESS_ALLOW"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PLX_ACCESS_DENY" EntityType="Self.PLX_ACCESS_DENY" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"PLX_ACCESS_DENY"."ACCESS_ID" AS "ACCESS_ID", 
+"PLX_ACCESS_DENY"."USER_ID" AS "USER_ID", 
+"PLX_ACCESS_DENY"."GRP_ID" AS "GRP_ID"
+FROM "IFAM"."PLX_ACCESS_DENY" "PLX_ACCESS_DENY"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ROUTE" EntityType="Self.ROUTE" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"ROUTE"."NODE_ID" AS "NODE_ID", 
+"ROUTE"."RETURN_STATE" AS "RETURN_STATE", 
+"ROUTE"."NEXT_NODE_ID" AS "NEXT_NODE_ID"
+FROM "IFAM"."ROUTE" "ROUTE"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RTI_STATUS" EntityType="Self.RTI_STATUS" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"RTI_STATUS"."MAP" AS "MAP", 
+"RTI_STATUS"."ACTIVITY" AS "ACTIVITY", 
+"RTI_STATUS"."AVAILABLE" AS "AVAILABLE", 
+"RTI_STATUS"."INUSE" AS "INUSE", 
+"RTI_STATUS"."FRIED" AS "FRIED", 
+"RTI_STATUS"."SUSP" AS "SUSP", 
+"RTI_STATUS"."ZOMBIE" AS "ZOMBIE", 
+"RTI_STATUS"."WIP" AS "WIP", 
+"RTI_STATUS"."TOTAL" AS "TOTAL"
+FROM "IFAM"."RTI_STATUS" "RTI_STATUS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RULE_CONTROL" EntityType="Self.RULE_CONTROL" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"RULE_CONTROL"."LOCK_FLAG" AS "LOCK_FLAG"
+FROM "IFAM"."RULE_CONTROL" "RULE_CONTROL"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SPLIT" EntityType="Self.SPLIT" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"SPLIT"."SPLIT_ID" AS "SPLIT_ID", 
+"SPLIT"."NODE_ID" AS "NODE_ID"
+FROM "IFAM"."SPLIT" "SPLIT"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="USER_GROUPS" EntityType="Self.USER_GROUPS" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"USER_GROUPS"."USERGRP_ID" AS "USERGRP_ID", 
+"USER_GROUPS"."USERGRP_MBR_TYPE" AS "USERGRP_MBR_TYPE", 
+"USER_GROUPS"."USERGRP_MBR_ID" AS "USERGRP_MBR_ID"
+FROM "IFAM"."USER_GROUPS" "USER_GROUPS"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WF_CHAR128" EntityType="Self.WF_CHAR128" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"WF_CHAR128"."VARIABLE_NAME_ID" AS "VARIABLE_NAME_ID", 
+"WF_CHAR128"."COURIER_ID" AS "COURIER_ID", 
+"WF_CHAR128"."VARIABLE_VALUE" AS "VARIABLE_VALUE"
+FROM "IFAM"."WF_CHAR128" "WF_CHAR128"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WF_CURRENCY" EntityType="Self.WF_CURRENCY" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"WF_CURRENCY"."VARIABLE_NAME_ID" AS "VARIABLE_NAME_ID", 
+"WF_CURRENCY"."COURIER_ID" AS "COURIER_ID", 
+"WF_CURRENCY"."VARIABLE_VALUE" AS "VARIABLE_VALUE"
+FROM "IFAM"."WF_CURRENCY" "WF_CURRENCY"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WF_DATETIME" EntityType="Self.WF_DATETIME" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"WF_DATETIME"."VARIABLE_NAME_ID" AS "VARIABLE_NAME_ID", 
+"WF_DATETIME"."COURIER_ID" AS "COURIER_ID", 
+"WF_DATETIME"."VARIABLE_VALUE" AS "VARIABLE_VALUE"
+FROM "IFAM"."WF_DATETIME" "WF_DATETIME"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WF_FLOAT64" EntityType="Self.WF_FLOAT64" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"WF_FLOAT64"."VARIABLE_NAME_ID" AS "VARIABLE_NAME_ID", 
+"WF_FLOAT64"."COURIER_ID" AS "COURIER_ID", 
+"WF_FLOAT64"."VARIABLE_VALUE" AS "VARIABLE_VALUE"
+FROM "IFAM"."WF_FLOAT64" "WF_FLOAT64"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WF_INT32" EntityType="Self.WF_INT32" store:Type="Tables" store:Schema="IFAM">
+      <DefiningQuery>SELECT 
+"WF_INT32"."VARIABLE_NAME_ID" AS "VARIABLE_NAME_ID", 
+"WF_INT32"."COURIER_ID" AS "COURIER_ID", 
+"WF_INT32"."VARIABLE_VALUE" AS "VARIABLE_VALUE"
+FROM "IFAM"."WF_INT32" "WF_INT32"</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

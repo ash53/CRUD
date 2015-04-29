@@ -1,0 +1,70 @@
+<Application x:Class="WpfDocViewer.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+               xmlns:properties="clr-namespace:WpfDocViewer.Properties"
+             DispatcherUnhandledException="Dispatcher_UnhandledException" StartupUri="/View/LoginPrompt.xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" d1p1:Ignorable="d" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <Application.Resources>
+        <ResourceDictionary>
+            <properties:Settings x:Key="Settings" />
+            <sys:String x:Key="History1">*</sys:String>
+            <sys:String x:Key="History2">*</sys:String>
+            <sys:String x:Key="History3">*</sys:String>
+            <sys:String x:Key="History4">*</sys:String>
+            <sys:String x:Key="History5">*</sys:String>
+            <sys:String x:Key="History6">*</sys:String>
+            <sys:String x:Key="ComboBoxTitle">Match By:</sys:String>
+            <x:Array x:Key="ComboBoxItems" Type="sys:String">
+                <sys:String>Docno</sys:String>
+                <sys:String>Pardocno</sys:String>
+                <sys:String>Doctype</sys:String>
+                <sys:String>Docdet</sys:String>
+            </x:Array>
+            <x:Array x:Key="PracticeList" Type="sys:String">
+                <sys:String>*</sys:String>
+            </x:Array>
+            <x:Array x:Key="SearchComboItems" Type="sys:String">
+                <sys:String>[NONE]</sys:String>
+                <sys:String>Practice</sys:String>
+                <sys:String>Division</sys:String>
+                <sys:String>Min Checkamt</sys:String>
+                <sys:String>Max Checkamt</sys:String>
+                <sys:String>Checknum</sys:String>
+                <sys:String>Embacct</sys:String>
+                <sys:String>Reason</sys:String>
+                <sys:String>Docdet</sys:String>
+                <sys:String>Doctype</sys:String>
+                <sys:String>Docno</sys:String>
+                <sys:String>Pardocno</sys:String>
+                <sys:String>Min Paidamt</sys:String>
+                <sys:String>Max Paidamt</sys:String>
+                <sys:String>Assigned_To</sys:String>
+            </x:Array>
+            <sys:String x:Key="Map">0000000000</sys:String>
+            <sys:String x:Key="Activity">0000000000</sys:String>
+            <sys:String x:Key="Depdt">0000000000</sys:String>
+            <sys:String x:Key="Doctype">0000000000</sys:String>
+            <sys:String x:Key="Docgroup">0000000000</sys:String>
+            <sys:String x:Key="Docdet">0000000000</sys:String>
+            <sys:String x:Key="Reason">0000000000</sys:String>
+            <sys:String x:Key="Assigned_To">0000000000</sys:String>
+            <sys:String x:Key="Docno">0000000000</sys:String>
+            <sys:String x:Key="Practice">0000000000</sys:String>
+            <sys:String x:Key="Account">0000000000</sys:String>
+            <sys:String x:Key="CheckAmount">0000000000</sys:String>
+            <sys:String x:Key="ParentDocno">0000000000</sys:String>
+            <sys:String x:Key="SearchType">*</sys:String>
+            <sys:String x:Key="SearchValue">*</sys:String>
+            <sys:String x:Key="ExportIFN">0000000000</sys:String>
+            <sys:String x:Key="ExportDocno">0000000000</sys:String>
+            <sys:String x:Key="SharedIFN">0000000000</sys:String>
+            <sys:Int16 x:Key="SharedPage">1</sys:Int16>
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" xmlns:vm="clr-namespace:WpfDocViewer.ViewModel" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WpfDocViewer;component/Resources/ScrollViewerStyle.xaml" />
+                <ResourceDictionary Source="/WpfDocViewer;component/Resources/DataGridStyle.xaml" />
+                <ResourceDictionary Source="/WpfDocViewer;component/Resources/ExpanderStyle.xaml" />
+                <ResourceDictionary Source="/WpfDocViewer;component/Resources/TextAndComboBoxStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

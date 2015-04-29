@@ -1,0 +1,145 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="TBoxStyle" TargetType="TextBox">
+        <Setter Property="Background" Value="White" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="BorderBrush" Value="SteelBlue" />
+    </Style>
+    <Style x:Key="BtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="White" />
+        <Setter Property="FontStyle" Value="Normal" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="BorderBrush" Value="SteelBlue" />
+    </Style>
+    <Style x:Key="CmbStyle" TargetType="ComboBox">
+        <Setter Property="FontStyle" Value="Normal" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Background" Value="White" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="BorderBrush" Value="SteelBlue" />
+    </Style>    
+    
+    <Style x:Key="cbCB" TargetType="{x:Type ComboBox}">
+        <Setter Property="FontStyle" Value="Normal" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Background" Value="White" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="BorderBrush" Value="SteelBlue"/>
+        <Setter Property="ComboBox.IsEnabled" Value="False"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=ChkOverwrite, Path=IsChecked}" Value="True">
+                <Setter Property="ComboBox.IsEnabled" Value="True"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding ElementName=ChkOverwrite, Path=IsChecked}" Value="False">
+                <Setter Property="ComboBox.IsEnabled" Value="False"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding ElementName=ChkRemitOnly, Path=IsChecked}" Value="True">
+                <Setter Property="ComboBox.IsEnabled" Value="False"/>
+            </DataTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="StartActivityStyle" TargetType="{x:Type ComboBox}">
+        <Setter Property="FontStyle" Value="Normal" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Background" Value="White" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="BorderBrush" Value="SteelBlue"/>
+        <Setter Property="ComboBox.IsEnabled" Value="False"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=ChkOWrite, Path=IsChecked}" Value="True">
+                <Setter Property="ComboBox.IsEnabled" Value="True"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding ElementName=ChkOWrite, Path=IsChecked}" Value="False">
+                <Setter Property="ComboBox.IsEnabled" Value="False"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding SelectedItem.key, ElementName=CmbDocType}" Value="RM">
+                <Setter Property="ComboBox.IsEnabled" Value="True"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="NotesVisibilityStyle" TargetType="{x:Type Button}">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=SearchCheckData, Path=IsChecked}" Value="True">
+                <Setter Property="Button.Visibility" Value="Visible"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding ElementName=SearchCheckData, Path=IsChecked}" Value="False">
+                <Setter Property="Button.Visibility" Value="Collapsed"/>
+            </DataTrigger>
+        </Style.Triggers>
+
+    </Style>
+
+    <Style x:Key="StackPanelGrids" TargetType="{x:Type Grid}">
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding SelectedItem.key, ElementName=CmbDocType}" Value="CK">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding SelectedItem.key, ElementName=CmbDocType}" Value="CE">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+    </Style>
+
+    <Style x:Key="NewStyle" TargetType="{x:Type Grid}">
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding SelectedItem.key, ElementName=CmbDocType}" Value="RM">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            <DataTrigger Binding="{Binding SelectedItem.key, ElementName=CmbDocType}" Value="CK">
+                <Setter Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding SelectedItem.key, ElementName=CmbDocType}" Value="CE">
+                <Setter Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+        </Style.Triggers>
+       
+    </Style>    
+ 
+    <Style x:Key="RemitCheck" TargetType="{x:Type CheckBox}">       
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding SelectedItem.key, ElementName=CmbDocType}" Value="RM">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>            
+        </Style.Triggers>
+     
+    </Style>
+
+    <Style x:Key="NeedsPrep" TargetType="{x:Type CheckBox}">
+        <Setter Property="Visibility" Value="Visible"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding SelectedItem.key, ElementName=CmbDocType}" Value="IR">
+                <Setter Property="Visibility" Value="Collapsed"/>
+            </DataTrigger>
+        </Style.Triggers>
+
+    </Style>
+    <Style x:Key="RemitTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="Visibility" Value="Collapsed"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding SelectedItem.key, ElementName=CmbDocType}" Value="RM">
+                <Setter Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+   
+
+    <Style x:Key="cbTBAuto" TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="White" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="BorderBrush" Value="SteelBlue" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=ChkAuto, Path=IsChecked}" Value="True">
+                <Setter Property="TextBox.IsEnabled" Value="False"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding ElementName=ChkAuto, Path=IsChecked}" Value="False">
+                <Setter Property="TextBox.IsEnabled" Value="True"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

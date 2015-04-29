@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="WpfDocViewer.Controls.MainWorkControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+               xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+               xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="491.827" d:DesignWidth="945" Foreground="Black" FontFamily="Tunga" FontSize="16">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="ValidationErrorTemplate">
+            <DockPanel>
+                <TextBlock Foreground="Red" FontSize="11"
+            DockPanel.Dock="Right">* RequiredField</TextBlock>
+                <AdornedElementPlaceholder 
+           x:Name="ErrorAdorner"></AdornedElementPlaceholder>
+            </DockPanel>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <ContentControl x:Name="WorkContentControl" Margin="0,0,0,-14" >
+        <Grid>
+            <GroupBox Header="Search" BorderBrush="#FF004376" Foreground="Black" BorderThickness="2" Height="88" VerticalAlignment="Top" Margin="0,-3,0,0">
+                <Grid Margin="0,0,0,4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="278*"></ColumnDefinition>
+                        <ColumnDefinition Width="228*"></ColumnDefinition>
+                        <ColumnDefinition Width="427*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="ParDocNo :"  Grid.Column="0" Margin="230,10,190,18" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="TxtParDoc" Text="{Binding ParentDocno, Mode=TwoWay}" Width="220" Height="30"  Grid.Column="1"/>
+                    <Button x:Name="BtnFind"  Command="{Binding FindCommand}" Width="106" Grid.Column="2" Margin="269,4,52,0">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                                <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                <GradientStop Color="#FFDCE9F7" Offset="0.5"/>
+                                <GradientStop Color="#FFA7C8F0" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <WrapPanel>
+                            <WrapPanel.Background>
+                                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                    <GradientStop Color="#FFDCE9F7" Offset="0.5"/>
+                                    <GradientStop Color="#FFA7C8F0" Offset="1"/>
+                                </LinearGradientBrush>
+                            </WrapPanel.Background>
+                            <Image Source="/WpfDocViewer;component/Images/web_search.png" />
+                            <TextBlock Text="Find" Width="39" Height="26" />
+
+                        </WrapPanel>
+                    </Button>
+
+                </Grid>
+            </GroupBox>
+            <Grid Name="ResultsGrid" Margin="0,0,0,10">
+                <Expander x:Name="myExpander" Height="190" Margin="0,91,10,216"  IsExpanded="{Binding ShowData, Mode=TwoWay}" Header="{Binding ShowDataByDocNo}" >
+                    <Expander.Content>
+                        <Border Grid.Row="0" BorderBrush="Gray"  BorderThickness="5" CornerRadius="10">
+                            <DataGrid Name="ShowDataByDocNo" Margin="5,0,-2,0" ItemsSource="{Binding GetDataByDocNumber}" SelectedIndex="{Binding SelectedRow}" SelectedItem="{Binding SelectedDataItem}"  SelectionMode="Single" MouseDoubleClick="ShowDataByDocNo_MouseDoubleClick" CanUserAddRows="False" >
+                            </DataGrid>
+                        </Border>
+                    </Expander.Content>
+                </Expander>
+            </Grid>
+
+            <GroupBox Header="WorkDetails" Margin="0,275,0,0" BorderBrush="#FF004376" Foreground="Black" BorderThickness="2" Height="210" VerticalAlignment="Top">
+
+                <Grid Height="190" VerticalAlignment="Top" Width="935" HorizontalAlignment="Left" Margin="0,0,-2,-32">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <CheckBox   x:Name="ChBNPrepping"   Content="Needs Prepping" IsChecked="{Binding IsChkNeedsPrepSelected}"  IsEnabled="{Binding IsEnable}"  Margin="20,0,776,162" Height="22" VerticalAlignment="Bottom" />
+                    <TextBlock  Grid.Column="0" Text="Start Activity :" Margin="31,34,0,121" HorizontalAlignment="Left" Width="94" RenderTransformOrigin="0.128,2.304"/>
+                    <ComboBox x:Name="CbStartActivity" Style="{StaticResource StartActivityStyle}"  Height="26" Margin="123,33,613,131"  ItemsSource="{Binding StartActivities}" SelectedValue="{Binding SelectedStartActivity, Mode=TwoWay, ValidatesOnDataErrors=True}"  Validation.ErrorTemplate="{StaticResource ValidationErrorTemplate}"    DisplayMemberPath="fullstartActivityDesc"  SelectedValuePath="startdescription">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFFDF9F9" Offset="0"/>
+                                <GradientStop Color="#FFFDF9F9" Offset="0.766"/>
+                                <GradientStop Color="#FFF7F9FB" Offset="0.179"/>
+                                <GradientStop Color="#FFACD0EE" Offset="0.955"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <TextBlock Name="TbMaps" Height="26" Width="181" HorizontalAlignment="Left"  IsEnabled="{Binding IsChecked, ElementName=ChkOWrite}" Text="{Binding SelectedItem.mapName, ElementName=CbStartActivity}"   Margin="125,72,0,0" VerticalAlignment="Top" ></TextBlock>
+                    <TextBlock x:Name="TbAct" HorizontalAlignment="Left" Height="26" VerticalAlignment="Bottom"  IsEnabled="{Binding IsChecked, ElementName=ChkOWrite}" Text="{Binding SelectedItem.activityName, ElementName=CbStartActivity}" Width="181" Margin="125,0,0,51"></TextBlock>
+                    <Label Content="Map Name :" HorizontalAlignment="Left" Height="36"   Margin="31,69,0,0" VerticalAlignment="Top" Width="89"/>
+                    <Label Content="Activity Name :" HorizontalAlignment="Left" Height="29" Margin="19,110,0,0" VerticalAlignment="Top" Width="101"/>
+                    <Button x:Name="StartWork"  Content="Start Work"  Click="StartWork_Click" Height="45" Margin="0,114,42,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="106" Grid.Column="0" >
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                                <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                <GradientStop Color="#FFDCE9F7" Offset="0.5"/>
+                                <GradientStop Color="#FFA7C8F0" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <!--<WrapPanel Width="103">
+                            <Image Source="/WpfDocViewer;component/Images/startwork.png" Height="40" Width="42"  />
+                            <TextBlock  Text="Start Work" Width="57" Height="26" />
+                        </WrapPanel>-->
+                    </Button>
+
+                    <CheckBox x:Name="ChkOWrite" Content="Overwrite Document Routing Information" IsChecked="{Binding IsChkOverwriteSelected}"  IsEnabled="{Binding IsEnableOverwrite}"  Grid.Column="0" Margin="19,144,662,12" />
+
+
+                    <xctk:BusyIndicator x:Name="ProgressBarOne" IsBusy="{Binding IsBusy}" BusyContent="Please wait.." Margin="495,33,284,0" Height="70"  VerticalAlignment="Top"   />
+                </Grid>
+
+            </GroupBox>
+
+        </Grid>
+
+    </ContentControl>
+</UserControl>

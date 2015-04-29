@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace WpfDocViewer.Controls
+{
+    /// <summary>
+    /// Interaction logic for AssemblyContentPresenter.xaml
+    /// </summary>
+    public partial class AssemblyContentPresenter : UserControl
+    {
+        Controls.DocViewerControl docviewer;
+        Controls.AssemblyControl assemblyControl;
+        public AssemblyContentPresenter()
+        {
+            InitializeComponent();
+            docviewer = new Controls.DocViewerControl(Model.PermissionsModel.Permissions.IDMPermissions.IDMServer, Environment.UserName, "");
+            windowsViewer.Child = docviewer;
+            docviewer.Resize +=docviewer_Resize;
+            
+            assemblyControl = new Controls.AssemblyControl();
+            RightContentPresenter.Content = assemblyControl;
+            
+        }
+
+void docviewer_Resize(object sender, EventArgs e)
+{
+ 	//throw new NotImplementedException();
+}
+    }
+}

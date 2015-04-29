@@ -1,0 +1,747 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StoreContainer" CdmEntityContainer="IfamModelContainer">
+    <EntitySetMapping Name="ACT_RETURN_STATES">
+      <EntityTypeMapping TypeName="IfamModel.ACT_RETURN_STATES">
+        <MappingFragment StoreEntitySet="ACT_RETURN_STATES">
+          <ScalarProperty Name="RETURN_STATE" ColumnName="RETURN_STATE" />
+          <ScalarProperty Name="ACT_NAME_ID" ColumnName="ACT_NAME_ID" />
+          <ScalarProperty Name="ACT_RETSTATE_ID" ColumnName="ACT_RETSTATE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACTGRP_NAMES">
+      <EntityTypeMapping TypeName="IfamModel.ACTGRP_NAMES">
+        <MappingFragment StoreEntitySet="ACTGRP_NAMES">
+          <ScalarProperty Name="ACTGRP_NAME" ColumnName="ACTGRP_NAME" />
+          <ScalarProperty Name="ACTGRP_NAME_ID" ColumnName="ACTGRP_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACTIVITY_NAMES">
+      <EntityTypeMapping TypeName="IfamModel.ACTIVITY_NAMES">
+        <MappingFragment StoreEntitySet="ACTIVITY_NAMES">
+          <ScalarProperty Name="FW" ColumnName="FW" />
+          <ScalarProperty Name="NBR_RETURN_STATES" ColumnName="NBR_RETURN_STATES" />
+          <ScalarProperty Name="TIME_STAMP" ColumnName="TIME_STAMP" />
+          <ScalarProperty Name="ACT_NAME_CMD" ColumnName="ACT_NAME_CMD" />
+          <ScalarProperty Name="DEFAULT_PRIORITY" ColumnName="DEFAULT_PRIORITY" />
+          <ScalarProperty Name="ACT_ATTR" ColumnName="ACT_ATTR" />
+          <ScalarProperty Name="ACT_TYPE" ColumnName="ACT_TYPE" />
+          <ScalarProperty Name="ACT_NAME" ColumnName="ACT_NAME" />
+          <ScalarProperty Name="ACT_NAME_ID" ColumnName="ACT_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACTV_ACT_CONFIG">
+      <EntityTypeMapping TypeName="IfamModel.ACTV_ACT_CONFIG">
+        <MappingFragment StoreEntitySet="ACTV_ACT_CONFIG">
+          <ScalarProperty Name="DEF_PORT_NUM" ColumnName="DEF_PORT_NUM" />
+          <ScalarProperty Name="MAX_ACTIVE_RUN" ColumnName="MAX_ACTIVE_RUN" />
+          <ScalarProperty Name="ACTIVE_ON" ColumnName="ACTIVE_ON" />
+          <ScalarProperty Name="SERV_ID" ColumnName="SERV_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLAUSES">
+      <EntityTypeMapping TypeName="IfamModel.CLAUS">
+        <MappingFragment StoreEntitySet="CLAUSES">
+          <ScalarProperty Name="ACTION_DATA" ColumnName="ACTION_DATA" />
+          <ScalarProperty Name="ACTION_CMD" ColumnName="ACTION_CMD" />
+          <ScalarProperty Name="ACTION_TYPE" ColumnName="ACTION_TYPE" />
+          <ScalarProperty Name="RETURN_STATE_USAGE" ColumnName="RETURN_STATE_USAGE" />
+          <ScalarProperty Name="ACCESS_NAME_STATUS" ColumnName="ACCESS_NAME_STATUS" />
+          <ScalarProperty Name="ACCESS_OPERATION" ColumnName="ACCESS_OPERATION" />
+          <ScalarProperty Name="ACCESS_TYPE" ColumnName="ACCESS_TYPE" />
+          <ScalarProperty Name="LOCK_FLAG" ColumnName="LOCK_FLAG" />
+          <ScalarProperty Name="MEMBER_TYPE" ColumnName="MEMBER_TYPE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="CONDITION" ColumnName="CONDITION" />
+          <ScalarProperty Name="RETURN_STATE" ColumnName="RETURN_STATE" />
+          <ScalarProperty Name="ACCESS_NAME" ColumnName="ACCESS_NAME" />
+          <ScalarProperty Name="ACT_NAME_ID" ColumnName="ACT_NAME_ID" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+          <ScalarProperty Name="CLAUSE_STATUS" ColumnName="CLAUSE_STATUS" />
+          <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+          <ScalarProperty Name="CLAUSE_ID" ColumnName="CLAUSE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COUR_WAIT_CONFIG">
+      <EntityTypeMapping TypeName="IfamModel.COUR_WAIT_CONFIG">
+        <MappingFragment StoreEntitySet="COUR_WAIT_CONFIG">
+          <ScalarProperty Name="DEF_PORT_NUM" ColumnName="DEF_PORT_NUM" />
+          <ScalarProperty Name="CRR_WAIT_FLAG" ColumnName="CRR_WAIT_FLAG" />
+          <ScalarProperty Name="SERV_ID" ColumnName="SERV_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COURIER_INFO">
+      <EntityTypeMapping TypeName="IfamModel.COURIER_INFO">
+        <MappingFragment StoreEntitySet="COURIER_INFO">
+          <ScalarProperty Name="TOP_MAP_ID" ColumnName="TOP_MAP_ID" />
+          <ScalarProperty Name="REFERENCE" ColumnName="REFERENCE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="PLX_RSERVI2" ColumnName="PLX_RSERVI2" />
+          <ScalarProperty Name="PLX_RSERVI1" ColumnName="PLX_RSERVI1" />
+          <ScalarProperty Name="PLX_RSERVC20" ColumnName="PLX_RSERVC20" />
+          <ScalarProperty Name="PLX_RSERVC19" ColumnName="PLX_RSERVC19" />
+          <ScalarProperty Name="PLX_RSERVC18" ColumnName="PLX_RSERVC18" />
+          <ScalarProperty Name="PLX_RSERVC17" ColumnName="PLX_RSERVC17" />
+          <ScalarProperty Name="PLX_RSERVC16" ColumnName="PLX_RSERVC16" />
+          <ScalarProperty Name="PLX_RSERVC15" ColumnName="PLX_RSERVC15" />
+          <ScalarProperty Name="PLX_RSERVC14" ColumnName="PLX_RSERVC14" />
+          <ScalarProperty Name="PLX_RSERVC13" ColumnName="PLX_RSERVC13" />
+          <ScalarProperty Name="PLX_RSERVC12" ColumnName="PLX_RSERVC12" />
+          <ScalarProperty Name="PLX_RSERVC11" ColumnName="PLX_RSERVC11" />
+          <ScalarProperty Name="PLX_RSERVC10" ColumnName="PLX_RSERVC10" />
+          <ScalarProperty Name="PLX_RSERVC9" ColumnName="PLX_RSERVC9" />
+          <ScalarProperty Name="PLX_RSERVC8" ColumnName="PLX_RSERVC8" />
+          <ScalarProperty Name="PLX_RSERVC7" ColumnName="PLX_RSERVC7" />
+          <ScalarProperty Name="PLX_RSERVC6" ColumnName="PLX_RSERVC6" />
+          <ScalarProperty Name="PLX_RSERVC5" ColumnName="PLX_RSERVC5" />
+          <ScalarProperty Name="PLX_RSERVC4" ColumnName="PLX_RSERVC4" />
+          <ScalarProperty Name="PLX_RSERVC3" ColumnName="PLX_RSERVC3" />
+          <ScalarProperty Name="PLX_RSERVC2" ColumnName="PLX_RSERVC2" />
+          <ScalarProperty Name="PLX_RSERVC1" ColumnName="PLX_RSERVC1" />
+          <ScalarProperty Name="RESERVED_3" ColumnName="RESERVED_3" />
+          <ScalarProperty Name="RESERVED_2" ColumnName="RESERVED_2" />
+          <ScalarProperty Name="RESERVED_1" ColumnName="RESERVED_1" />
+          <ScalarProperty Name="LOG_CONTROL" ColumnName="LOG_CONTROL" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COURIER_INSTANCE">
+      <EntityTypeMapping TypeName="IfamModel.COURIER_INSTANCE">
+        <MappingFragment StoreEntitySet="COURIER_INSTANCE">
+          <ScalarProperty Name="SERV_ID" ColumnName="SERV_ID" />
+          <ScalarProperty Name="RETURN_VALUE" ColumnName="RETURN_VALUE" />
+          <ScalarProperty Name="LIST_CONT_FLAG" ColumnName="LIST_CONT_FLAG" />
+          <ScalarProperty Name="LIST_START_USRGRP" ColumnName="LIST_START_USRGRP" />
+          <ScalarProperty Name="LIST_START_TYPE" ColumnName="LIST_START_TYPE" />
+          <ScalarProperty Name="LIST_START_USER" ColumnName="LIST_START_USER" />
+          <ScalarProperty Name="ACT_ID" ColumnName="ACT_ID" />
+          <ScalarProperty Name="RETURN_STATE" ColumnName="RETURN_STATE" />
+          <ScalarProperty Name="PRIORITY_INCREMENT" ColumnName="PRIORITY_INCREMENT" />
+          <ScalarProperty Name="IN_ACT_DATE" ColumnName="IN_ACT_DATE" />
+          <ScalarProperty Name="REQUEST_DATE" ColumnName="REQUEST_DATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="LOGIN_HANDLE" ColumnName="LOGIN_HANDLE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="RENDEZVOUS_NODE_ID" ColumnName="RENDEZVOUS_NODE_ID" />
+          <ScalarProperty Name="EVENT_CODE" ColumnName="EVENT_CODE" />
+          <ScalarProperty Name="PREV_NODE_ID" ColumnName="PREV_NODE_ID" />
+          <ScalarProperty Name="PREV_MAP_INST_ID" ColumnName="PREV_MAP_INST_ID" />
+          <ScalarProperty Name="NODE_ID" ColumnName="NODE_ID" />
+          <ScalarProperty Name="MAP_INST_ID" ColumnName="MAP_INST_ID" />
+          <ScalarProperty Name="SPLIT_CNT" ColumnName="SPLIT_CNT" />
+          <ScalarProperty Name="PARENT_COURIER" ColumnName="PARENT_COURIER" />
+          <ScalarProperty Name="MAP_ID" ColumnName="MAP_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="ACT_NAME_ID" ColumnName="ACT_NAME_ID" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="COURIER_INST_ID" ColumnName="COURIER_INST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COURIER_LOG">
+      <EntityTypeMapping TypeName="IfamModel.COURIER_LOG">
+        <MappingFragment StoreEntitySet="COURIER_LOG">
+          <ScalarProperty Name="MACH_NAME" ColumnName="MACH_NAME" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="ACT_NAME" ColumnName="ACT_NAME" />
+          <ScalarProperty Name="MAP_NAME" ColumnName="MAP_NAME" />
+          <ScalarProperty Name="USER_TAG" ColumnName="USER_TAG" />
+          <ScalarProperty Name="ROOT_LOGIN" ColumnName="ROOT_LOGIN" />
+          <ScalarProperty Name="RETURN_DATE" ColumnName="RETURN_DATE" />
+          <ScalarProperty Name="REQUEST_DATE" ColumnName="REQUEST_DATE" />
+          <ScalarProperty Name="IN_ACT_DATE" ColumnName="IN_ACT_DATE" />
+          <ScalarProperty Name="MACH_ID" ColumnName="MACH_ID" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="RETURN_STATE" ColumnName="RETURN_STATE" />
+          <ScalarProperty Name="ACT_NAME_ID" ColumnName="ACT_NAME_ID" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+          <ScalarProperty Name="NODE_ID" ColumnName="NODE_ID" />
+          <ScalarProperty Name="COURIER_INST_ID" ColumnName="COURIER_INST_ID" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="TRANSACTION_NO" ColumnName="TRANSACTION_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEADLINE_CONFIG">
+      <EntityTypeMapping TypeName="IfamModel.DEADLINE_CONFIG">
+        <MappingFragment StoreEntitySet="DEADLINE_CONFIG">
+          <ScalarProperty Name="DEF_PORT_NUM" ColumnName="DEF_PORT_NUM" />
+          <ScalarProperty Name="MAX_PRIORITY" ColumnName="MAX_PRIORITY" />
+          <ScalarProperty Name="PRIORITY_INC" ColumnName="PRIORITY_INC" />
+          <ScalarProperty Name="CURR_DDLN" ColumnName="CURR_DDLN" />
+          <ScalarProperty Name="DDLN_ON" ColumnName="DDLN_ON" />
+          <ScalarProperty Name="SERV_ID" ColumnName="SERV_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENT_LOG_CONFIG">
+      <EntityTypeMapping TypeName="IfamModel.EVENT_LOG_CONFIG">
+        <MappingFragment StoreEntitySet="EVENT_LOG_CONFIG">
+          <ScalarProperty Name="DEF_PORT_NUM" ColumnName="DEF_PORT_NUM" />
+          <ScalarProperty Name="LOG_FILE" ColumnName="LOG_FILE" />
+          <ScalarProperty Name="DEBUG_FILE" ColumnName="DEBUG_FILE" />
+          <ScalarProperty Name="DISK_LOG_CAP" ColumnName="DISK_LOG_CAP" />
+          <ScalarProperty Name="COUNTRY_CODE" ColumnName="COUNTRY_CODE" />
+          <ScalarProperty Name="LOG_LEVEL" ColumnName="LOG_LEVEL" />
+          <ScalarProperty Name="SERV_ID" ColumnName="SERV_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FWSYS_CONFIG">
+      <EntityTypeMapping TypeName="IfamModel.FWSYS_CONFIG">
+        <MappingFragment StoreEntitySet="FWSYS_CONFIG">
+          <ScalarProperty Name="CTLINFO_INTVAL" ColumnName="CTLINFO_INTVAL" />
+          <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+          <ScalarProperty Name="SERIAL_STR" ColumnName="SERIAL_STR" />
+          <ScalarProperty Name="FMK_STR" ColumnName="FMK_STR" />
+          <ScalarProperty Name="MAX_NIMBED_STR" ColumnName="MAX_NIMBED_STR" />
+          <ScalarProperty Name="JDBC_DRIVER" ColumnName="JDBC_DRIVER" />
+          <ScalarProperty Name="JDBC_URL" ColumnName="JDBC_URL" />
+          <ScalarProperty Name="DEF_AGENT_PORT" ColumnName="DEF_AGENT_PORT" />
+          <ScalarProperty Name="IFSM_LOG_FILE" ColumnName="IFSM_LOG_FILE" />
+          <ScalarProperty Name="FW_DBNAME" ColumnName="FW_DBNAME" />
+          <ScalarProperty Name="CONFIG_FILE" ColumnName="CONFIG_FILE" />
+          <ScalarProperty Name="DAP_COUR_THRESH" ColumnName="DAP_COUR_THRESH" />
+          <ScalarProperty Name="DAP_PRIOR_INC" ColumnName="DAP_PRIOR_INC" />
+          <ScalarProperty Name="DAP_FORMULA" ColumnName="DAP_FORMULA" />
+          <ScalarProperty Name="CURR_SRC_CNT" ColumnName="CURR_SRC_CNT" />
+          <ScalarProperty Name="CURR_STAT_CNT" ColumnName="CURR_STAT_CNT" />
+          <ScalarProperty Name="CURR_SYSMON_CNT" ColumnName="CURR_SYSMON_CNT" />
+          <ScalarProperty Name="CURR_DDLN_CNT" ColumnName="CURR_DDLN_CNT" />
+          <ScalarProperty Name="CURR_PROC_CNT" ColumnName="CURR_PROC_CNT" />
+          <ScalarProperty Name="CURR_CIFAM_CNT" ColumnName="CURR_CIFAM_CNT" />
+          <ScalarProperty Name="CURR_MIFAM_CNT" ColumnName="CURR_MIFAM_CNT" />
+          <ScalarProperty Name="SYS_STATE" ColumnName="SYS_STATE" />
+          <ScalarProperty Name="TRANS_SEM_KEY" ColumnName="TRANS_SEM_KEY" />
+          <ScalarProperty Name="TRANS_MEM_KEY" ColumnName="TRANS_MEM_KEY" />
+          <ScalarProperty Name="MAX_SRC_CNT" ColumnName="MAX_SRC_CNT" />
+          <ScalarProperty Name="MAX_STAT_CNT" ColumnName="MAX_STAT_CNT" />
+          <ScalarProperty Name="MAX_SYSMON_CNT" ColumnName="MAX_SYSMON_CNT" />
+          <ScalarProperty Name="MAX_DDLN_CNT" ColumnName="MAX_DDLN_CNT" />
+          <ScalarProperty Name="MAX_PROC_CNT" ColumnName="MAX_PROC_CNT" />
+          <ScalarProperty Name="MAX_CIFAM_CNT" ColumnName="MAX_CIFAM_CNT" />
+          <ScalarProperty Name="MAX_MIFAM_CNT" ColumnName="MAX_MIFAM_CNT" />
+          <ScalarProperty Name="DOMAIN_ID" ColumnName="DOMAIN_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FWSYS_HOSTS">
+      <EntityTypeMapping TypeName="IfamModel.FWSYS_HOSTS">
+        <MappingFragment StoreEntitySet="FWSYS_HOSTS">
+          <ScalarProperty Name="PWD_AUTH_FILE" ColumnName="PWD_AUTH_FILE" />
+          <ScalarProperty Name="PWD_AUTH_TYPE" ColumnName="PWD_AUTH_TYPE" />
+          <ScalarProperty Name="MAX_RESP_TIME" ColumnName="MAX_RESP_TIME" />
+          <ScalarProperty Name="MAX_SHUT_RESP_TIME" ColumnName="MAX_SHUT_RESP_TIME" />
+          <ScalarProperty Name="MAX_EXEC_RESP_TIME" ColumnName="MAX_EXEC_RESP_TIME" />
+          <ScalarProperty Name="MIFAM_NAME" ColumnName="MIFAM_NAME" />
+          <ScalarProperty Name="DISP_DEV" ColumnName="DISP_DEV" />
+          <ScalarProperty Name="BIN_PATH" ColumnName="BIN_PATH" />
+          <ScalarProperty Name="ACTIVE_FLAG" ColumnName="ACTIVE_FLAG" />
+          <ScalarProperty Name="IP_ADDR" ColumnName="IP_ADDR" />
+          <ScalarProperty Name="HOST_NAME" ColumnName="HOST_NAME" />
+          <ScalarProperty Name="HOST_ID" ColumnName="HOST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FWSYS_SERVICES">
+      <EntityTypeMapping TypeName="IfamModel.FWSYS_SERVICES">
+        <MappingFragment StoreEntitySet="FWSYS_SERVICES">
+          <ScalarProperty Name="R_PID" ColumnName="R_PID" />
+          <ScalarProperty Name="ACT_NAME_ID" ColumnName="ACT_NAME_ID" />
+          <ScalarProperty Name="PERSISTENCE" ColumnName="PERSISTENCE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CMD_TIME" ColumnName="CMD_TIME" />
+          <ScalarProperty Name="CMD" ColumnName="CMD" />
+          <ScalarProperty Name="NEXT_STATE_TIME" ColumnName="NEXT_STATE_TIME" />
+          <ScalarProperty Name="NEXT_STATE" ColumnName="NEXT_STATE" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="DOMAIN_ID" ColumnName="DOMAIN_ID" />
+          <ScalarProperty Name="SERV_TYPE" ColumnName="SERV_TYPE" />
+          <ScalarProperty Name="SERV_PID" ColumnName="SERV_PID" />
+          <ScalarProperty Name="HOST_ID" ColumnName="HOST_ID" />
+          <ScalarProperty Name="SERV_ID" ColumnName="SERV_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HIST_CONFIG">
+      <EntityTypeMapping TypeName="IfamModel.HIST_CONFIG">
+        <MappingFragment StoreEntitySet="HIST_CONFIG">
+          <ScalarProperty Name="DEF_PORT_NUM" ColumnName="DEF_PORT_NUM" />
+          <ScalarProperty Name="HIST_INTERVAL" ColumnName="HIST_INTERVAL" />
+          <ScalarProperty Name="HIST_ON" ColumnName="HIST_ON" />
+          <ScalarProperty Name="SERV_ID" ColumnName="SERV_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IFAM_CONFIG">
+      <EntityTypeMapping TypeName="IfamModel.IFAM_CONFIG">
+        <MappingFragment StoreEntitySet="IFAM_CONFIG">
+          <ScalarProperty Name="COMP_UPD_FLAG" ColumnName="COMP_UPD_FLAG" />
+          <ScalarProperty Name="DEF_PORT_NUM" ColumnName="DEF_PORT_NUM" />
+          <ScalarProperty Name="MORE_ROWS_FLAG" ColumnName="MORE_ROWS_FLAG" />
+          <ScalarProperty Name="CURRENCY_PREC" ColumnName="CURRENCY_PREC" />
+          <ScalarProperty Name="MAX_RUN_TIME" ColumnName="MAX_RUN_TIME" />
+          <ScalarProperty Name="TRACE_FILE" ColumnName="TRACE_FILE" />
+          <ScalarProperty Name="DATALIST_SEC_CHK" ColumnName="DATALIST_SEC_CHK" />
+          <ScalarProperty Name="LOG_HANDLE_BASE" ColumnName="LOG_HANDLE_BASE" />
+          <ScalarProperty Name="CRR_LOG_FLAG" ColumnName="CRR_LOG_FLAG" />
+          <ScalarProperty Name="USER_CNT" ColumnName="USER_CNT" />
+          <ScalarProperty Name="CIFAM_CNT" ColumnName="CIFAM_CNT" />
+          <ScalarProperty Name="IFAM_TYPE" ColumnName="IFAM_TYPE" />
+          <ScalarProperty Name="SERV_ID" ColumnName="SERV_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LDAP_CONFIG">
+      <EntityTypeMapping TypeName="IfamModel.LDAP_CONFIG">
+        <MappingFragment StoreEntitySet="LDAP_CONFIG">
+          <ScalarProperty Name="SEARCH_FILT" ColumnName="SEARCH_FILT" />
+          <ScalarProperty Name="BASE" ColumnName="BASE" />
+          <ScalarProperty Name="SCOPE" ColumnName="SCOPE" />
+          <ScalarProperty Name="PORT_NUM" ColumnName="PORT_NUM" />
+          <ScalarProperty Name="HOST_NAME" ColumnName="HOST_NAME" />
+          <ScalarProperty Name="DEF_AUTH" ColumnName="DEF_AUTH" />
+          <ScalarProperty Name="SERV_ID" ColumnName="SERV_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOGINs">
+      <EntityTypeMapping TypeName="IfamModel.LOGIN">
+        <MappingFragment StoreEntitySet="LOGIN">
+          <ScalarProperty Name="TIME_STAMP" ColumnName="TIME_STAMP" />
+          <ScalarProperty Name="SERV_ID" ColumnName="SERV_ID" />
+          <ScalarProperty Name="LOGIN_TIME" ColumnName="LOGIN_TIME" />
+          <ScalarProperty Name="MACH_ID" ColumnName="MACH_ID" />
+          <ScalarProperty Name="ACT_NAME_ID" ColumnName="ACT_NAME_ID" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="LOGIN_HANDLE" ColumnName="LOGIN_HANDLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MACHINE_DATA">
+      <EntityTypeMapping TypeName="IfamModel.MACHINE_DATA">
+        <MappingFragment StoreEntitySet="MACHINE_DATA">
+          <ScalarProperty Name="MACH_NAME" ColumnName="MACH_NAME" />
+          <ScalarProperty Name="MACH_ID" ColumnName="MACH_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAPs">
+      <EntityTypeMapping TypeName="IfamModel.MAP">
+        <MappingFragment StoreEntitySet="MAP">
+          <ScalarProperty Name="ERROR_ACTIVITY_ID" ColumnName="ERROR_ACTIVITY_ID" />
+          <ScalarProperty Name="TIME_STAMP" ColumnName="TIME_STAMP" />
+          <ScalarProperty Name="START_NODE_ID" ColumnName="START_NODE_ID" />
+          <ScalarProperty Name="MAP_STATE" ColumnName="MAP_STATE" />
+          <ScalarProperty Name="MAP_VERSION" ColumnName="MAP_VERSION" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+          <ScalarProperty Name="MAP_ID" ColumnName="MAP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAP_ACT">
+      <EntityTypeMapping TypeName="IfamModel.MAP_ACT">
+        <MappingFragment StoreEntitySet="MAP_ACT">
+          <ScalarProperty Name="ACT_ATTR" ColumnName="ACT_ATTR" />
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="ACT_STATUS" ColumnName="ACT_STATUS" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+          <ScalarProperty Name="ACT_NAME_ID" ColumnName="ACT_NAME_ID" />
+          <ScalarProperty Name="ACT_ID" ColumnName="ACT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAP_INSTANCES">
+      <EntityTypeMapping TypeName="IfamModel.MAP_INSTANCES">
+        <MappingFragment StoreEntitySet="MAP_INSTANCES">
+          <ScalarProperty Name="TOP_MAP_NAME_ID" ColumnName="TOP_MAP_NAME_ID" />
+          <ScalarProperty Name="PARENT_MAP_INST_ID" ColumnName="PARENT_MAP_INST_ID" />
+          <ScalarProperty Name="PARENT_NODE_ID" ColumnName="PARENT_NODE_ID" />
+          <ScalarProperty Name="PARENT_MAP_ID" ColumnName="PARENT_MAP_ID" />
+          <ScalarProperty Name="MAP_ID" ColumnName="MAP_ID" />
+          <ScalarProperty Name="MAP_INST_ID" ColumnName="MAP_INST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAP_NAMES">
+      <EntityTypeMapping TypeName="IfamModel.MAP_NAMES">
+        <MappingFragment StoreEntitySet="MAP_NAMES">
+          <ScalarProperty Name="COMMIT_LH" ColumnName="COMMIT_LH" />
+          <ScalarProperty Name="FW" ColumnName="FW" />
+          <ScalarProperty Name="RETAIN_FLAG" ColumnName="RETAIN_FLAG" />
+          <ScalarProperty Name="LATEST_VERSION" ColumnName="LATEST_VERSION" />
+          <ScalarProperty Name="MAP_LOGIN" ColumnName="MAP_LOGIN" />
+          <ScalarProperty Name="MAP_NAME" ColumnName="MAP_NAME" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NODEs">
+      <EntityTypeMapping TypeName="IfamModel.NODE">
+        <MappingFragment StoreEntitySet="NODE">
+          <ScalarProperty Name="USER_NODE_ID" ColumnName="USER_NODE_ID" />
+          <ScalarProperty Name="MAP_ID" ColumnName="MAP_ID" />
+          <ScalarProperty Name="LINK_ID" ColumnName="LINK_ID" />
+          <ScalarProperty Name="NODE_TYPE" ColumnName="NODE_TYPE" />
+          <ScalarProperty Name="NODE_ID" ColumnName="NODE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERIAL_CONFIG">
+      <EntityTypeMapping TypeName="IfamModel.SERIAL_CONFIG">
+        <MappingFragment StoreEntitySet="SERIAL_CONFIG">
+          <ScalarProperty Name="DEF_PORT_NUM" ColumnName="DEF_PORT_NUM" />
+          <ScalarProperty Name="SERV_ID" ColumnName="SERV_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERIAL_IDS">
+      <EntityTypeMapping TypeName="IfamModel.SERIAL_IDS">
+        <MappingFragment StoreEntitySet="SERIAL_IDS">
+          <ScalarProperty Name="RESERVED2" ColumnName="RESERVED2" />
+          <ScalarProperty Name="RESERVED1" ColumnName="RESERVED1" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="TRANSACTION_NO" ColumnName="TRANSACTION_NO" />
+          <ScalarProperty Name="CACHING_FACTOR" ColumnName="CACHING_FACTOR" />
+          <ScalarProperty Name="CURRENT_ID" ColumnName="CURRENT_ID" />
+          <ScalarProperty Name="SERIAL_ID" ColumnName="SERIAL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STAT_CONFIG">
+      <EntityTypeMapping TypeName="IfamModel.STAT_CONFIG">
+        <MappingFragment StoreEntitySet="STAT_CONFIG">
+          <ScalarProperty Name="DEF_PORT_NUM" ColumnName="DEF_PORT_NUM" />
+          <ScalarProperty Name="STAT_NAME" ColumnName="STAT_NAME" />
+          <ScalarProperty Name="STAT_DBNAME" ColumnName="STAT_DBNAME" />
+          <ScalarProperty Name="FLUSH_FILE" ColumnName="FLUSH_FILE" />
+          <ScalarProperty Name="CRITICAL" ColumnName="CRITICAL" />
+          <ScalarProperty Name="STAT_QID" ColumnName="STAT_QID" />
+          <ScalarProperty Name="STAT_QKEY" ColumnName="STAT_QKEY" />
+          <ScalarProperty Name="STAT_MEM_ID" ColumnName="STAT_MEM_ID" />
+          <ScalarProperty Name="STAT_MEM_KEY" ColumnName="STAT_MEM_KEY" />
+          <ScalarProperty Name="STAT_ON" ColumnName="STAT_ON" />
+          <ScalarProperty Name="MAX_USER_STAT_CNT" ColumnName="MAX_USER_STAT_CNT" />
+          <ScalarProperty Name="MAX_SACT_STAT_CNT" ColumnName="MAX_SACT_STAT_CNT" />
+          <ScalarProperty Name="MAX_MACT_STAT_CNT" ColumnName="MAX_MACT_STAT_CNT" />
+          <ScalarProperty Name="MAX_MAP_STAT_CNT" ColumnName="MAX_MAP_STAT_CNT" />
+          <ScalarProperty Name="SERV_ID" ColumnName="SERV_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TABLE_INFO">
+      <EntityTypeMapping TypeName="IfamModel.TABLE_INFO">
+        <MappingFragment StoreEntitySet="TABLE_INFO">
+          <ScalarProperty Name="CLEANUP_FLAG" ColumnName="CLEANUP_FLAG" />
+          <ScalarProperty Name="BUS_TABLE_NAME" ColumnName="BUS_TABLE_NAME" />
+          <ScalarProperty Name="TABLE_NAME_ID" ColumnName="TABLE_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USER_GROUP_NAMES">
+      <EntityTypeMapping TypeName="IfamModel.USER_GROUP_NAMES">
+        <MappingFragment StoreEntitySet="USER_GROUP_NAMES">
+          <ScalarProperty Name="USERGRP_NAME" ColumnName="USERGRP_NAME" />
+          <ScalarProperty Name="USERGRP_ID" ColumnName="USERGRP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="IfamModel.USER">
+        <MappingFragment StoreEntitySet="USERS">
+          <ScalarProperty Name="MAIL_ADDRESS" ColumnName="MAIL_ADDRESS" />
+          <ScalarProperty Name="LOCK_FLAG" ColumnName="LOCK_FLAG" />
+          <ScalarProperty Name="USER_STATUS" ColumnName="USER_STATUS" />
+          <ScalarProperty Name="MAP_PRIVILEGE" ColumnName="MAP_PRIVILEGE" />
+          <ScalarProperty Name="ACCESS_LEVEL" ColumnName="ACCESS_LEVEL" />
+          <ScalarProperty Name="DELETE_FLAG" ColumnName="DELETE_FLAG" />
+          <ScalarProperty Name="LOGIN_COUNT" ColumnName="LOGIN_COUNT" />
+          <ScalarProperty Name="LOGIN_LIMIT" ColumnName="LOGIN_LIMIT" />
+          <ScalarProperty Name="ACT_NAME_ID" ColumnName="ACT_NAME_ID" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="MIDDLE_NAME" ColumnName="MIDDLE_NAME" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="LOGIN_NAME" ColumnName="LOGIN_NAME" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VARIABLES">
+      <EntityTypeMapping TypeName="IfamModel.VARIABLE">
+        <MappingFragment StoreEntitySet="VARIABLES">
+          <ScalarProperty Name="LENGTH" ColumnName="LENGTH" />
+          <ScalarProperty Name="BUS_COLUMN_NAME" ColumnName="BUS_COLUMN_NAME" />
+          <ScalarProperty Name="BUS_TABLE_NAME" ColumnName="BUS_TABLE_NAME" />
+          <ScalarProperty Name="VALUE_LOCK_FLAG" ColumnName="VALUE_LOCK_FLAG" />
+          <ScalarProperty Name="LOCK_FLAG" ColumnName="LOCK_FLAG" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="ACCESS_LEVEL" ColumnName="ACCESS_LEVEL" />
+          <ScalarProperty Name="DATATYPE" ColumnName="DATATYPE" />
+          <ScalarProperty Name="SCOPE" ColumnName="SCOPE" />
+          <ScalarProperty Name="VARIABLE_NAME" ColumnName="VARIABLE_NAME" />
+          <ScalarProperty Name="VARIABLE_NAME_ID" ColumnName="VARIABLE_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACTGRP_FORWARD">
+      <EntityTypeMapping TypeName="IfamModel.ACTGRP_FORWARD">
+        <MappingFragment StoreEntitySet="ACTGRP_FORWARD">
+          <ScalarProperty Name="FORWARD_TO" ColumnName="FORWARD_TO" />
+          <ScalarProperty Name="ACTGRP_NAME_ID" ColumnName="ACTGRP_NAME_ID" />
+          <ScalarProperty Name="FORWARD_FROM" ColumnName="FORWARD_FROM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACTGRP_PERM_HOLD">
+      <EntityTypeMapping TypeName="IfamModel.ACTGRP_PERM_HOLD">
+        <MappingFragment StoreEntitySet="ACTGRP_PERM_HOLD">
+          <ScalarProperty Name="ACT_NAME" ColumnName="ACT_NAME" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+          <ScalarProperty Name="ACTGRP_NAME_ID" ColumnName="ACTGRP_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ACTGRP_PERMISSION">
+      <EntityTypeMapping TypeName="IfamModel.ACTGRP_PERMISSION">
+        <MappingFragment StoreEntitySet="ACTGRP_PERMISSION">
+          <ScalarProperty Name="ACT_NAME_ID" ColumnName="ACT_NAME_ID" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+          <ScalarProperty Name="ACTGRP_NAME_ID" ColumnName="ACTGRP_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONFIGs">
+      <EntityTypeMapping TypeName="IfamModel.CONFIG">
+        <MappingFragment StoreEntitySet="CONFIG">
+          <ScalarProperty Name="CF_VALUE" ColumnName="CF_VALUE" />
+          <ScalarProperty Name="CF_SUB_SEC_NAME" ColumnName="CF_SUB_SEC_NAME" />
+          <ScalarProperty Name="CF_SEC_NAME" ColumnName="CF_SEC_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DBVERSIONs">
+      <EntityTypeMapping TypeName="IfamModel.DBVERSION">
+        <MappingFragment StoreEntitySet="DBVERSION">
+          <ScalarProperty Name="VERSION_NUM" ColumnName="VERSION_NUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEADLINEs">
+      <EntityTypeMapping TypeName="IfamModel.DEADLINE">
+        <MappingFragment StoreEntitySet="DEADLINE">
+          <ScalarProperty Name="DEADLINE_STRING" ColumnName="DEADLINE_STRING" />
+          <ScalarProperty Name="DEADLINE_CMD" ColumnName="DEADLINE_CMD" />
+          <ScalarProperty Name="ACTION_COMPLETED" ColumnName="ACTION_COMPLETED" />
+          <ScalarProperty Name="PRIORITY_INCREMENT" ColumnName="PRIORITY_INCREMENT" />
+          <ScalarProperty Name="DEADLINE_ACTION" ColumnName="DEADLINE_ACTION" />
+          <ScalarProperty Name="DEADLINE1" ColumnName="DEADLINE" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="DEADLINE_ID" ColumnName="DEADLINE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEF_PERM_HOLD">
+      <EntityTypeMapping TypeName="IfamModel.DEF_PERM_HOLD">
+        <MappingFragment StoreEntitySet="DEF_PERM_HOLD">
+          <ScalarProperty Name="ACT_NAME" ColumnName="ACT_NAME" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ERROR_MSG">
+      <EntityTypeMapping TypeName="IfamModel.ERROR_MSG">
+        <MappingFragment StoreEntitySet="ERROR_MSG">
+          <ScalarProperty Name="ERR_MSG" ColumnName="ERR_MSG" />
+          <ScalarProperty Name="MSG_TYPE" ColumnName="MSG_TYPE" />
+          <ScalarProperty Name="ERR_ID" ColumnName="ERR_ID" />
+          <ScalarProperty Name="LANG_ID" ColumnName="LANG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FLOW_STAT">
+      <EntityTypeMapping TypeName="IfamModel.FLOW_STAT">
+        <MappingFragment StoreEntitySet="FLOW_STAT">
+          <ScalarProperty Name="FLOW_STAT_CNT_STR" ColumnName="FLOW_STAT_CNT_STR" />
+          <ScalarProperty Name="FLOW_STAT_STR" ColumnName="FLOW_STAT_STR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FWSYS_PROC_CONFIG">
+      <EntityTypeMapping TypeName="IfamModel.FWSYS_PROC_CONFIG">
+        <MappingFragment StoreEntitySet="FWSYS_PROC_CONFIG">
+          <ScalarProperty Name="LOG_FILE" ColumnName="LOG_FILE" />
+          <ScalarProperty Name="SYSMON_HOST" ColumnName="SYSMON_HOST" />
+          <ScalarProperty Name="PROC_NAME" ColumnName="PROC_NAME" />
+          <ScalarProperty Name="HOST_NAME" ColumnName="HOST_NAME" />
+          <ScalarProperty Name="HOST_ID" ColumnName="HOST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAP_ACT_INST">
+      <EntityTypeMapping TypeName="IfamModel.MAP_ACT_INST">
+        <MappingFragment StoreEntitySet="MAP_ACT_INST">
+          <ScalarProperty Name="MAP_ID" ColumnName="MAP_ID" />
+          <ScalarProperty Name="ACT_NAME_ID" ColumnName="ACT_NAME_ID" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAP_DATA">
+      <EntityTypeMapping TypeName="IfamModel.MAP_DATA">
+        <MappingFragment StoreEntitySet="MAP_DATA">
+          <ScalarProperty Name="MAP_DATA_BLOB" ColumnName="MAP_DATA_BLOB" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="LOCK_FLAG" ColumnName="LOCK_FLAG" />
+          <ScalarProperty Name="TIME_STAMP" ColumnName="TIME_STAMP" />
+          <ScalarProperty Name="MAP_DATA_SIZE" ColumnName="MAP_DATA_SIZE" />
+          <ScalarProperty Name="MAP_DATA_TYPE" ColumnName="MAP_DATA_TYPE" />
+          <ScalarProperty Name="MAP_ID" ColumnName="MAP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISSIONs">
+      <EntityTypeMapping TypeName="IfamModel.PERMISSION">
+        <MappingFragment StoreEntitySet="PERMISSION">
+          <ScalarProperty Name="COUNTER" ColumnName="COUNTER" />
+          <ScalarProperty Name="ACTGRP_NAME_ID" ColumnName="ACTGRP_NAME_ID" />
+          <ScalarProperty Name="ACT_NAME_ID" ColumnName="ACT_NAME_ID" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISSION_HOLD">
+      <EntityTypeMapping TypeName="IfamModel.PERMISSION_HOLD">
+        <MappingFragment StoreEntitySet="PERMISSION_HOLD">
+          <ScalarProperty Name="ACT_NAME" ColumnName="ACT_NAME" />
+          <ScalarProperty Name="MAP_NAME_ID" ColumnName="MAP_NAME_ID" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLX_ACCESS_ALLOW">
+      <EntityTypeMapping TypeName="IfamModel.PLX_ACCESS_ALLOW">
+        <MappingFragment StoreEntitySet="PLX_ACCESS_ALLOW">
+          <ScalarProperty Name="GRP_ID" ColumnName="GRP_ID" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="ACCESS_ID" ColumnName="ACCESS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLX_ACCESS_DENY">
+      <EntityTypeMapping TypeName="IfamModel.PLX_ACCESS_DENY">
+        <MappingFragment StoreEntitySet="PLX_ACCESS_DENY">
+          <ScalarProperty Name="GRP_ID" ColumnName="GRP_ID" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="ACCESS_ID" ColumnName="ACCESS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROUTEs">
+      <EntityTypeMapping TypeName="IfamModel.ROUTE">
+        <MappingFragment StoreEntitySet="ROUTE">
+          <ScalarProperty Name="NEXT_NODE_ID" ColumnName="NEXT_NODE_ID" />
+          <ScalarProperty Name="RETURN_STATE" ColumnName="RETURN_STATE" />
+          <ScalarProperty Name="NODE_ID" ColumnName="NODE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RTI_STATUS">
+      <EntityTypeMapping TypeName="IfamModel.RTI_STATUS">
+        <MappingFragment StoreEntitySet="RTI_STATUS">
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="WIP" ColumnName="WIP" />
+          <ScalarProperty Name="ZOMBIE" ColumnName="ZOMBIE" />
+          <ScalarProperty Name="SUSP" ColumnName="SUSP" />
+          <ScalarProperty Name="FRIED" ColumnName="FRIED" />
+          <ScalarProperty Name="INUSE" ColumnName="INUSE" />
+          <ScalarProperty Name="AVAILABLE" ColumnName="AVAILABLE" />
+          <ScalarProperty Name="ACTIVITY" ColumnName="ACTIVITY" />
+          <ScalarProperty Name="MAP" ColumnName="MAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RULE_CONTROL">
+      <EntityTypeMapping TypeName="IfamModel.RULE_CONTROL">
+        <MappingFragment StoreEntitySet="RULE_CONTROL">
+          <ScalarProperty Name="LOCK_FLAG" ColumnName="LOCK_FLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SPLITs">
+      <EntityTypeMapping TypeName="IfamModel.SPLIT">
+        <MappingFragment StoreEntitySet="SPLIT">
+          <ScalarProperty Name="NODE_ID" ColumnName="NODE_ID" />
+          <ScalarProperty Name="SPLIT_ID" ColumnName="SPLIT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USER_GROUPS">
+      <EntityTypeMapping TypeName="IfamModel.USER_GROUPS">
+        <MappingFragment StoreEntitySet="USER_GROUPS">
+          <ScalarProperty Name="USERGRP_MBR_ID" ColumnName="USERGRP_MBR_ID" />
+          <ScalarProperty Name="USERGRP_MBR_TYPE" ColumnName="USERGRP_MBR_TYPE" />
+          <ScalarProperty Name="USERGRP_ID" ColumnName="USERGRP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WF_CHAR128">
+      <EntityTypeMapping TypeName="IfamModel.WF_CHAR128">
+        <MappingFragment StoreEntitySet="WF_CHAR128">
+          <ScalarProperty Name="VARIABLE_VALUE" ColumnName="VARIABLE_VALUE" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="VARIABLE_NAME_ID" ColumnName="VARIABLE_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WF_CURRENCY">
+      <EntityTypeMapping TypeName="IfamModel.WF_CURRENCY">
+        <MappingFragment StoreEntitySet="WF_CURRENCY">
+          <ScalarProperty Name="VARIABLE_VALUE" ColumnName="VARIABLE_VALUE" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="VARIABLE_NAME_ID" ColumnName="VARIABLE_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WF_DATETIME">
+      <EntityTypeMapping TypeName="IfamModel.WF_DATETIME">
+        <MappingFragment StoreEntitySet="WF_DATETIME">
+          <ScalarProperty Name="VARIABLE_VALUE" ColumnName="VARIABLE_VALUE" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="VARIABLE_NAME_ID" ColumnName="VARIABLE_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WF_FLOAT64">
+      <EntityTypeMapping TypeName="IfamModel.WF_FLOAT64">
+        <MappingFragment StoreEntitySet="WF_FLOAT64">
+          <ScalarProperty Name="VARIABLE_VALUE" ColumnName="VARIABLE_VALUE" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="VARIABLE_NAME_ID" ColumnName="VARIABLE_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WF_INT32">
+      <EntityTypeMapping TypeName="IfamModel.WF_INT32">
+        <MappingFragment StoreEntitySet="WF_INT32">
+          <ScalarProperty Name="VARIABLE_VALUE" ColumnName="VARIABLE_VALUE" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="VARIABLE_NAME_ID" ColumnName="VARIABLE_NAME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

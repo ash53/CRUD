@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Production Area -->
+<iqServerConfig name="rti QA" version="1.0" info="rti QA">
+  <serverGroupConfig>
+    <defaultGroup name="default" group="default" active="true">
+
+      <clientParams>
+        <!-- param name="xmlBaseDir" value="/opt/rex/programs/iqs/iqxml" -->
+        <param name="xmlBaseDir" value="stream"/>
+        <!-- param name="commTimeout" value="300000" 5min -->
+        <!-- commTimeout of zero with responseTimeoutPolicy of IGNORE or    -->
+        <!-- BOUNDED should produce the 3.6.9 behavior of explicitly using  -->
+        <!-- the server's responseTimeout value                             -->
+        <param name="commTimeout" value="0"/>
+        <param name="connectionTimeout" value="60000"/>
+        <param name="logDir" value="C:\TEMP"/>
+        <param name="java.logLevel" value="WARNING"/>
+        <param name="java.connectionClass" value="com.solvepoint.iqrpc.client.SocketConnection"/>
+      </clientParams>
+
+    </defaultGroup>
+    <!--group name="main"   group="main"   active="true"/ -->
+    <!--group name="nondb"  group="nondb"  active="true"/ -->
+    <!--group name="nonemb" group="nonemb" active="true"/ -->
+  </serverGroupConfig>
+
+  <servers>
+    <!-- "server" is the DTD equivalent of "group" -->
+    <server name="master" group="default" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20135"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti01" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20136"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti02" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20137"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti03" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20138"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti04" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20139"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti05" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20140"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti06" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20141"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti07" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20142"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti08" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20143"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti09" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20144"/>
+         <param name="xmlBaseDir" value="stream"/>
+     </clientParams>
+    </server>
+    <server name="rti10" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20145"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti11" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20146"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti12" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20147"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti13" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20148"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti14" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20149"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti15" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20150"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti16" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20151"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti17" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20152"/>
+         <param name="xmlBaseDir" value="stream"/>
+     </clientParams>
+    </server>
+    <server name="rti18" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20153"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti19" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20154"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti20" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20155"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti21" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20156"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti22" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20157"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti23" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20158"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti24" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20159"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti25" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20160"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti26" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20161"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="rti27" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20216"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="train" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20162"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="pd01" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20163"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="pd02" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20164"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="noemb" group="nondb" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20203"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="mpi" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20192"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="noembwan" group="nondb" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20212"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="noemb1" group="nondb" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20215"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="longrpc" group="main" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20600"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+    <server name="enroll" group="nonemb" active="true">
+      <clientParams>
+        <param name="server.url.list" value="rtitsta.rti.com:20227"/>
+        <param name="xmlBaseDir" value="stream"/>
+      </clientParams>
+    </server>
+  </servers>
+
+</iqServerConfig>
+

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCFADD0C-42E6-41F5-810F-EF9C84894666}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RACServicesUnitTests</RootNamespace>
+    <AssemblyName>RACServicesUnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="RACTests01.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RACTests02.cs" />
+    <Compile Include="RACTests03.cs" />
+    <Compile Include="RACTests04.cs" />
+    <Compile Include="RACTests05.cs" />
+    <Compile Include="RACTests06.cs" />
+    <Compile Include="RACTests7.cs" />
+    <Compile Include="VerifyUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rti.AdministrationService\Rti.AdministrationServer\Rti.AdministrationServer.csproj">
+      <Project>{e8825eba-107a-43e7-a5b4-3af562000377}</Project>
+      <Name>Rti.AdministrationServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rti.DataModel\Rti.DataModel.csproj">
+      <Project>{6bcc6ada-2ab0-4cbe-afa6-51c8c5a654fb}</Project>
+      <Name>Rti.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rti.DocumentManagerService\Rti.DocumentManagerServer\Rti.DocumentManagerServer.csproj">
+      <Project>{8da4b379-086d-4bfd-9d1c-27780ec01349}</Project>
+      <Name>Rti.DocumentManagerServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rti.EagleIqGatewayService\Rti.EagleIqGatewayServer\Rti.EagleIqGatewayServer.csproj">
+      <Project>{37d6d815-0fb7-4afa-8f8e-76ff71b71945}</Project>
+      <Name>Rti.EagleIqGatewayServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rti.EncryptionLib\Rti.EncryptionLib.csproj">
+      <Project>{a7b73829-78fd-43f1-a3c7-2290a0ba6bb7}</Project>
+      <Name>Rti.EncryptionLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rti.ExternalInterfaces\Rti.ExternalInterfaces.csproj">
+      <Project>{ba767011-ca53-49c3-b2c3-7466e3e406b9}</Project>
+      <Name>Rti.ExternalInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rti.Imaging\Rti.Imaging.csproj">
+      <Project>{e6313654-64ab-4332-9476-48f3046ced04}</Project>
+      <Name>Rti.Imaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rti.InternalInterfaces\Rti.InternalInterfaces.csproj">
+      <Project>{7b47e43e-29da-479a-a3d8-af2bed427114}</Project>
+      <Name>Rti.InternalInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rti.RemoteFileTransfer\Rti.RemoteFileTransfer.csproj">
+      <Project>{e0f7dbe9-3f26-4a23-8cc4-60972bf643fd}</Project>
+      <Name>Rti.RemoteFileTransfer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rti.RemoteProcedureCalls\Rti.RemoteProcedureCalls.csproj">
+      <Project>{42f71d2b-6bd0-4703-a681-85e777e5a89f}</Project>
+      <Name>Rti.RemoteProcedureCalls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rti\Rti.csproj">
+      <Project>{7143739e-b054-42b6-a474-87f0f8adb666}</Project>
+      <Name>Rti</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

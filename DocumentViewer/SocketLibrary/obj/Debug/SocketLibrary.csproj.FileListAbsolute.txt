@@ -1,0 +1,4 @@
+c:\users\marklane.emsc\documents\visual studio 2010\Projects\DocumentViewer\SocketLibrary\bin\Debug\SocketLibrary.dll
+c:\users\marklane.emsc\documents\visual studio 2010\Projects\DocumentViewer\SocketLibrary\bin\Debug\SocketLibrary.pdb
+c:\users\marklane.emsc\documents\visual studio 2010\Projects\DocumentViewer\SocketLibrary\obj\Debug\SocketLibrary.dll
+c:\users\marklane.emsc\documents\visual studio 2010\Projects\DocumentViewer\SocketLibrary\obj\Debug\SocketLibrary.pdb

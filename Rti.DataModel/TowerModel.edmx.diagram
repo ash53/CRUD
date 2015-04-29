@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2c78685ab1a0424f83603b2a8ab8e49b" Name="Diagram1" ZoomLevel="60" >
+        <EntityTypeShape EntityType="TowerModel.AMRBILLEXT" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRPOSTEXT" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.AR_REGION" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TowerModel.BILLDOCEXT" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TowerModel.IMAGEINFO_USERS" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.PATIENT_VOLUME" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TowerModel.POSTDOCEXT" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.WF_INVENTORY" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="TowerModel.WF_PRODUCTIVITY" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRBILL" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRBILL_HISTORY" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRDISCOVERY" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRDISCOVERY_VIEW1" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRDISCOVERY_VIEW3" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRDISCOVERY_VIEW4" Width="1.5" PointX="10.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRPOST" Width="1.5" PointX="6.75" PointY="11.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRPOST_HISTORY" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRPOSTDETAIL" Width="1.5" PointX="12.75" PointY="10.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRPOSTWAKE" Width="1.5" PointX="8.75" PointY="13.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRPOSTWAKE_DEL" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRWFWAKE" Width="1.5" PointX="14.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TowerModel.AMRWFWAKE_DEL" Width="1.5" PointX="14.75" PointY="8.75" />
+        <EntityTypeShape EntityType="TowerModel.ANNOTTBL" Width="1.5" PointX="14.75" PointY="12.75" />
+        <EntityTypeShape EntityType="TowerModel.B_LIST" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.B_MAP" Width="1.5" PointX="16.75" PointY="5.75" />
+        <EntityTypeShape EntityType="TowerModel.B2D" Width="1.5" PointX="16.75" PointY="8.75" />
+        <EntityTypeShape EntityType="TowerModel.B3D" Width="1.5" PointX="16.75" PointY="12.75" />
+        <EntityTypeShape EntityType="TowerModel.B4D" Width="1.5" PointX="14.75" PointY="16.75" />
+        <EntityTypeShape EntityType="TowerModel.BAMRBILL" Width="1.5" PointX="16.75" PointY="16.75" />
+        <EntityTypeShape EntityType="TowerModel.BAMRPOST" Width="1.5" PointX="8.75" PointY="17.75" />
+        <EntityTypeShape EntityType="TowerModel.BBILLDOC" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.BILLDOC" Width="1.5" PointX="18.75" PointY="8.75" />
+        <EntityTypeShape EntityType="TowerModel.BPOSTDOC" Width="1.5" PointX="18.75" PointY="16.75" />
+        <EntityTypeShape EntityType="TowerModel.COURIER_RELOCATE" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.DEPOSITCLIENT" Width="1.5" PointX="4.75" PointY="20.75" />
+        <EntityTypeShape EntityType="TowerModel.DOCDETAIL_LOOKUP" Width="1.5" PointX="20.75" PointY="5.75" />
+        <EntityTypeShape EntityType="TowerModel.DOCLIST" Width="1.5" PointX="20.75" PointY="8.75" />
+        <EntityTypeShape EntityType="TowerModel.DOCTYPE_LOOKUP" Width="1.5" PointX="10.75" PointY="20.75" />
+        <EntityTypeShape EntityType="TowerModel.FLDINFO" Width="1.5" PointX="20.75" PointY="12.75" />
+        <EntityTypeShape EntityType="TowerModel.FTBL" Width="1.5" PointX="12.75" PointY="20.75" />
+        <EntityTypeShape EntityType="TowerModel.FULLBALANCE_REQUEST" Width="1.5" PointX="20.75" PointY="15.75" />
+        <EntityTypeShape EntityType="TowerModel.POSTBD" Width="1.5" PointX="0.75" PointY="21.75" />
+        <EntityTypeShape EntityType="TowerModel.POSTDETAIL" Width="1.5" PointX="20.75" PointY="21.75" />
+        <EntityTypeShape EntityType="TowerModel.POSTDETAIL_STATUS_LOOKUP" Width="1.5" PointX="22.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.POSTDOC" Width="1.5" PointX="22.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TowerModel.POSTDOC_STATUS_LOOKUP" Width="1.5" PointX="22.75" PointY="11.75" />
+        <EntityTypeShape EntityType="TowerModel.POSTWAKE" Width="1.5" PointX="22.75" PointY="14.75" />
+        <EntityTypeShape EntityType="TowerModel.POSTWAKE_DEL" Width="1.5" PointX="22.75" PointY="18.75" />
+        <EntityTypeShape EntityType="TowerModel.REASON_LOOKUP" Width="1.5" PointX="22.75" PointY="22.75" />
+        <EntityTypeShape EntityType="TowerModel.RTIBD" Width="1.5" PointX="24.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.RTIHIST" Width="1.5" PointX="2.75" PointY="24.75" />
+        <EntityTypeShape EntityType="TowerModel.RTIWAKE" Width="1.5" PointX="4.75" PointY="24.75" />
+        <EntityTypeShape EntityType="TowerModel.SCAN_LOG" Width="1.5" PointX="24.75" PointY="8.75" />
+        <EntityTypeShape EntityType="TowerModel.SOURCETYPE_LOOKUP" Width="1.5" PointX="24.75" PointY="14.75" />
+        <EntityTypeShape EntityType="TowerModel.TABINFO" Width="1.5" PointX="24.75" PointY="17.75" />
+        <EntityTypeShape EntityType="TowerModel.TTBL" Width="1.5" PointX="24.75" PointY="20.75" />
+        <EntityTypeShape EntityType="TowerModel.WFWAKE" Width="1.5" PointX="24.75" PointY="24.75" />
+        <EntityTypeShape EntityType="TowerModel.WFWAKE_DEL" Width="1.5" PointX="10.75" PointY="25.75" />
+        <EntityTypeShape EntityType="TowerModel.GROUPATTRIBUTE" Width="1.5" PointX="13.375" PointY="25.75" />
+        <EntityTypeShape EntityType="TowerModel.USERATTRIBUTE" Width="1.5" PointX="7.375" PointY="26.75" />
+        <EntityTypeShape EntityType="TowerModel.STARTRULE_LOOKUP" Width="1.5" PointX="27.375" PointY="9.75" />
+        <EntityTypeShape EntityType="TowerModel.RTICLIENT" Width="1.5" PointX="27.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.CRUDRULE" Width="1.5" PointX="27.375" PointY="13.75" />
+        <EntityTypeShape EntityType="TowerModel.BPRRULE" Width="1.5" PointX="15.375" PointY="27.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,10 @@
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\obj\x86\Release\Rti.csprojResolveAssemblyReference.cache
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Release\Rti.dll.config
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Release\Rti.dll
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Release\Rti.pdb
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Release\EntityFramework.dll
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Release\log4net.dll
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Release\EntityFramework.xml
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Release\log4net.xml
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\obj\x86\Release\Rti.dll
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\obj\x86\Release\Rti.pdb

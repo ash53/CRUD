@@ -1,0 +1,1356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="TowerModel" />
+  <Alias Key="Target" Value="TowerModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="TowerModelContainer" StorageEntityContainer="TowerModelStoreContainer">
+    <EntitySetMapping Name="AMRBILLEXTs">
+      <EntityTypeMapping TypeName="TowerModel.AMRBILLEXT">
+        <MappingFragment StoreEntitySet="AMRBILLEXT">
+          <ScalarProperty Name="FINANCIAL_CLASS" ColumnName="FINANCIAL_CLASS" />
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRPOSTEXTs">
+      <EntityTypeMapping TypeName="TowerModel.AMRPOSTEXT">
+        <MappingFragment StoreEntitySet="AMRPOSTEXT">
+          <ScalarProperty Name="SERVICEID" ColumnName="SERVICEID" />
+          <ScalarProperty Name="FINANCIAL_CLASS" ColumnName="FINANCIAL_CLASS" />
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AR_REGION">
+      <EntityTypeMapping TypeName="TowerModel.AR_REGION">
+        <MappingFragment StoreEntitySet="AR_REGION">
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BILLDOCEXTs">
+      <EntityTypeMapping TypeName="TowerModel.BILLDOCEXT">
+        <MappingFragment StoreEntitySet="BILLDOCEXT">
+          <ScalarProperty Name="FINANCIAL_CLASS" ColumnName="FINANCIAL_CLASS" />
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMAGEINFO_USERS">
+      <EntityTypeMapping TypeName="TowerModel.IMAGEINFO_USERS">
+        <MappingFragment StoreEntitySet="IMAGEINFO_USERS">
+          <ScalarProperty Name="ENVIRONMENT" ColumnName="ENVIRONMENT" />
+          <ScalarProperty Name="APPLICATION" ColumnName="APPLICATION" />
+          <ScalarProperty Name="USERACCESS" ColumnName="USERACCESS" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PATIENT_VOLUME">
+      <EntityTypeMapping TypeName="TowerModel.PATIENT_VOLUME">
+        <MappingFragment StoreEntitySet="PATIENT_VOLUME">
+          <ScalarProperty Name="RESCAN_COUNT" ColumnName="RESCAN_COUNT" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="UPDATE_USERID" ColumnName="UPDATE_USERID" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CREATE_USERID" ColumnName="CREATE_USERID" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="SUSPEND" ColumnName="SUSPEND" />
+          <ScalarProperty Name="MISSING_CUR" ColumnName="MISSING_CUR" />
+          <ScalarProperty Name="MISSING_ORIG" ColumnName="MISSING_ORIG" />
+          <ScalarProperty Name="NON_BILL_CUR" ColumnName="NON_BILL_CUR" />
+          <ScalarProperty Name="NON_BILL_ORIG" ColumnName="NON_BILL_ORIG" />
+          <ScalarProperty Name="TOTAL_ED_LOG" ColumnName="TOTAL_ED_LOG" />
+          <ScalarProperty Name="REC_DATE" ColumnName="REC_DATE" />
+          <ScalarProperty Name="SVC_END_DATE" ColumnName="SVC_END_DATE" />
+          <ScalarProperty Name="SVC_START_DATE" ColumnName="SVC_START_DATE" />
+          <ScalarProperty Name="SND_DATE" ColumnName="SND_DATE" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="AS_OF_DATE" ColumnName="AS_OF_DATE" />
+          <ScalarProperty Name="PATIENT_VOLUME_ID" ColumnName="PATIENT_VOLUME_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POSTDOCEXTs">
+      <EntityTypeMapping TypeName="TowerModel.POSTDOCEXT">
+        <MappingFragment StoreEntitySet="POSTDOCEXT">
+          <ScalarProperty Name="SERVICEID" ColumnName="SERVICEID" />
+          <ScalarProperty Name="FINANCIAL_CLASS" ColumnName="FINANCIAL_CLASS" />
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WF_INVENTORY">
+      <EntityTypeMapping TypeName="TowerModel.WF_INVENTORY">
+        <MappingFragment StoreEntitySet="WF_INVENTORY">
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="ITEM_COUNT" ColumnName="ITEM_COUNT" />
+          <ScalarProperty Name="FINANCIAL_CLASS" ColumnName="FINANCIAL_CLASS" />
+          <ScalarProperty Name="CODE_TYPE" ColumnName="CODE_TYPE" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="ACTIVITY_NAME" ColumnName="ACTIVITY_NAME" />
+          <ScalarProperty Name="MAP_NAME" ColumnName="MAP_NAME" />
+          <ScalarProperty Name="WF_DATE" ColumnName="WF_DATE" />
+          <ScalarProperty Name="WF_INVENTORY_ID" ColumnName="WF_INVENTORY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WF_PRODUCTIVITY">
+      <EntityTypeMapping TypeName="TowerModel.WF_PRODUCTIVITY">
+        <MappingFragment StoreEntitySet="WF_PRODUCTIVITY">
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="ITEM_COUNT" ColumnName="ITEM_COUNT" />
+          <ScalarProperty Name="FINANCIAL_CLASS" ColumnName="FINANCIAL_CLASS" />
+          <ScalarProperty Name="CODE_TYPE" ColumnName="CODE_TYPE" />
+          <ScalarProperty Name="TO_ACTIVITY" ColumnName="TO_ACTIVITY" />
+          <ScalarProperty Name="FROM_ACTIVITY" ColumnName="FROM_ACTIVITY" />
+          <ScalarProperty Name="MAP_NAME" ColumnName="MAP_NAME" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="WF_DATE" ColumnName="WF_DATE" />
+          <ScalarProperty Name="WF_PRODUCTIVITY_ID" ColumnName="WF_PRODUCTIVITY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRBILLs">
+      <EntityTypeMapping TypeName="TowerModel.AMRBILL">
+        <MappingFragment StoreEntitySet="AMRBILL">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="SPARE3" ColumnName="SPARE3" />
+          <ScalarProperty Name="SPARE2" ColumnName="SPARE2" />
+          <ScalarProperty Name="SPARE1" ColumnName="SPARE1" />
+          <ScalarProperty Name="RT_ENCTR" ColumnName="RT_ENCTR" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="INCIDENT" ColumnName="INCIDENT" />
+          <ScalarProperty Name="LOB" ColumnName="LOB" />
+          <ScalarProperty Name="DISPTYPE" ColumnName="DISPTYPE" />
+          <ScalarProperty Name="TRIPPRE" ColumnName="TRIPPRE" />
+          <ScalarProperty Name="TOB" ColumnName="TOB" />
+          <ScalarProperty Name="EXTPAYOR" ColumnName="EXTPAYOR" />
+          <ScalarProperty Name="PATSSN" ColumnName="PATSSN" />
+          <ScalarProperty Name="PATDOB" ColumnName="PATDOB" />
+          <ScalarProperty Name="PATFNAME" ColumnName="PATFNAME" />
+          <ScalarProperty Name="PATLNAME" ColumnName="PATLNAME" />
+          <ScalarProperty Name="ENCTRNO" ColumnName="ENCTRNO" />
+          <ScalarProperty Name="EMACCT" ColumnName="EMACCT" />
+          <ScalarProperty Name="RLFLAG" ColumnName="RLFLAG" />
+          <ScalarProperty Name="OSTATUS" ColumnName="OSTATUS" />
+          <ScalarProperty Name="SOURCEID" ColumnName="SOURCEID" />
+          <ScalarProperty Name="BOXNUM" ColumnName="BOXNUM" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="ORIGDOC" ColumnName="ORIGDOC" />
+          <ScalarProperty Name="ASDOCNO" ColumnName="ASDOCNO" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="DOS" ColumnName="DOS" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="EXPSTAT" ColumnName="EXPSTAT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCGROUP" ColumnName="DOCGROUP" />
+          <ScalarProperty Name="SCANUID" ColumnName="SCANUID" />
+          <ScalarProperty Name="SCANTIME" ColumnName="SCANTIME" />
+          <ScalarProperty Name="SCANDATE" ColumnName="SCANDATE" />
+          <ScalarProperty Name="SLEVEL" ColumnName="SLEVEL" />
+          <ScalarProperty Name="TNSTAT" ColumnName="TNSTAT" />
+          <ScalarProperty Name="TNIFNID" ColumnName="TNIFNID" />
+          <ScalarProperty Name="TNIFNDS" ColumnName="TNIFNDS" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="NPAGES" ColumnName="NPAGES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRBILL_HISTORY">
+      <EntityTypeMapping TypeName="TowerModel.AMRBILL_HISTORY">
+        <MappingFragment StoreEntitySet="AMRBILL_HISTORY">
+          <ScalarProperty Name="OS_USER" ColumnName="OS_USER" />
+          <ScalarProperty Name="MACHINE_NAME" ColumnName="MACHINE_NAME" />
+          <ScalarProperty Name="LAST_UPDATED_TIMESTAMP" ColumnName="LAST_UPDATED_TIMESTAMP" />
+          <ScalarProperty Name="LAST_UPDATED_BY" ColumnName="LAST_UPDATED_BY" />
+          <ScalarProperty Name="AMRBILL_HISTORY_ID" ColumnName="AMRBILL_HISTORY_ID" />
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="RT_ENCTR" ColumnName="RT_ENCTR" />
+          <ScalarProperty Name="SPARE3" ColumnName="SPARE3" />
+          <ScalarProperty Name="SPARE2" ColumnName="SPARE2" />
+          <ScalarProperty Name="SPARE1" ColumnName="SPARE1" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="INCIDENT" ColumnName="INCIDENT" />
+          <ScalarProperty Name="LOB" ColumnName="LOB" />
+          <ScalarProperty Name="DISPTYPE" ColumnName="DISPTYPE" />
+          <ScalarProperty Name="TRIPPRE" ColumnName="TRIPPRE" />
+          <ScalarProperty Name="TOB" ColumnName="TOB" />
+          <ScalarProperty Name="EXTPAYOR" ColumnName="EXTPAYOR" />
+          <ScalarProperty Name="PATSSN" ColumnName="PATSSN" />
+          <ScalarProperty Name="PATDOB" ColumnName="PATDOB" />
+          <ScalarProperty Name="PATFNAME" ColumnName="PATFNAME" />
+          <ScalarProperty Name="PATLNAME" ColumnName="PATLNAME" />
+          <ScalarProperty Name="ENCTRNO" ColumnName="ENCTRNO" />
+          <ScalarProperty Name="EMACCT" ColumnName="EMACCT" />
+          <ScalarProperty Name="RLFLAG" ColumnName="RLFLAG" />
+          <ScalarProperty Name="OSTATUS" ColumnName="OSTATUS" />
+          <ScalarProperty Name="SOURCEID" ColumnName="SOURCEID" />
+          <ScalarProperty Name="BOXNUM" ColumnName="BOXNUM" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="ORIGDOC" ColumnName="ORIGDOC" />
+          <ScalarProperty Name="ASDOCNO" ColumnName="ASDOCNO" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="DOS" ColumnName="DOS" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="EXPSTAT" ColumnName="EXPSTAT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCGROUP" ColumnName="DOCGROUP" />
+          <ScalarProperty Name="SCANUID" ColumnName="SCANUID" />
+          <ScalarProperty Name="SCANTIME" ColumnName="SCANTIME" />
+          <ScalarProperty Name="SCANDATE" ColumnName="SCANDATE" />
+          <ScalarProperty Name="SLEVEL" ColumnName="SLEVEL" />
+          <ScalarProperty Name="TNSTAT" ColumnName="TNSTAT" />
+          <ScalarProperty Name="TNIFNID" ColumnName="TNIFNID" />
+          <ScalarProperty Name="TNIFNDS" ColumnName="TNIFNDS" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="NPAGES" ColumnName="NPAGES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRDISCOVERies">
+      <EntityTypeMapping TypeName="TowerModel.AMRDISCOVERY">
+        <MappingFragment StoreEntitySet="AMRDISCOVERY">
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="WHO" ColumnName="WHO" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="DOS" ColumnName="DOS" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="TRIPPRE" ColumnName="TRIPPRE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REASON" ColumnName="REASON" />
+          <ScalarProperty Name="SOURCE_ID" ColumnName="SOURCE_ID" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="START_ACTIVITY" ColumnName="START_ACTIVITY" />
+          <ScalarProperty Name="ENCTR_NO" ColumnName="ENCTR_NO" />
+          <ScalarProperty Name="AMRDISCOVERY_ID" ColumnName="AMRDISCOVERY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRDISCOVERY_VIEW1">
+      <EntityTypeMapping TypeName="TowerModel.AMRDISCOVERY_VIEW1">
+        <MappingFragment StoreEntitySet="AMRDISCOVERY_VIEW1">
+          <ScalarProperty Name="REFRESHDATE" ColumnName="REFRESHDATE" />
+          <ScalarProperty Name="YEAR" ColumnName="YEAR" />
+          <ScalarProperty Name="MONTH" ColumnName="MONTH" />
+          <ScalarProperty Name="TOB" ColumnName="TOB" />
+          <ScalarProperty Name="LOB" ColumnName="LOB" />
+          <ScalarProperty Name="WHO" ColumnName="WHO" />
+          <ScalarProperty Name="ITEMCOUNT" ColumnName="ITEMCOUNT" />
+          <ScalarProperty Name="START_ACTIVITY" ColumnName="START_ACTIVITY" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="DOS" ColumnName="DOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRDISCOVERY_VIEW3">
+      <EntityTypeMapping TypeName="TowerModel.AMRDISCOVERY_VIEW3">
+        <MappingFragment StoreEntitySet="AMRDISCOVERY_VIEW3">
+          <ScalarProperty Name="REFRESHDATE" ColumnName="REFRESHDATE" />
+          <ScalarProperty Name="YEAR" ColumnName="YEAR" />
+          <ScalarProperty Name="MONTH" ColumnName="MONTH" />
+          <ScalarProperty Name="TOB" ColumnName="TOB" />
+          <ScalarProperty Name="LOB" ColumnName="LOB" />
+          <ScalarProperty Name="WHO" ColumnName="WHO" />
+          <ScalarProperty Name="DAILYTRIPS" ColumnName="DAILYTRIPS" />
+          <ScalarProperty Name="ITEMCOUNT" ColumnName="ITEMCOUNT" />
+          <ScalarProperty Name="START_ACTIVITY" ColumnName="START_ACTIVITY" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="DOS" ColumnName="DOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRDISCOVERY_VIEW4">
+      <EntityTypeMapping TypeName="TowerModel.AMRDISCOVERY_VIEW4">
+        <MappingFragment StoreEntitySet="AMRDISCOVERY_VIEW4">
+          <ScalarProperty Name="REFRESHDATE" ColumnName="REFRESHDATE" />
+          <ScalarProperty Name="TOB" ColumnName="TOB" />
+          <ScalarProperty Name="LOB" ColumnName="LOB" />
+          <ScalarProperty Name="WHO" ColumnName="WHO" />
+          <ScalarProperty Name="MONTHLYITEMCOUNT" ColumnName="MONTHLYITEMCOUNT" />
+          <ScalarProperty Name="START_ACTIVITY" ColumnName="START_ACTIVITY" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="MONTH" ColumnName="MONTH" />
+          <ScalarProperty Name="YEAR" ColumnName="YEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRPOSTs">
+      <EntityTypeMapping TypeName="TowerModel.AMRPOST">
+        <MappingFragment StoreEntitySet="AMRPOST">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="INVOICE" ColumnName="INVOICE" />
+          <ScalarProperty Name="LOB" ColumnName="LOB" />
+          <ScalarProperty Name="TOB" ColumnName="TOB" />
+          <ScalarProperty Name="ENCTRNO" ColumnName="ENCTRNO" />
+          <ScalarProperty Name="SPARE3" ColumnName="SPARE3" />
+          <ScalarProperty Name="SPARE2" ColumnName="SPARE2" />
+          <ScalarProperty Name="SPARE1" ColumnName="SPARE1" />
+          <ScalarProperty Name="EXPSTAT" ColumnName="EXPSTAT" />
+          <ScalarProperty Name="BOXNUM" ColumnName="BOXNUM" />
+          <ScalarProperty Name="SOURCEID" ColumnName="SOURCEID" />
+          <ScalarProperty Name="SCANUID" ColumnName="SCANUID" />
+          <ScalarProperty Name="SCANTIME" ColumnName="SCANTIME" />
+          <ScalarProperty Name="SCANDATE" ColumnName="SCANDATE" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="RLFLAG" ColumnName="RLFLAG" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCGROUP" ColumnName="DOCGROUP" />
+          <ScalarProperty Name="DEPCODE" ColumnName="DEPCODE" />
+          <ScalarProperty Name="EXTPAYOR" ColumnName="EXTPAYOR" />
+          <ScalarProperty Name="DEPDT" ColumnName="DEPDT" />
+          <ScalarProperty Name="CHECKAMT" ColumnName="CHECKAMT" />
+          <ScalarProperty Name="CHECKNUM" ColumnName="CHECKNUM" />
+          <ScalarProperty Name="EMBACCT" ColumnName="EMBACCT" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="ORIGDOC" ColumnName="ORIGDOC" />
+          <ScalarProperty Name="PARDOCNO" ColumnName="PARDOCNO" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="SLEVEL" ColumnName="SLEVEL" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="NPAGES" ColumnName="NPAGES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRPOST_HISTORY">
+      <EntityTypeMapping TypeName="TowerModel.AMRPOST_HISTORY">
+        <MappingFragment StoreEntitySet="AMRPOST_HISTORY">
+          <ScalarProperty Name="OS_USER" ColumnName="OS_USER" />
+          <ScalarProperty Name="MACHINE_NAME" ColumnName="MACHINE_NAME" />
+          <ScalarProperty Name="LAST_UPDATED_TIMESTAMP" ColumnName="LAST_UPDATED_TIMESTAMP" />
+          <ScalarProperty Name="LAST_UPDATED_BY" ColumnName="LAST_UPDATED_BY" />
+          <ScalarProperty Name="AMRPOST_HISTORY_ID" ColumnName="AMRPOST_HISTORY_ID" />
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="SPARE3" ColumnName="SPARE3" />
+          <ScalarProperty Name="SPARE2" ColumnName="SPARE2" />
+          <ScalarProperty Name="SPARE1" ColumnName="SPARE1" />
+          <ScalarProperty Name="INVOICE" ColumnName="INVOICE" />
+          <ScalarProperty Name="LOB" ColumnName="LOB" />
+          <ScalarProperty Name="TOB" ColumnName="TOB" />
+          <ScalarProperty Name="ENCTRNO" ColumnName="ENCTRNO" />
+          <ScalarProperty Name="EXPSTAT" ColumnName="EXPSTAT" />
+          <ScalarProperty Name="BOXNUM" ColumnName="BOXNUM" />
+          <ScalarProperty Name="SOURCEID" ColumnName="SOURCEID" />
+          <ScalarProperty Name="SCANUID" ColumnName="SCANUID" />
+          <ScalarProperty Name="SCANTIME" ColumnName="SCANTIME" />
+          <ScalarProperty Name="SCANDATE" ColumnName="SCANDATE" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="RLFLAG" ColumnName="RLFLAG" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCGROUP" ColumnName="DOCGROUP" />
+          <ScalarProperty Name="DEPCODE" ColumnName="DEPCODE" />
+          <ScalarProperty Name="EXTPAYOR" ColumnName="EXTPAYOR" />
+          <ScalarProperty Name="DEPDT" ColumnName="DEPDT" />
+          <ScalarProperty Name="CHECKAMT" ColumnName="CHECKAMT" />
+          <ScalarProperty Name="CHECKNUM" ColumnName="CHECKNUM" />
+          <ScalarProperty Name="EMBACCT" ColumnName="EMBACCT" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="ORIGDOC" ColumnName="ORIGDOC" />
+          <ScalarProperty Name="PARDOCNO" ColumnName="PARDOCNO" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="SLEVEL" ColumnName="SLEVEL" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="NPAGES" ColumnName="NPAGES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRPOSTDETAILs">
+      <EntityTypeMapping TypeName="TowerModel.AMRPOSTDETAIL">
+        <MappingFragment StoreEntitySet="AMRPOSTDETAIL">
+          <ScalarProperty Name="SERVICEID" ColumnName="SERVICEID" />
+          <ScalarProperty Name="COMINGLED_STATUS" ColumnName="COMINGLED_STATUS" />
+          <ScalarProperty Name="ALT_TOWID" ColumnName="ALT_TOWID" />
+          <ScalarProperty Name="ORIG_TOWID" ColumnName="ORIG_TOWID" />
+          <ScalarProperty Name="MODIFYUID" ColumnName="MODIFYUID" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="INVOICENO" ColumnName="INVOICENO" />
+          <ScalarProperty Name="LOB" ColumnName="LOB" />
+          <ScalarProperty Name="TOB" ColumnName="TOB" />
+          <ScalarProperty Name="ENCTRNO" ColumnName="ENCTRNO" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="INFORMATIONAL" ColumnName="INFORMATIONAL" />
+          <ScalarProperty Name="REASON" ColumnName="REASON" />
+          <ScalarProperty Name="NEXT_MAP_NAME" ColumnName="NEXT_MAP_NAME" />
+          <ScalarProperty Name="NEXT_ACT_NAME" ColumnName="NEXT_ACT_NAME" />
+          <ScalarProperty Name="IFN" ColumnName="IFN" />
+          <ScalarProperty Name="VSCROLL" ColumnName="VSCROLL" />
+          <ScalarProperty Name="HSCROLL" ColumnName="HSCROLL" />
+          <ScalarProperty Name="ORIENTATION" ColumnName="ORIENTATION" />
+          <ScalarProperty Name="YSCALE" ColumnName="YSCALE" />
+          <ScalarProperty Name="XSCALE" ColumnName="XSCALE" />
+          <ScalarProperty Name="WIDTH" ColumnName="WIDTH" />
+          <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+          <ScalarProperty Name="TOP" ColumnName="TOP" />
+          <ScalarProperty Name="LEFT" ColumnName="LEFT" />
+          <ScalarProperty Name="CREATEUID" ColumnName="CREATEUID" />
+          <ScalarProperty Name="MODIFYDATE" ColumnName="MODIFYDATE" />
+          <ScalarProperty Name="DOCPAGE" ColumnName="DOCPAGE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="ROUTEINFO" ColumnName="ROUTEINFO" />
+          <ScalarProperty Name="EMBACCT" ColumnName="EMBACCT" />
+          <ScalarProperty Name="PAIDAMT" ColumnName="PAIDAMT" />
+          <ScalarProperty Name="SVCDT" ColumnName="SVCDT" />
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="AMRPOSTDETAIL_ID" ColumnName="AMRPOSTDETAIL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRPOSTWAKEs">
+      <EntityTypeMapping TypeName="TowerModel.AMRPOSTWAKE">
+        <MappingFragment StoreEntitySet="AMRPOSTWAKE">
+          <ScalarProperty Name="AMRPOSTWAKE_ID" ColumnName="AMRPOSTWAKE_ID" />
+          <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+          <ScalarProperty Name="PROCESSATTEMPTS" ColumnName="PROCESSATTEMPTS" />
+          <ScalarProperty Name="PROCESSDATE" ColumnName="PROCESSDATE" />
+          <ScalarProperty Name="PROCESSSTATUS" ColumnName="PROCESSSTATUS" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="COURIER_INST_ID" ColumnName="COURIER_INST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRPOSTWAKE_DEL">
+      <EntityTypeMapping TypeName="TowerModel.AMRPOSTWAKE_DEL">
+        <MappingFragment StoreEntitySet="AMRPOSTWAKE_DEL">
+          <ScalarProperty Name="AMRPOSTWAKE_ID" ColumnName="AMRPOSTWAKE_ID" />
+          <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+          <ScalarProperty Name="PROCESSATTEMPTS" ColumnName="PROCESSATTEMPTS" />
+          <ScalarProperty Name="PROCESSDATE" ColumnName="PROCESSDATE" />
+          <ScalarProperty Name="PROCESSSTATUS" ColumnName="PROCESSSTATUS" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="COURIER_INST_ID" ColumnName="COURIER_INST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRWFWAKEs">
+      <EntityTypeMapping TypeName="TowerModel.AMRWFWAKE">
+        <MappingFragment StoreEntitySet="AMRWFWAKE">
+          <ScalarProperty Name="AMRWFWAKE_ID" ColumnName="AMRWFWAKE_ID" />
+          <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+          <ScalarProperty Name="PROCESSATTEMPTS" ColumnName="PROCESSATTEMPTS" />
+          <ScalarProperty Name="PROCESSDATE" ColumnName="PROCESSDATE" />
+          <ScalarProperty Name="PROCESSSTATUS" ColumnName="PROCESSSTATUS" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="COURIER_INST_ID" ColumnName="COURIER_INST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMRWFWAKE_DEL">
+      <EntityTypeMapping TypeName="TowerModel.AMRWFWAKE_DEL">
+        <MappingFragment StoreEntitySet="AMRWFWAKE_DEL">
+          <ScalarProperty Name="AMRWFWAKE_ID" ColumnName="AMRWFWAKE_ID" />
+          <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+          <ScalarProperty Name="PROCESSATTEMPTS" ColumnName="PROCESSATTEMPTS" />
+          <ScalarProperty Name="PROCESSDATE" ColumnName="PROCESSDATE" />
+          <ScalarProperty Name="PROCESSSTATUS" ColumnName="PROCESSSTATUS" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="COURIER_INST_ID" ColumnName="COURIER_INST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ANNOTTBLs">
+      <EntityTypeMapping TypeName="TowerModel.ANNOTTBL">
+        <MappingFragment StoreEntitySet="ANNOTTBL">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="ANTIFNID" ColumnName="ANTIFNID" />
+          <ScalarProperty Name="ANTIFNDS" ColumnName="ANTIFNDS" />
+          <ScalarProperty Name="NPAGES" ColumnName="NPAGES" />
+          <ScalarProperty Name="IMGPAGE" ColumnName="IMGPAGE" />
+          <ScalarProperty Name="IMGIFNID" ColumnName="IMGIFNID" />
+          <ScalarProperty Name="IMGIFNDS" ColumnName="IMGIFNDS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="B_LIST">
+      <EntityTypeMapping TypeName="TowerModel.B_LIST">
+        <MappingFragment StoreEntitySet="B_LIST">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="APPLIC" ColumnName="APPLIC" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="SLEVEL" ColumnName="SLEVEL" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="SZ_PGS" ColumnName="SZ_PGS" />
+          <ScalarProperty Name="DOC_NO" ColumnName="DOC_NO" />
+          <ScalarProperty Name="SZ_DCS" ColumnName="SZ_DCS" />
+          <ScalarProperty Name="C_TIME" ColumnName="C_TIME" />
+          <ScalarProperty Name="C_USER" ColumnName="C_USER" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="BTITLE" ColumnName="BTITLE" />
+          <ScalarProperty Name="BIDENT" ColumnName="BIDENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="B_MAP">
+      <EntityTypeMapping TypeName="TowerModel.B_MAP">
+        <MappingFragment StoreEntitySet="B_MAP">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="APPLIC" ColumnName="APPLIC" />
+          <ScalarProperty Name="DOCID" ColumnName="DOCID" />
+          <ScalarProperty Name="BIDENT" ColumnName="BIDENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="B2D">
+      <EntityTypeMapping TypeName="TowerModel.B2D">
+        <MappingFragment StoreEntitySet="B2D">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="DSTRUCT" ColumnName="DSTRUCT" />
+          <ScalarProperty Name="OCRCNT" ColumnName="OCRCNT" />
+          <ScalarProperty Name="BADOCR" ColumnName="BADOCR" />
+          <ScalarProperty Name="DSTAT" ColumnName="DSTAT" />
+          <ScalarProperty Name="DOCSZ" ColumnName="DOCSZ" />
+          <ScalarProperty Name="DOCID" ColumnName="DOCID" />
+          <ScalarProperty Name="DOCNUM" ColumnName="DOCNUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="B3D">
+      <EntityTypeMapping TypeName="TowerModel.B3D">
+        <MappingFragment StoreEntitySet="B3D">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="DSTRUCT" ColumnName="DSTRUCT" />
+          <ScalarProperty Name="OCRCNT" ColumnName="OCRCNT" />
+          <ScalarProperty Name="BADOCR" ColumnName="BADOCR" />
+          <ScalarProperty Name="DSTAT" ColumnName="DSTAT" />
+          <ScalarProperty Name="DOCSZ" ColumnName="DOCSZ" />
+          <ScalarProperty Name="DOCID" ColumnName="DOCID" />
+          <ScalarProperty Name="DOCNUM" ColumnName="DOCNUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="B4D">
+      <EntityTypeMapping TypeName="TowerModel.B4D">
+        <MappingFragment StoreEntitySet="B4D">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="DSTRUCT" ColumnName="DSTRUCT" />
+          <ScalarProperty Name="OCRCNT" ColumnName="OCRCNT" />
+          <ScalarProperty Name="BADOCR" ColumnName="BADOCR" />
+          <ScalarProperty Name="DSTAT" ColumnName="DSTAT" />
+          <ScalarProperty Name="DOCSZ" ColumnName="DOCSZ" />
+          <ScalarProperty Name="DOCID" ColumnName="DOCID" />
+          <ScalarProperty Name="DOCNUM" ColumnName="DOCNUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BAMRBILLs">
+      <EntityTypeMapping TypeName="TowerModel.BAMRBILL">
+        <MappingFragment StoreEntitySet="BAMRBILL">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="BIDENT" ColumnName="BIDENT" />
+          <ScalarProperty Name="SPARE3" ColumnName="SPARE3" />
+          <ScalarProperty Name="SPARE2" ColumnName="SPARE2" />
+          <ScalarProperty Name="SPARE1" ColumnName="SPARE1" />
+          <ScalarProperty Name="RT_ENCTR" ColumnName="RT_ENCTR" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="INCIDENT" ColumnName="INCIDENT" />
+          <ScalarProperty Name="LOB" ColumnName="LOB" />
+          <ScalarProperty Name="DISPTYPE" ColumnName="DISPTYPE" />
+          <ScalarProperty Name="TRIPPRE" ColumnName="TRIPPRE" />
+          <ScalarProperty Name="TOB" ColumnName="TOB" />
+          <ScalarProperty Name="EXTPAYOR" ColumnName="EXTPAYOR" />
+          <ScalarProperty Name="PATSSN" ColumnName="PATSSN" />
+          <ScalarProperty Name="PATDOB" ColumnName="PATDOB" />
+          <ScalarProperty Name="PATFNAME" ColumnName="PATFNAME" />
+          <ScalarProperty Name="PATLNAME" ColumnName="PATLNAME" />
+          <ScalarProperty Name="ENCTRNO" ColumnName="ENCTRNO" />
+          <ScalarProperty Name="EMACCT" ColumnName="EMACCT" />
+          <ScalarProperty Name="RLFLAG" ColumnName="RLFLAG" />
+          <ScalarProperty Name="OSTATUS" ColumnName="OSTATUS" />
+          <ScalarProperty Name="SOURCEID" ColumnName="SOURCEID" />
+          <ScalarProperty Name="BOXNUM" ColumnName="BOXNUM" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="ORIGDOC" ColumnName="ORIGDOC" />
+          <ScalarProperty Name="ASDOCNO" ColumnName="ASDOCNO" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="DOS" ColumnName="DOS" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="EXPSTAT" ColumnName="EXPSTAT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCGROUP" ColumnName="DOCGROUP" />
+          <ScalarProperty Name="SCANUID" ColumnName="SCANUID" />
+          <ScalarProperty Name="SCANTIME" ColumnName="SCANTIME" />
+          <ScalarProperty Name="SCANDATE" ColumnName="SCANDATE" />
+          <ScalarProperty Name="SLEVEL" ColumnName="SLEVEL" />
+          <ScalarProperty Name="TNSTAT" ColumnName="TNSTAT" />
+          <ScalarProperty Name="TNIFNID" ColumnName="TNIFNID" />
+          <ScalarProperty Name="TNIFNDS" ColumnName="TNIFNDS" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="NPAGES" ColumnName="NPAGES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BAMRPOSTs">
+      <EntityTypeMapping TypeName="TowerModel.BAMRPOST">
+        <MappingFragment StoreEntitySet="BAMRPOST">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="BIDENT" ColumnName="BIDENT" />
+          <ScalarProperty Name="INVOICE" ColumnName="INVOICE" />
+          <ScalarProperty Name="LOB" ColumnName="LOB" />
+          <ScalarProperty Name="TOB" ColumnName="TOB" />
+          <ScalarProperty Name="ENCTRNO" ColumnName="ENCTRNO" />
+          <ScalarProperty Name="SPARE3" ColumnName="SPARE3" />
+          <ScalarProperty Name="SPARE2" ColumnName="SPARE2" />
+          <ScalarProperty Name="SPARE1" ColumnName="SPARE1" />
+          <ScalarProperty Name="EXPSTAT" ColumnName="EXPSTAT" />
+          <ScalarProperty Name="BOXNUM" ColumnName="BOXNUM" />
+          <ScalarProperty Name="SOURCEID" ColumnName="SOURCEID" />
+          <ScalarProperty Name="SCANUID" ColumnName="SCANUID" />
+          <ScalarProperty Name="SCANTIME" ColumnName="SCANTIME" />
+          <ScalarProperty Name="SCANDATE" ColumnName="SCANDATE" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="RLFLAG" ColumnName="RLFLAG" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCGROUP" ColumnName="DOCGROUP" />
+          <ScalarProperty Name="DEPCODE" ColumnName="DEPCODE" />
+          <ScalarProperty Name="EXTPAYOR" ColumnName="EXTPAYOR" />
+          <ScalarProperty Name="DEPDT" ColumnName="DEPDT" />
+          <ScalarProperty Name="CHECKAMT" ColumnName="CHECKAMT" />
+          <ScalarProperty Name="CHECKNUM" ColumnName="CHECKNUM" />
+          <ScalarProperty Name="EMBACCT" ColumnName="EMBACCT" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="ORIGDOC" ColumnName="ORIGDOC" />
+          <ScalarProperty Name="PARDOCNO" ColumnName="PARDOCNO" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="SLEVEL" ColumnName="SLEVEL" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="NPAGES" ColumnName="NPAGES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BBILLDOCs">
+      <EntityTypeMapping TypeName="TowerModel.BBILLDOC">
+        <MappingFragment StoreEntitySet="BBILLDOC">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="BIDENT" ColumnName="BIDENT" />
+          <ScalarProperty Name="SPARE3" ColumnName="SPARE3" />
+          <ScalarProperty Name="SPARE2" ColumnName="SPARE2" />
+          <ScalarProperty Name="SPARE1" ColumnName="SPARE1" />
+          <ScalarProperty Name="RLFLAG" ColumnName="RLFLAG" />
+          <ScalarProperty Name="OSTATUS" ColumnName="OSTATUS" />
+          <ScalarProperty Name="SOURCEID" ColumnName="SOURCEID" />
+          <ScalarProperty Name="BOXNUM" ColumnName="BOXNUM" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="ORIGDOC" ColumnName="ORIGDOC" />
+          <ScalarProperty Name="ASDOCNO" ColumnName="ASDOCNO" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="DOS" ColumnName="DOS" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="EXPSTAT" ColumnName="EXPSTAT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCGROUP" ColumnName="DOCGROUP" />
+          <ScalarProperty Name="SCANUID" ColumnName="SCANUID" />
+          <ScalarProperty Name="SCANTIME" ColumnName="SCANTIME" />
+          <ScalarProperty Name="SCANDATE" ColumnName="SCANDATE" />
+          <ScalarProperty Name="SLEVEL" ColumnName="SLEVEL" />
+          <ScalarProperty Name="TNSTAT" ColumnName="TNSTAT" />
+          <ScalarProperty Name="TNIFNID" ColumnName="TNIFNID" />
+          <ScalarProperty Name="TNIFNDS" ColumnName="TNIFNDS" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="NPAGES" ColumnName="NPAGES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BILLDOCs">
+      <EntityTypeMapping TypeName="TowerModel.BILLDOC">
+        <MappingFragment StoreEntitySet="BILLDOC">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="SPARE3" ColumnName="SPARE3" />
+          <ScalarProperty Name="SPARE2" ColumnName="SPARE2" />
+          <ScalarProperty Name="SPARE1" ColumnName="SPARE1" />
+          <ScalarProperty Name="RLFLAG" ColumnName="RLFLAG" />
+          <ScalarProperty Name="OSTATUS" ColumnName="OSTATUS" />
+          <ScalarProperty Name="SOURCEID" ColumnName="SOURCEID" />
+          <ScalarProperty Name="BOXNUM" ColumnName="BOXNUM" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="ORIGDOC" ColumnName="ORIGDOC" />
+          <ScalarProperty Name="ASDOCNO" ColumnName="ASDOCNO" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="DOS" ColumnName="DOS" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="EXPSTAT" ColumnName="EXPSTAT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCGROUP" ColumnName="DOCGROUP" />
+          <ScalarProperty Name="SCANUID" ColumnName="SCANUID" />
+          <ScalarProperty Name="SCANTIME" ColumnName="SCANTIME" />
+          <ScalarProperty Name="SCANDATE" ColumnName="SCANDATE" />
+          <ScalarProperty Name="SLEVEL" ColumnName="SLEVEL" />
+          <ScalarProperty Name="TNSTAT" ColumnName="TNSTAT" />
+          <ScalarProperty Name="TNIFNID" ColumnName="TNIFNID" />
+          <ScalarProperty Name="TNIFNDS" ColumnName="TNIFNDS" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="NPAGES" ColumnName="NPAGES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BPOSTDOCs">
+      <EntityTypeMapping TypeName="TowerModel.BPOSTDOC">
+        <MappingFragment StoreEntitySet="BPOSTDOC">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="BIDENT" ColumnName="BIDENT" />
+          <ScalarProperty Name="SPARE3" ColumnName="SPARE3" />
+          <ScalarProperty Name="SPARE2" ColumnName="SPARE2" />
+          <ScalarProperty Name="SPARE1" ColumnName="SPARE1" />
+          <ScalarProperty Name="EXPSTAT" ColumnName="EXPSTAT" />
+          <ScalarProperty Name="BOXNUM" ColumnName="BOXNUM" />
+          <ScalarProperty Name="SOURCEID" ColumnName="SOURCEID" />
+          <ScalarProperty Name="SCANUID" ColumnName="SCANUID" />
+          <ScalarProperty Name="SCANTIME" ColumnName="SCANTIME" />
+          <ScalarProperty Name="SCANDATE" ColumnName="SCANDATE" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="RLFLAG" ColumnName="RLFLAG" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCGROUP" ColumnName="DOCGROUP" />
+          <ScalarProperty Name="DEPCODE" ColumnName="DEPCODE" />
+          <ScalarProperty Name="EXTPAYOR" ColumnName="EXTPAYOR" />
+          <ScalarProperty Name="DEPDT" ColumnName="DEPDT" />
+          <ScalarProperty Name="CHECKAMT" ColumnName="CHECKAMT" />
+          <ScalarProperty Name="CHECKNUM" ColumnName="CHECKNUM" />
+          <ScalarProperty Name="EMBACCT" ColumnName="EMBACCT" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="ORIGDOC" ColumnName="ORIGDOC" />
+          <ScalarProperty Name="PARDOCNO" ColumnName="PARDOCNO" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="SLEVEL" ColumnName="SLEVEL" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="NPAGES" ColumnName="NPAGES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COURIER_RELOCATE">
+      <EntityTypeMapping TypeName="TowerModel.COURIER_RELOCATE">
+        <MappingFragment StoreEntitySet="COURIER_RELOCATE">
+          <ScalarProperty Name="RELOCTYPE" ColumnName="RELOCTYPE" />
+          <ScalarProperty Name="ERRMSG" ColumnName="ERRMSG" />
+          <ScalarProperty Name="COURIERID" ColumnName="COURIERID" />
+          <ScalarProperty Name="UPDATE_USERID" ColumnName="UPDATE_USERID" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_USERID" ColumnName="CREATE_USERID" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="COMPLETEDTTM" ColumnName="COMPLETEDTTM" />
+          <ScalarProperty Name="ATTEMPTCOUNT" ColumnName="ATTEMPTCOUNT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="TOACTIVITY" ColumnName="TOACTIVITY" />
+          <ScalarProperty Name="FROMACTIVITY" ColumnName="FROMACTIVITY" />
+          <ScalarProperty Name="MAPNAME" ColumnName="MAPNAME" />
+          <ScalarProperty Name="COURIER_RELOCATE_ID" ColumnName="COURIER_RELOCATE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPOSITCLIENTs">
+      <EntityTypeMapping TypeName="TowerModel.DEPOSITCLIENT">
+        <MappingFragment StoreEntitySet="DEPOSITCLIENT">
+          <ScalarProperty Name="UPDATE_USER" ColumnName="UPDATE_USER" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="SERVICEID" ColumnName="SERVICEID" />
+          <ScalarProperty Name="EMBILLZPRACTICE" ColumnName="EMBILLZPRACTICE" />
+          <ScalarProperty Name="DEPOSITPRACTICE" ColumnName="DEPOSITPRACTICE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCDETAIL_LOOKUP">
+      <EntityTypeMapping TypeName="TowerModel.DOCDETAIL_LOOKUP">
+        <MappingFragment StoreEntitySet="DOCDETAIL_LOOKUP">
+          <ScalarProperty Name="EXCLUDE_PREPPING" ColumnName="EXCLUDE_PREPPING" />
+          <ScalarProperty Name="DOCTYPE_LOOKUP_ID" ColumnName="DOCTYPE_LOOKUP_ID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCDETAIL_LOOKUP_ID" ColumnName="DOCDETAIL_LOOKUP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCLISTs">
+      <EntityTypeMapping TypeName="TowerModel.DOCLIST">
+        <MappingFragment StoreEntitySet="DOCLIST">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="DSTRUCT" ColumnName="DSTRUCT" />
+          <ScalarProperty Name="OCRCNT" ColumnName="OCRCNT" />
+          <ScalarProperty Name="BADOCR" ColumnName="BADOCR" />
+          <ScalarProperty Name="DSTAT" ColumnName="DSTAT" />
+          <ScalarProperty Name="DOCSZ" ColumnName="DOCSZ" />
+          <ScalarProperty Name="DOCID" ColumnName="DOCID" />
+          <ScalarProperty Name="DOCNUM" ColumnName="DOCNUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCTYPE_LOOKUP">
+      <EntityTypeMapping TypeName="TowerModel.DOCTYPE_LOOKUP">
+        <MappingFragment StoreEntitySet="DOCTYPE_LOOKUP">
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCTYPE_LOOKUP_ID" ColumnName="DOCTYPE_LOOKUP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FLDINFOes">
+      <EntityTypeMapping TypeName="TowerModel.FLDINFO">
+        <MappingFragment StoreEntitySet="FLDINFO">
+          <ScalarProperty Name="LEN" ColumnName="LEN" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="SYN" ColumnName="SYN" />
+          <ScalarProperty Name="FLD" ColumnName="FLD" />
+          <ScalarProperty Name="TAB" ColumnName="TAB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FTBLs">
+      <EntityTypeMapping TypeName="TowerModel.FTBL">
+        <MappingFragment StoreEntitySet="FTBL">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="DFLTVAL" ColumnName="DFLTVAL" />
+          <ScalarProperty Name="VALIDFN" ColumnName="VALIDFN" />
+          <ScalarProperty Name="CONV" ColumnName="CONV" />
+          <ScalarProperty Name="PIC" ColumnName="PIC" />
+          <ScalarProperty Name="IOTYPE" ColumnName="IOTYPE" />
+          <ScalarProperty Name="LEN" ColumnName="LEN" />
+          <ScalarProperty Name="COL" ColumnName="COL" />
+          <ScalarProperty Name="FROW" ColumnName="FROW" />
+          <ScalarProperty Name="FDATA" ColumnName="FDATA" />
+          <ScalarProperty Name="FTYPE" ColumnName="FTYPE" />
+          <ScalarProperty Name="FNUM" ColumnName="FNUM" />
+          <ScalarProperty Name="ANAME" ColumnName="ANAME" />
+          <ScalarProperty Name="TNAME" ColumnName="TNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FULLBALANCE_REQUEST">
+      <EntityTypeMapping TypeName="TowerModel.FULLBALANCE_REQUEST">
+        <MappingFragment StoreEntitySet="FULLBALANCE_REQUEST">
+          <ScalarProperty Name="BATCHID" ColumnName="BATCHID" />
+          <ScalarProperty Name="ACCTORGBAL" ColumnName="ACCTORGBAL" />
+          <ScalarProperty Name="PAYOR" ColumnName="PAYOR" />
+          <ScalarProperty Name="UNIVERSALFINCLASS" ColumnName="UNIVERSALFINCLASS" />
+          <ScalarProperty Name="RPCMSG" ColumnName="RPCMSG" />
+          <ScalarProperty Name="UPDATE_USERID" ColumnName="UPDATE_USERID" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+          <ScalarProperty Name="CREATE_USERID" ColumnName="CREATE_USERID" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="COMPLETEDTTM" ColumnName="COMPLETEDTTM" />
+          <ScalarProperty Name="ATTEMPTCOUNT" ColumnName="ATTEMPTCOUNT" />
+          <ScalarProperty Name="SCHEDULEDTTM" ColumnName="SCHEDULEDTTM" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="EMBILLZ_DFPAYOR" ColumnName="EMBILLZ_DFPAYOR" />
+          <ScalarProperty Name="COURIERID" ColumnName="COURIERID" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="PAIDAMT" ColumnName="PAIDAMT" />
+          <ScalarProperty Name="DEPOSITDATE" ColumnName="DEPOSITDATE" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="FULLBALANCE_REQUEST_ID" ColumnName="FULLBALANCE_REQUEST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POSTBDs">
+      <EntityTypeMapping TypeName="TowerModel.POSTBD">
+        <MappingFragment StoreEntitySet="POSTBD">
+          <ScalarProperty Name="SERVICEID" ColumnName="SERVICEID" />
+          <ScalarProperty Name="INFORMATIONAL" ColumnName="INFORMATIONAL" />
+          <ScalarProperty Name="CORRECTION_FOLDER" ColumnName="CORRECTION_FOLDER" />
+          <ScalarProperty Name="ESCALATION_REASON" ColumnName="ESCALATION_REASON" />
+          <ScalarProperty Name="FINANCIAL_CLASS" ColumnName="FINANCIAL_CLASS" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="ROUTEINFO" ColumnName="ROUTEINFO" />
+          <ScalarProperty Name="IMPORT_INFO" ColumnName="IMPORT_INFO" />
+          <ScalarProperty Name="SVCDT" ColumnName="SVCDT" />
+          <ScalarProperty Name="POSTBD_ID" ColumnName="POSTBD_ID" />
+          <ScalarProperty Name="RECEIVEDATE" ColumnName="RECEIVEDATE" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="POSTDETAIL_ID" ColumnName="POSTDETAIL_ID" />
+          <ScalarProperty Name="IFN" ColumnName="IFN" />
+          <ScalarProperty Name="MAP_INST_ID" ColumnName="MAP_INST_ID" />
+          <ScalarProperty Name="NODE_ID" ColumnName="NODE_ID" />
+          <ScalarProperty Name="MAP_NAME" ColumnName="MAP_NAME" />
+          <ScalarProperty Name="ACT_NAME" ColumnName="ACT_NAME" />
+          <ScalarProperty Name="PLX_COURIER_ID" ColumnName="PLX_COURIER_ID" />
+          <ScalarProperty Name="COURIER_INST_ID" ColumnName="COURIER_INST_ID" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCGROUP" ColumnName="DOCGROUP" />
+          <ScalarProperty Name="DEPCODE" ColumnName="DEPCODE" />
+          <ScalarProperty Name="EXTPAYOR" ColumnName="EXTPAYOR" />
+          <ScalarProperty Name="PAIDAMT" ColumnName="PAIDAMT" />
+          <ScalarProperty Name="CHECKAMT" ColumnName="CHECKAMT" />
+          <ScalarProperty Name="CHECKNUM" ColumnName="CHECKNUM" />
+          <ScalarProperty Name="EMBACCT" ColumnName="EMBACCT" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="REASON" ColumnName="REASON" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="PARDOCNO" ColumnName="PARDOCNO" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="WHO" ColumnName="WHO" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="DEPDT" ColumnName="DEPDT" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POSTDETAILs">
+      <EntityTypeMapping TypeName="TowerModel.POSTDETAIL">
+        <MappingFragment StoreEntitySet="POSTDETAIL">
+          <ScalarProperty Name="SERVICEID" ColumnName="SERVICEID" />
+          <ScalarProperty Name="COMINGLED_STATUS" ColumnName="COMINGLED_STATUS" />
+          <ScalarProperty Name="ALT_TOWID" ColumnName="ALT_TOWID" />
+          <ScalarProperty Name="ORIG_TOWID" ColumnName="ORIG_TOWID" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="INFORMATIONAL" ColumnName="INFORMATIONAL" />
+          <ScalarProperty Name="REASON" ColumnName="REASON" />
+          <ScalarProperty Name="NEXT_MAP_NAME" ColumnName="NEXT_MAP_NAME" />
+          <ScalarProperty Name="NEXT_ACT_NAME" ColumnName="NEXT_ACT_NAME" />
+          <ScalarProperty Name="IFN" ColumnName="IFN" />
+          <ScalarProperty Name="VSCROLL" ColumnName="VSCROLL" />
+          <ScalarProperty Name="HSCROLL" ColumnName="HSCROLL" />
+          <ScalarProperty Name="ORIENTATION" ColumnName="ORIENTATION" />
+          <ScalarProperty Name="YSCALE" ColumnName="YSCALE" />
+          <ScalarProperty Name="XSCALE" ColumnName="XSCALE" />
+          <ScalarProperty Name="WIDTH" ColumnName="WIDTH" />
+          <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+          <ScalarProperty Name="TOP" ColumnName="TOP" />
+          <ScalarProperty Name="LEFT" ColumnName="LEFT" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+          <ScalarProperty Name="CREATEUID" ColumnName="CREATEUID" />
+          <ScalarProperty Name="MODIFYDATE" ColumnName="MODIFYDATE" />
+          <ScalarProperty Name="MODIFYUID" ColumnName="MODIFYUID" />
+          <ScalarProperty Name="DOCPAGE" ColumnName="DOCPAGE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="ROUTEINFO" ColumnName="ROUTEINFO" />
+          <ScalarProperty Name="EMBACCT" ColumnName="EMBACCT" />
+          <ScalarProperty Name="PAIDAMT" ColumnName="PAIDAMT" />
+          <ScalarProperty Name="SVCDT" ColumnName="SVCDT" />
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="POSTDETAIL_ID" ColumnName="POSTDETAIL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POSTDETAIL_STATUS_LOOKUP">
+      <EntityTypeMapping TypeName="TowerModel.POSTDETAIL_STATUS_LOOKUP">
+        <MappingFragment StoreEntitySet="POSTDETAIL_STATUS_LOOKUP">
+          <ScalarProperty Name="ACT_NAME" ColumnName="ACT_NAME" />
+          <ScalarProperty Name="MAP_NAME" ColumnName="MAP_NAME" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="TYPECODE" ColumnName="TYPECODE" />
+          <ScalarProperty Name="POSTDETAIL_STATUS_LOOKUP_ID" ColumnName="POSTDETAIL_STATUS_LOOKUP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POSTDOCs">
+      <EntityTypeMapping TypeName="TowerModel.POSTDOC">
+        <MappingFragment StoreEntitySet="POSTDOC">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="SPARE3" ColumnName="SPARE3" />
+          <ScalarProperty Name="SPARE2" ColumnName="SPARE2" />
+          <ScalarProperty Name="SPARE1" ColumnName="SPARE1" />
+          <ScalarProperty Name="EXPSTAT" ColumnName="EXPSTAT" />
+          <ScalarProperty Name="BOXNUM" ColumnName="BOXNUM" />
+          <ScalarProperty Name="SOURCEID" ColumnName="SOURCEID" />
+          <ScalarProperty Name="SCANUID" ColumnName="SCANUID" />
+          <ScalarProperty Name="SCANTIME" ColumnName="SCANTIME" />
+          <ScalarProperty Name="SCANDATE" ColumnName="SCANDATE" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="RLFLAG" ColumnName="RLFLAG" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="DOCGROUP" ColumnName="DOCGROUP" />
+          <ScalarProperty Name="DEPCODE" ColumnName="DEPCODE" />
+          <ScalarProperty Name="EXTPAYOR" ColumnName="EXTPAYOR" />
+          <ScalarProperty Name="DEPDT" ColumnName="DEPDT" />
+          <ScalarProperty Name="CHECKAMT" ColumnName="CHECKAMT" />
+          <ScalarProperty Name="CHECKNUM" ColumnName="CHECKNUM" />
+          <ScalarProperty Name="EMBACCT" ColumnName="EMBACCT" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="ORIGDOC" ColumnName="ORIGDOC" />
+          <ScalarProperty Name="PARDOCNO" ColumnName="PARDOCNO" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="SLEVEL" ColumnName="SLEVEL" />
+          <ScalarProperty Name="IFNID" ColumnName="IFNID" />
+          <ScalarProperty Name="IFNDS" ColumnName="IFNDS" />
+          <ScalarProperty Name="NPAGES" ColumnName="NPAGES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POSTDOC_STATUS_LOOKUP">
+      <EntityTypeMapping TypeName="TowerModel.POSTDOC_STATUS_LOOKUP">
+        <MappingFragment StoreEntitySet="POSTDOC_STATUS_LOOKUP">
+          <ScalarProperty Name="ACT_NAME" ColumnName="ACT_NAME" />
+          <ScalarProperty Name="MAP_NAME" ColumnName="MAP_NAME" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="TYPECODE" ColumnName="TYPECODE" />
+          <ScalarProperty Name="POSTDOC_STATUS_LOOKUP_ID" ColumnName="POSTDOC_STATUS_LOOKUP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POSTWAKEs">
+      <EntityTypeMapping TypeName="TowerModel.POSTWAKE">
+        <MappingFragment StoreEntitySet="POSTWAKE">
+          <ScalarProperty Name="POSTQUEUE_SEQ_ID" ColumnName="POSTQUEUE_SEQ_ID" />
+          <ScalarProperty Name="POSTWAKE_ID" ColumnName="POSTWAKE_ID" />
+          <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+          <ScalarProperty Name="PROCESSATTEMPTS" ColumnName="PROCESSATTEMPTS" />
+          <ScalarProperty Name="PROCESSDATE" ColumnName="PROCESSDATE" />
+          <ScalarProperty Name="PROCESSSTATUS" ColumnName="PROCESSSTATUS" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="COURIER_INST_ID" ColumnName="COURIER_INST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POSTWAKE_DEL">
+      <EntityTypeMapping TypeName="TowerModel.POSTWAKE_DEL">
+        <MappingFragment StoreEntitySet="POSTWAKE_DEL">
+          <ScalarProperty Name="POSTWAKE_ID" ColumnName="POSTWAKE_ID" />
+          <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+          <ScalarProperty Name="PROCESSATTEMPTS" ColumnName="PROCESSATTEMPTS" />
+          <ScalarProperty Name="PROCESSDATE" ColumnName="PROCESSDATE" />
+          <ScalarProperty Name="PROCESSSTATUS" ColumnName="PROCESSSTATUS" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="COURIER_INST_ID" ColumnName="COURIER_INST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REASON_LOOKUP">
+      <EntityTypeMapping TypeName="TowerModel.REASON_LOOKUP">
+        <MappingFragment StoreEntitySet="REASON_LOOKUP">
+          <ScalarProperty Name="REASON" ColumnName="REASON" />
+          <ScalarProperty Name="REASON_ID" ColumnName="REASON_ID" />
+          <ScalarProperty Name="ACTIVITY" ColumnName="ACTIVITY" />
+          <ScalarProperty Name="REASON_GROUP" ColumnName="REASON_GROUP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RTIBDs">
+      <EntityTypeMapping TypeName="TowerModel.RTIBD">
+        <MappingFragment StoreEntitySet="RTIBD">
+          <ScalarProperty Name="CORRECTION_FOLDER" ColumnName="CORRECTION_FOLDER" />
+          <ScalarProperty Name="ESCALATION_REASON" ColumnName="ESCALATION_REASON" />
+          <ScalarProperty Name="FINANCIAL_CLASS" ColumnName="FINANCIAL_CLASS" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="SPARE1" ColumnName="SPARE1" />
+          <ScalarProperty Name="EMTRAC" ColumnName="EMTRAC" />
+          <ScalarProperty Name="MAP_INST_ID" ColumnName="MAP_INST_ID" />
+          <ScalarProperty Name="NODE_ID" ColumnName="NODE_ID" />
+          <ScalarProperty Name="MAP_NAME" ColumnName="MAP_NAME" />
+          <ScalarProperty Name="ACT_NAME" ColumnName="ACT_NAME" />
+          <ScalarProperty Name="RTIACCTNUM" ColumnName="RTIACCTNUM" />
+          <ScalarProperty Name="NUMOFCHARTS" ColumnName="NUMOFCHARTS" />
+          <ScalarProperty Name="ACCTNUM" ColumnName="ACCTNUM" />
+          <ScalarProperty Name="PLX_COURIER_ID" ColumnName="PLX_COURIER_ID" />
+          <ScalarProperty Name="COURIER_INST_ID" ColumnName="COURIER_INST_ID" />
+          <ScalarProperty Name="CODETYPE" ColumnName="CODETYPE" />
+          <ScalarProperty Name="DATATYPE" ColumnName="DATATYPE" />
+          <ScalarProperty Name="STARTSTEP" ColumnName="STARTSTEP" />
+          <ScalarProperty Name="IFN" ColumnName="IFN" />
+          <ScalarProperty Name="REASON" ColumnName="REASON" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="WHO" ColumnName="WHO" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="RECDATE" ColumnName="RECDATE" />
+          <ScalarProperty Name="DOS" ColumnName="DOS" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RTIHISTs">
+      <EntityTypeMapping TypeName="TowerModel.RTIHIST">
+        <MappingFragment StoreEntitySet="RTIHIST">
+          <ScalarProperty Name="SPARE3" ColumnName="SPARE3" />
+          <ScalarProperty Name="SPARE2" ColumnName="SPARE2" />
+          <ScalarProperty Name="SPARE1" ColumnName="SPARE1" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ENT_DT_TM" ColumnName="ENT_DT_TM" />
+          <ScalarProperty Name="CRE_DT_TM" ColumnName="CRE_DT_TM" />
+          <ScalarProperty Name="ACTIVITY" ColumnName="ACTIVITY" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RTIWAKEs">
+      <EntityTypeMapping TypeName="TowerModel.RTIWAKE">
+        <MappingFragment StoreEntitySet="RTIWAKE">
+          <ScalarProperty Name="ERRORDATE" ColumnName="ERRORDATE" />
+          <ScalarProperty Name="ALTWAKE" ColumnName="ALTWAKE" />
+          <ScalarProperty Name="WAKESTAT" ColumnName="WAKESTAT" />
+          <ScalarProperty Name="DOCNO" ColumnName="DOCNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SCAN_LOG">
+      <EntityTypeMapping TypeName="TowerModel.SCAN_LOG">
+        <MappingFragment StoreEntitySet="SCAN_LOG">
+          <ScalarProperty Name="O_REVID" ColumnName="O_REVID" />
+          <ScalarProperty Name="O_OBJID" ColumnName="O_OBJID" />
+          <ScalarProperty Name="O_TYPEID" ColumnName="O_TYPEID" />
+          <ScalarProperty Name="O_HOSTID" ColumnName="O_HOSTID" />
+          <ScalarProperty Name="O_INSTNO" ColumnName="O_INSTNO" />
+          <ScalarProperty Name="O_PROCNO" ColumnName="O_PROCNO" />
+          <ScalarProperty Name="O_HOSTNO" ColumnName="O_HOSTNO" />
+          <ScalarProperty Name="DICTATIONS" ColumnName="DICTATIONS" />
+          <ScalarProperty Name="TOTAL_PROCESS" ColumnName="TOTAL_PROCESS" />
+          <ScalarProperty Name="ADD_ON" ColumnName="ADD_ON" />
+          <ScalarProperty Name="NON_BILL" ColumnName="NON_BILL" />
+          <ScalarProperty Name="SUSP_CHARTS" ColumnName="SUSP_CHARTS" />
+          <ScalarProperty Name="BACK_DATE" ColumnName="BACK_DATE" />
+          <ScalarProperty Name="TOTAL_CHARTS" ColumnName="TOTAL_CHARTS" />
+          <ScalarProperty Name="TOTAL_DOS" ColumnName="TOTAL_DOS" />
+          <ScalarProperty Name="MISSINGS" ColumnName="MISSINGS" />
+          <ScalarProperty Name="PAT_LOG" ColumnName="PAT_LOG" />
+          <ScalarProperty Name="ADMIT_DATE" ColumnName="ADMIT_DATE" />
+          <ScalarProperty Name="MISSING_LOG" ColumnName="MISSING_LOG" />
+          <ScalarProperty Name="BATCH_ID" ColumnName="BATCH_ID" />
+          <ScalarProperty Name="BILL_AREA" ColumnName="BILL_AREA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOURCETYPE_LOOKUP">
+      <EntityTypeMapping TypeName="TowerModel.SOURCETYPE_LOOKUP">
+        <MappingFragment StoreEntitySet="SOURCETYPE_LOOKUP">
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="TYPECODE" ColumnName="TYPECODE" />
+          <ScalarProperty Name="SOURCETYPE_LOOKUP_ID" ColumnName="SOURCETYPE_LOOKUP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TABINFOes">
+      <EntityTypeMapping TypeName="TowerModel.TABINFO">
+        <MappingFragment StoreEntitySet="TABINFO">
+          <ScalarProperty Name="SYN" ColumnName="SYN" />
+          <ScalarProperty Name="TAB" ColumnName="TAB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TTBLs">
+      <EntityTypeMapping TypeName="TowerModel.TTBL">
+        <MappingFragment StoreEntitySet="TTBL">
+          <ScalarProperty Name="TOWID" ColumnName="TOWID" />
+          <ScalarProperty Name="SCRIPTFL" ColumnName="SCRIPTFL" />
+          <ScalarProperty Name="NOUTFLDS" ColumnName="NOUTFLDS" />
+          <ScalarProperty Name="NINPFLDS" ColumnName="NINPFLDS" />
+          <ScalarProperty Name="TWIDTH" ColumnName="TWIDTH" />
+          <ScalarProperty Name="THEIGHT" ColumnName="THEIGHT" />
+          <ScalarProperty Name="ANAME" ColumnName="ANAME" />
+          <ScalarProperty Name="TNAME" ColumnName="TNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WFWAKEs">
+      <EntityTypeMapping TypeName="TowerModel.WFWAKE">
+        <MappingFragment StoreEntitySet="WFWAKE">
+          <ScalarProperty Name="WFQUEUE_SEQ_ID" ColumnName="WFQUEUE_SEQ_ID" />
+          <ScalarProperty Name="WFWAKE_ID" ColumnName="WFWAKE_ID" />
+          <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+          <ScalarProperty Name="PROCESSATTEMPTS" ColumnName="PROCESSATTEMPTS" />
+          <ScalarProperty Name="PROCESSDATE" ColumnName="PROCESSDATE" />
+          <ScalarProperty Name="PROCESSSTATUS" ColumnName="PROCESSSTATUS" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="COURIER_INST_ID" ColumnName="COURIER_INST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WFWAKE_DEL">
+      <EntityTypeMapping TypeName="TowerModel.WFWAKE_DEL">
+        <MappingFragment StoreEntitySet="WFWAKE_DEL">
+          <ScalarProperty Name="WFWAKE_ID" ColumnName="WFWAKE_ID" />
+          <ScalarProperty Name="LASTUPDATE" ColumnName="LASTUPDATE" />
+          <ScalarProperty Name="PROCESSATTEMPTS" ColumnName="PROCESSATTEMPTS" />
+          <ScalarProperty Name="PROCESSDATE" ColumnName="PROCESSDATE" />
+          <ScalarProperty Name="PROCESSSTATUS" ColumnName="PROCESSSTATUS" />
+          <ScalarProperty Name="COURIER_ID" ColumnName="COURIER_ID" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="COURIER_INST_ID" ColumnName="COURIER_INST_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GROUPATTRIBUTES">
+      <EntityTypeMapping TypeName="TowerModel.GROUPATTRIBUTE">
+        <MappingFragment StoreEntitySet="GROUPATTRIBUTES">
+          <ScalarProperty Name="MODIFIEDTIMESTAMP" ColumnName="MODIFIEDTIMESTAMP" />
+          <ScalarProperty Name="CREATEDTIMESTAMP" ColumnName="CREATEDTIMESTAMP" />
+          <ScalarProperty Name="GROUPATTRIBUTEVALUE" ColumnName="GROUPATTRIBUTEVALUE" />
+          <ScalarProperty Name="GROUPATTRIBUTEKEY" ColumnName="GROUPATTRIBUTEKEY" />
+          <ScalarProperty Name="GROUPNAME" ColumnName="GROUPNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERATTRIBUTES">
+      <EntityTypeMapping TypeName="TowerModel.USERATTRIBUTE">
+        <MappingFragment StoreEntitySet="USERATTRIBUTES">
+          <ScalarProperty Name="MODIFIEDTIMESTAMP" ColumnName="MODIFIEDTIMESTAMP" />
+          <ScalarProperty Name="CREATEDTIMESTAMP" ColumnName="CREATEDTIMESTAMP" />
+          <ScalarProperty Name="USERATTRIBUTEVALUE" ColumnName="USERATTRIBUTEVALUE" />
+          <ScalarProperty Name="USERATTRIBUTEKEY" ColumnName="USERATTRIBUTEKEY" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STARTRULE_LOOKUP">
+      <EntityTypeMapping TypeName="TowerModel.STARTRULE_LOOKUP">
+        <MappingFragment StoreEntitySet="STARTRULE_LOOKUP">
+          <ScalarProperty Name="POSTDETAIL_STATUS_LOOKUP_ID" ColumnName="POSTDETAIL_STATUS_LOOKUP_ID" />
+          <ScalarProperty Name="SOURCETYPE_LOOKUP_ID" ColumnName="SOURCETYPE_LOOKUP_ID" />
+          <ScalarProperty Name="SECURITY_GROUP" ColumnName="SECURITY_GROUP" />
+          <ScalarProperty Name="REASON" ColumnName="REASON" />
+          <ScalarProperty Name="DOCDET" ColumnName="DOCDET" />
+          <ScalarProperty Name="DOCTYPE" ColumnName="DOCTYPE" />
+          <ScalarProperty Name="STARTRULE_LOOKUP_ID" ColumnName="STARTRULE_LOOKUP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RTICLIENTs">
+      <EntityTypeMapping TypeName="TowerModel.RTICLIENT">
+        <MappingFragment StoreEntitySet="RTICLIENT">
+          <ScalarProperty Name="RTICLIENT_ID" ColumnName="RTICLIENT_ID" />
+          <ScalarProperty Name="AR_REGION" ColumnName="AR_REGION" />
+          <ScalarProperty Name="FACILITY_NAME" ColumnName="FACILITY_NAME" />
+          <ScalarProperty Name="OVERDUE_CLASS" ColumnName="OVERDUE_CLASS" />
+          <ScalarProperty Name="DELINQUENT_CLASS" ColumnName="DELINQUENT_CLASS" />
+          <ScalarProperty Name="DAILY_VOLUME" ColumnName="DAILY_VOLUME" />
+          <ScalarProperty Name="DEFICIENCY_THRESHOLD" ColumnName="DEFICIENCY_THRESHOLD" />
+          <ScalarProperty Name="PRACTICE_NAME" ColumnName="PRACTICE_NAME" />
+          <ScalarProperty Name="CLIENT_LAG_DAYS" ColumnName="CLIENT_LAG_DAYS" />
+          <ScalarProperty Name="REGION_ABBR" ColumnName="REGION_ABBR" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="IQSERVER_NAME" ColumnName="IQSERVER_NAME" />
+          <ScalarProperty Name="LOGICAL_DBNAME" ColumnName="LOGICAL_DBNAME" />
+          <ScalarProperty Name="REX_DBNAME" ColumnName="REX_DBNAME" />
+          <ScalarProperty Name="SERVER_PORT" ColumnName="SERVER_PORT" />
+          <ScalarProperty Name="SERVER_NAME2" ColumnName="SERVER_NAME2" />
+          <ScalarProperty Name="SERVER_NAME" ColumnName="SERVER_NAME" />
+          <ScalarProperty Name="CONTRACT_TYPE" ColumnName="CONTRACT_TYPE" />
+          <ScalarProperty Name="HOSPITALIST" ColumnName="HOSPITALIST" />
+          <ScalarProperty Name="POST_ENDDATE" ColumnName="POST_ENDDATE" />
+          <ScalarProperty Name="POST_EFFDATE" ColumnName="POST_EFFDATE" />
+          <ScalarProperty Name="ENDDATE" ColumnName="ENDDATE" />
+          <ScalarProperty Name="EFFDATE" ColumnName="EFFDATE" />
+          <ScalarProperty Name="DATATYPE" ColumnName="DATATYPE" />
+          <ScalarProperty Name="VERIFYGRP" ColumnName="VERIFYGRP" />
+          <ScalarProperty Name="CODEGRP" ColumnName="CODEGRP" />
+          <ScalarProperty Name="RLOGGRP" ColumnName="RLOGGRP" />
+          <ScalarProperty Name="CODETYPE" ColumnName="CODETYPE" />
+          <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+          <ScalarProperty Name="PRACTICE" ColumnName="PRACTICE" />
+          <ScalarProperty Name="EMPRAC" ColumnName="EMPRAC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CRUDRULES">
+      <EntityTypeMapping TypeName="TowerModel.CRUDRULE">
+        <MappingFragment StoreEntitySet="CRUDRULES">
+          <ScalarProperty Name="DBNAME" ColumnName="DBNAME" />
+          <ScalarProperty Name="ISCOMBOBOXCOLUMN" ColumnName="ISCOMBOBOXCOLUMN" />
+          <ScalarProperty Name="MODIFIEDTIMESTAMP" ColumnName="MODIFIEDTIMESTAMP" />
+          <ScalarProperty Name="CREATEDTIMESTAMP" ColumnName="CREATEDTIMESTAMP" />
+          <ScalarProperty Name="DEFAULTVALUE" ColumnName="DEFAULTVALUE" />
+          <ScalarProperty Name="COLUMNTYPE" ColumnName="COLUMNTYPE" />
+          <ScalarProperty Name="ISPRIMARYKEY" ColumnName="ISPRIMARYKEY" />
+          <ScalarProperty Name="CANEDIT" ColumnName="CANEDIT" />
+          <ScalarProperty Name="ISREQUIRED" ColumnName="ISREQUIRED" />
+          <ScalarProperty Name="VALIDENTRIES" ColumnName="VALIDENTRIES" />
+          <ScalarProperty Name="COLUMNMAXVALUE" ColumnName="COLUMNMAXVALUE" />
+          <ScalarProperty Name="COLUMNMINVALUE" ColumnName="COLUMNMINVALUE" />
+          <ScalarProperty Name="RTISCHEMA" ColumnName="RTISCHEMA" />
+          <ScalarProperty Name="RTICOLUMN" ColumnName="RTICOLUMN" />
+          <ScalarProperty Name="RTITABLE" ColumnName="RTITABLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BPRRULES">
+      <EntityTypeMapping TypeName="TowerModel.BPRRULE">
+        <MappingFragment StoreEntitySet="BPRRULES">
+          <ScalarProperty Name="MODIFIEDTIMESTAMP" ColumnName="MODIFIEDTIMESTAMP" />
+          <ScalarProperty Name="CREATEDTIMESTAMP" ColumnName="CREATEDTIMESTAMP" />
+          <ScalarProperty Name="ENABLED" ColumnName="ENABLED" />
+          <ScalarProperty Name="RENAMEFILEMASK" ColumnName="RENAMEFILEMASK" />
+          <ScalarProperty Name="THIRDPARTYDROPFOLDER" ColumnName="THIRDPARTYDROPFOLDER" />
+          <ScalarProperty Name="RTIBILLINGENDDATE" ColumnName="RTIBILLINGENDDATE" />
+          <ScalarProperty Name="RTIBILLINGSTARTDATE" ColumnName="RTIBILLINGSTARTDATE" />
+          <ScalarProperty Name="MONITORFOLDER" ColumnName="MONITORFOLDER" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

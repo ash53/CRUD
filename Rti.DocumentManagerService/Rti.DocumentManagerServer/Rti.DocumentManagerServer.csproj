@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8DA4B379-086D-4BFD-9D1C-27780EC01349}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rti.DocumentManagerServer</RootNamespace>
+    <AssemblyName>Rti.DocumentManagerServer</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LIVE|x86'">
+    <OutputPath>bin\x86\LIVE\</OutputPath>
+    <DefineConstants>TRACE;LIVE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\DocUtils.cs" />
+    <Compile Include="DataAccess\Embillz.cs" />
+    <Compile Include="DataAccess\PostBd.cs" />
+    <Compile Include="DataAccess\PostDetail.cs" />
+    <Compile Include="DataAccess\PostDoc.cs" />
+    <Compile Include="ServiceReferences\ServiceReferenceFlowareWebLive\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceReferences\ServiceReferenceFlowareWebTest\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Threads\DocumentManagerMonitor.cs" />
+    <Compile Include="Servers\DocumentManagerServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Atalasoft.dotImage, Version=10.4.1.60644, Culture=neutral, PublicKeyToken=2b02b46f7326f73b, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Atalasoft\DotImage 10.4\bin\4.0\x86\Atalasoft.dotImage.dll</HintPath>
+    </Reference>
+    <Reference Include="Atalasoft.dotImage.Pdf, Version=10.4.1.60644, Culture=neutral, PublicKeyToken=2b02b46f7326f73b, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Atalasoft\DotImage 10.4\bin\4.0\x86\Atalasoft.dotImage.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Atalasoft.dotImage.PdfReader, Version=10.4.1.60644, Culture=neutral, PublicKeyToken=2b02b46f7326f73b, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Atalasoft\DotImage 10.4\bin\4.0\x86\Atalasoft.dotImage.PdfReader.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="iqClient">
+      <HintPath>..\..\lib\iqClient.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="ServiceReferences\ServiceReferenceFlowareWebLive\FlowareWebServiceManager1.wsdl" />
+    <None Include="ServiceReferences\ServiceReferenceFlowareWebLive\Rti.DocumentManagerServer.ServiceReferenceFlowareWebLive.createWorkItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="ServiceReferences\ServiceReferenceFlowareWebTest\FlowareWebServiceManager.wsdl" />
+    <None Include="ServiceReferences\ServiceReferenceFlowareWebTest\Rti.DocumentManagerServer.ServiceReferenceFlowareWebTest.createWorkItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Rti.DataModel\Rti.DataModel.csproj">
+      <Project>{6bcc6ada-2ab0-4cbe-afa6-51c8c5a654fb}</Project>
+      <Name>Rti.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RTI.ENCRYPTIONLIB\Rti.EncryptionLib.csproj">
+      <Project>{a7b73829-78fd-43f1-a3c7-2290a0ba6bb7}</Project>
+      <Name>Rti.EncryptionLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Rti.Imaging\Rti.Imaging.csproj">
+      <Project>{e6313654-64ab-4332-9476-48f3046ced04}</Project>
+      <Name>Rti.Imaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Rti.InternalInterfaces\Rti.InternalInterfaces.csproj">
+      <Project>{A40E8053-CDBE-4DB6-9D09-C6A4C6958EB2}</Project>
+      <Name>Rti.InternalInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Rti.RemoteFileTransfer\Rti.RemoteFileTransfer.csproj">
+      <Project>{e0f7dbe9-3f26-4a23-8cc4-60972bf643fd}</Project>
+      <Name>Rti.RemoteFileTransfer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Rti.RemoteProcedureCalls\Rti.RemoteProcedureCalls.csproj">
+      <Project>{42f71d2b-6bd0-4703-a681-85e777e5a89f}</Project>
+      <Name>Rti.RemoteProcedureCalls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Rti\Rti.csproj">
+      <Project>{96E24F3E-4F17-489D-88D8-E3C211C4090D}</Project>
+      <Name>Rti</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="ServiceReferences\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="ServiceReferences\ServiceReferenceFlowareWebLive\" />
+    <WCFMetadataStorage Include="ServiceReferences\ServiceReferenceFlowareWebTest\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServiceReferences\ServiceReferenceFlowareWebLive\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServiceReferences\ServiceReferenceFlowareWebLive\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServiceReferences\ServiceReferenceFlowareWebLive\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServiceReferences\ServiceReferenceFlowareWebTest\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServiceReferences\ServiceReferenceFlowareWebTest\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServiceReferences\ServiceReferenceFlowareWebTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="licenses.licx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

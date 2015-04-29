@@ -1,0 +1,5 @@
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.EncryptionLib\bin\Release\EncryptionLib.dll
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.EncryptionLib\bin\Release\EncryptionLib.pdb
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.EncryptionLib\obj\Release\Rti.EncryptionLib.csprojResolveAssemblyReference.cache
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.EncryptionLib\obj\Release\EncryptionLib.dll
+C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti.EncryptionLib\obj\Release\EncryptionLib.pdb

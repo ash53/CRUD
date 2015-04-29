@@ -1,0 +1,501 @@
+<doc>
+  <assembly>
+    <name>Atalasoft.dotImage.PdfReader</name>
+  </assembly>
+  <members>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings">
+      <summary> Settings that control how annotations are rendered. </summary>
+      <remarks> These fields can be OR'ed together to combine more than one setting. </remarks>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.Render3DAnnotation">
+      <summary> Render 3D annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderCaretAnnotation">
+      <summary> Render Caret annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderCircleAnnotation">
+      <summary> Render Circle annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderFileAttachmentAnnotation">
+      <summary> Render FileAttachment annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderFreeTextAnnotation">
+      <summary> Render FreeText annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderHighlightAnnotation">
+      <summary> Render Highlight annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderInkAnnotation">
+      <summary> Render Ink annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderLineAnnotation">
+      <summary> Render Line annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderLinkAnnotation">
+      <summary> Render Link annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderMovieAnnotation">
+      <summary> Render Movie annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderPolygonAnnotation">
+      <summary> Render Polygon annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderPolylineAnnotation">
+      <summary> Render Polyline annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderPopupAnnotation">
+      <summary> Render Popup annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderPrinterMarkAnnotation">
+      <summary> Render PrinterMark annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderRubberStampAnnotation">
+      <summary> Render RubberStamp annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderScreenAnnotation">
+      <summary> Render Screen annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderSoundAnnotation">
+      <summary> Render Sound annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderSquareAnnotation">
+      <summary> Render Square annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderSquigglyUnderlineAnnotation">
+      <summary> Render SquigglyUnderline annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderStrikeOutAnnotation">
+      <summary> Render StrikeOut annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderTextAnnotation">
+      <summary> Render Text annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderTrapNetAnnotation">
+      <summary> Render TrapNet annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderUnderlineAnnotation">
+      <summary> Render Underline annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderWatermarkAnnotation">
+      <summary> Render Watermark annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderWidgetAnnotation">
+      <summary> Render Widget annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderNone">
+      <summary> Render no annotations. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.AnnotationRenderSettings.RenderAll">
+      <summary> Render all annotations. </summary>
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.ColorTransformationMode">
+      <summary> This class is unused now, but may be used in a future version </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.ColorTransformationMode.HighSpeed">
+      <summary> This class is unused now, but may be used in a future version </summary>
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.ColorRenderSettings">
+      <summary> This class is unused now, but may be used in a future version </summary>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.ColorRenderSettings.#ctor">
+      <summary> This class is unused now, but may be used in a future version </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.ColorRenderSettings.BackColor">
+      <summary> This class is unused now, but may be used in a future version </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.ColorRenderSettings.RenderMode">
+      <summary> This class is unused now, but may be used in a future version </summary>
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.Document">
+      <summary> The <STRONG>Document</STRONG> class is the top-level class that represents an existing PDF document.
+ </summary>
+    </member>
+    <member name="O:Atalasoft.Imaging.Codec.Pdf.Document.#ctor">
+      <overloads> Initializes a new instance of the <STRONG>Document</STRONG> class. </overloads>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Document.Pages">
+      <summary> Collection of pages in this document. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Pages&quot;]/*" />
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Document.Author">
+      <summary> The person who authored this document. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Author&quot;]/*" />
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Author&quot;]/*" />
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Document.Creator">
+      <summary> The application that created this document before it was converted to PDF. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Creator&quot;]/*" />
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Creator&quot;]/*" />
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Document.Keywords">
+      <summary> Keywords of this document. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Keywords&quot;]/*" />
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Keywords&quot;]/*" />
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Document.Producer">
+      <summary> The application that converted this document to PDF. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Producer&quot;]/*" />
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Producer&quot;]/*" />
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Document.Subject">
+      <summary> Subject of this document. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Subject&quot;]/*" />
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Subject&quot;]/*" />
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Document.Title">
+      <summary> Title of this document. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Title&quot;]/*" />
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~Title&quot;]/*" />
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Document.Resolution">
+      <summary> Resolution of this document. </summary>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.Document.#ctor(System.IO.BinaryReader)">
+      <summary> Opens an existing document using a BinaryReader. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~_ctor(BinaryReader)&quot;]/*" />
+      <param name="reader"> The reader from which the document is read. </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.Document.#ctor(System.IO.Stream)">
+      <summary> Opens an existing document using a <STRONG>Stream</STRONG>. </summary>
+      <param name="stream"> A Stream containing a PDF Document </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.Document.#ctor(System.IO.BinaryReader,System.String)">
+      <summary> Opens an existing password-protected document using a BinaryReader. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Document~_ctor(BinaryReader,string)&quot;]/*" />
+      <param name="reader"> The reader from which the document is read. </param>
+      <param name="password"> Password that is required to open this document. </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.Document.#ctor(System.IO.Stream,System.String)">
+      <summary> Opens an existing password-protected document using a <STRONG>Stream</STRONG>. </summary>
+      <param name="stream"> A Stream containing a PDF Document </param>
+      <param name="password"> Password that is required to open this document. </param>
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.ExtractedImageInfo">
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.ExtractedImageInfo&quot;]/*" />
+      <summary> Represents a single occurrence of an image on a PDF page.  Encapsulates both the image and its location on
+ the page. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.ExtractedImageInfo&quot;]/*" />
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.ExtractedImageInfo.Image">
+      <summary> Gets the extracted image. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.ExtractedImageInfo.Transformation">
+      <remarks>
+        <para>This transformation assumes that the original coordinate system has its origin at the lower-left
+ corner and a unit corresponds to a point (1/72 inch). It also assumes that the image is drawn at the origin of the
+ transformed coordinate system as a unit rectangle.</para>
+      </remarks>
+      <summary> Gets the transformation required to draw the image at the right location. </summary>
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.FontSubstitutionMap">
+      <summary> Gets a value that lets you define which external fonts are used to render fonts that are not embedded.
+ </summary>
+    </member>
+    <member name="O:Atalasoft.Imaging.Codec.Pdf.FontSubstitutionMap.Add">
+      <overloads> Add a new entry to the map. </overloads>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.FontSubstitutionMap.Add(System.String,System.IO.Stream)">
+      <summary> Add a new entry to the map. </summary>
+      <param name="fontName"> The name of the font to map. </param>
+      <param name="stream">
+        <DD>The stream that holds the font program.</DD>
+        <DD />
+      </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.FontSubstitutionMap.Add(System.String,System.String)">
+      <summary> Add a new entry to the map. </summary>
+      <param name="fontName"> The name of the font to map. </param>
+      <param name="file">
+        <para>The file that holds the font program.</para>
+      </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.FontSubstitutionMap.Clear">
+      <summary> Remove all entries. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.FontSubstitutionMap.FontNames">
+      <summary> Gets all the font names included in this map. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.FontSubstitutionMap.SearchPath">
+      <summary> Gets or sets a semi-colon separated list of folders to search for font files that are included in the
+ substitution map. The folders are searched from left to right until the font file is found. </summary>
+      <remarks> The default value is ".;%FONTDIR%". This means that by default font files will be searched in the current
+ folder first and then in the system font directory (typically c:\windows\fonts). </remarks>
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.Page">
+      <summary> A page inside an existing PDF document.  Obtained through the <c>Pages.Item</c> property of the
+ <c>Pages</c> class. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Page.Width">
+      <summary> Gets the viewer width of this page in points. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Page~Width&quot;]/*" />
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Page.Height">
+      <summary> Gets the viewer height of this page in points. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Page~Height&quot;]/*" />
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Page.ArtBox">
+      <summary> Gets the the dimensions of the page's meaningful content intended by the page's creator. </summary>
+      <remarks> Default to the crop box. </remarks>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Page.BleedBox">
+      <summary> Gets the dimensions to which the page should be clipped in a production environment. </summary>
+      <remarks> Defaults to the crop box. </remarks>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Page.CropBox">
+      <summary> Gets the maximum imageable area of the physical medium on which the page is to be printed. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Page.MediaBox">
+      <summary> Gets the maximum imageable area of the physical medium. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Page.TrimBox">
+      <summary>
+        <para>Gets the dimensions of the finished page after trimming.</para>
+      </summary>
+      <remarks> Defaults to the crop box. </remarks>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Page.Rotate">
+      <summary>
+        <para>Gets the counter-clockwise rotation in degrees that the viewer should apply to the page.</para>
+      </summary>
+      <remarks> If the page does not have an explicit viewer rotation set, 0 is returned. </remarks>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Page.SingleImageOnly">
+      <summary> Gets a value indicating if the content of this PDF page consists of a single image only. </summary>
+      <remarks> When this value is true, the <c>Page.ExtractImages</c> method is more efficient than rendering the
+ PDF as a Page. </remarks>
+    </member>
+    <member name="O:Atalasoft.Imaging.Codec.Pdf.Page.Draw">
+      <overloads> Draws the page context onto a graphics object. </overloads>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.Page.Draw(System.Drawing.Graphics)">
+      <summary> Draws the page content using default page boundary and render settings. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Page~Draw(Graphics)&quot;]/*" />
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Page~Draw(Graphics)&quot;]/*" />
+      <param name="graphics"> Graphics object to which content is drawn. </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.Page.Draw(System.Drawing.Graphics,Atalasoft.Imaging.Codec.Pdf.RenderSettings)">
+      <summary> Draws the page content using default page boundary. </summary>
+      <param name="graphics"> Graphics object to which content is drawn. </param>
+      <param name="renderSettings"> Settings that control the render process. </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.Page.Draw(System.Drawing.Graphics,Atalasoft.Imaging.Codec.Pdf.PageBoundary)">
+      <summary> Draws the page content using default render settings. </summary>
+      <param name="graphics"> Graphics object to which content is drawn. </param>
+      <param name="pageBoundary"> The page boundary that is used to draw the PDF page. </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.Page.Draw(System.Drawing.Graphics,Atalasoft.Imaging.Codec.Pdf.PageBoundary,Atalasoft.Imaging.Codec.Pdf.RenderSettings)">
+      <summary> Draws the page content. </summary>
+      <param name="graphics"> Graphics object to which content is drawn. </param>
+      <param name="pageBoundary"> The page boundary that is used to draw the PDF page. </param>
+      <param name="renderSettings"> Settings that control the render process. </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.Page.ExtractImages">
+      <summary> Extracts all images on this page. </summary>
+      <returns> Extracted images. Can be of zero length. </returns>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Page~ExtractImages&quot;]/*" />
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Page~ExtractImages&quot;]/*" />
+      <remarks> This method will extract each image embedded in a specified page.  The method is more efficient for single
+ image PDF pages as it does not resample the image to fit in the indicated resolution. </remarks>
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.PageBoundary">
+      <summary> Different PDF page boundaries that each correspond to a specific imaging or finishing process. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.PageBoundary.ArtBox">
+      <summary> The dimensions of the page's meaningful content as intended by the page's creator. Default to the crop
+ box. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.PageBoundary.BleedBox">
+      <summary> The dimensions to which the page should be clipped in a production environment. Defaults to the crop box.
+ </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.PageBoundary.CropBox">
+      <summary> The dimension to which the page should be clipped when displayed or printed. Defaults to the media box.
+ </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.PageBoundary.Default">
+      <summary> The dimensions of the intersection of the media box and the crop box. If the crop box is not present, the
+ visible box is set to the media box. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.PageBoundary.MediaBox">
+      <summary> The maximum imageable area of the physical medium on which the page is to be printed. </summary>
+    </member>
+    <member name="F:Atalasoft.Imaging.Codec.Pdf.PageBoundary.TrimBox">
+      <summary> The dimensions of the finished page after trimming. Defaults to the crop box. </summary>
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.PageCollection">
+      <summary> A collection of Page objects. </summary>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.PageCollection.#ctor(System.IO.Stream,System.String)">
+      <summary> Creates a PageCollection from a Stream containing a PDF and password </summary>
+      <param name="stream"> A stream that must be positioned to the beginning of a PDF </param>
+      <param name="password"> The password to use to open the PDF </param>
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.Pages">
+      <summary> Collection of pages inside a PDF document. Non-creatable. Obtained through the <c>Document.Pages</c> property of the <c>Document</c> class. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Pages.Count">
+      <summary> Gets the number of pages. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Pages~Count&quot;]/*" />
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.Pages.Item">
+      <summary> Retrieve a page by 0-based index. </summary>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Pages~Item&quot;]/*" />
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.Pages~Item&quot;]/*" />
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.PdfDecoder">
+      <remarks> To support reading JPEG2000 and JBIG2 compressed PDF files, you must distribute the
+ <EM>Atalasoft.dotImage.Jbig2.dll,</EM><EM>Atalasoft.dotImage.Jpeg2000.dll</EM>, and <EM>AtalaJp2.dll</EM> alongside
+ your Atalasoft.dotImage.PdfRasterizer.dll.  However you are not required to distribute these dependencies if you do
+ not wish to support JP2 or JBIG images within PDF files. </remarks>
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.PdfDecoder&quot;]/*" />
+      <include file="external documentation.txt" path="MyDocs/MyMembers[@name=&quot;Atalasoft.dotImage.PdfRasterizer~Atalasoft.Imaging.Codec.Pdf.PdfDecoder&quot;]/*" />
+      <summary> A <c>MultiFramedImageDecoder</c> used to read PDF pages as images from a Stream. </summary>
+    </member>
+    <member name="O:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.#ctor">
+      <overloads> Initializes a new instance of a <STRONG>PdfDecoder</STRONG>. </overloads>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.#ctor">
+      <summary> Initializes a new instance of a <STRONG>PdfDecoder</STRONG>. </summary>
+    </member>
+    <member name="O:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.Dispose">
+      <overloads> Releases all resources managed by this object. </overloads>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.Dispose">
+      <summary> Releases all resources managed by this object. </summary>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.IsValidFormat(System.IO.Stream)">
+      <summary> Returns true if and only if the specified Stream contains a PDF document. </summary>
+      <returns> True if and only if the specified Stream contains a PDF document. </returns>
+      <param name="stream"> The Stream that holds the PDF document to verify. It is assumed that the stream position
+ points is at the start of the PDF document. </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.GetFrameCount(System.IO.Stream)">
+      <summary> Returns the number of pages in a PDF document. </summary>
+      <returns> Number of pages. </returns>
+      <param name="stream"> The Stream that holds the PDF document. It is assumed that the Stream
+ position points is at the start of the PDF document. </param>
+    </member>
+    <member name="O:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.GetImageInfo">
+      <overloads> Returns information about the PDF without decoding it. </overloads>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.GetImageInfo(System.IO.Stream)">
+      <remarks> To obtain the PDF specific information, the ImageInfo return value must be cast to a
+ <STRONG>PdfImageInfo</STRONG>. </remarks>
+      <summary> Returns information about the first page of the PDF document. </summary>
+      <returns> An instance of a <c>PdfImageInfo</c>. </returns>
+      <param name="stream"> The Stream that holds the PDF document. It is assumed that the Stream
+ position points is at the start of the PDF document. </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.GetImageInfo(System.IO.Stream,System.Int32)">
+      <remarks> To obtain the PDF specific information, the ImageInfo return value must be cast to a
+ <STRONG>PdfImageInfo</STRONG>. </remarks>
+      <summary> Returns information about the given page of the PDF document. </summary>
+      <returns> An instance of a <c>PdfImageInfo</c>. </returns>
+      <param name="stream"> The Stream that holds the PDF document. It is assumed that the Stream
+ position points is at the start of the PDF document. </param>
+      <param name="frameIndex"> The zero-based index of the page from which to return
+ information. </param>
+    </member>
+    <member name="O:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.Read">
+      <overloads> Read a PDF document as an AtalaImage. </overloads>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.Read(System.IO.Stream,Atalasoft.Imaging.ProgressEventHandler)">
+      <summary> Read a PDF document and return the first page as an AtalaImage. </summary>
+      <returns> AtalaImage containing the first page. </returns>
+      <param name="stream"> The stream that holds the PDF document. It is assumed that the stream
+ position points is at the start of the PDF document. </param>
+      <param name="progress"> The progress delegate. Can be set to null (Nothing in Visual
+ Basic). </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.Read(System.IO.Stream,System.Int32,Atalasoft.Imaging.ProgressEventHandler)">
+      <summary> Read a PDF document and return the given page as an AtalaImage. </summary>
+      <returns> AtalaImage containing the given page. </returns>
+      <param name="stream"> The stream that holds the PDF document. It is assumed that the stream
+ position points is at the start of the PDF document. </param>
+      <param name="frameIndex"> The zero-based index of the page from which to return
+ information. </param>
+      <param name="progress"> The progress delegate. Can be set to null (Nothing in Visual
+ Basic).  </param>
+    </member>
+    <member name="M:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.ReadRegion(System.IO.Stream,System.Drawing.Rectangle,System.Int32,Atalasoft.Imaging.ProgressEventHandler)">
+      <summary> Reads a rectangle region from the PDF.  This uses memory proportional to the size of the region.
+ </summary>
+      <returns> An image that is the size of the region passed in with only a portion of the PDF rendered to it.
+ </returns>
+      <param name="stream"> A stream positioned to the beginning of a PDF </param>
+      <param name="region"> A rectangle region to render. </param>
+      <param name="frameIndex"> The page number of the PDF to render starting from zero </param>
+      <param name="progress"> A progress handler </param>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.MINRESOLUTION">
+      <summary> The minimum resolution that PDF's can be read at. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.MAXRESOLUTION">
+      <summary> The maximum resolution that PDF's can be read at. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.Password">
+      <summary> The password for the PDF or null for no password </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.Resolution">
+      <value> The resolution at which to render a PDF page. </value>
+      <summary> Gets or sets the resolution at which to render a PDF page. </summary>
+      <remarks> Note that in general rendering a PDF page will cause embedded images to be up- or down-sampled. To
+ retrieve embedded images at their original sample rate, use the <c>Page.ExtractImages</c> method. </remarks>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.SmoothingMode">
+      <summary> Gets or sets a value specifying whether and how smoothing (antialiasing) is applied to lines, curves, and
+ edges of filled areas and text. </summary>
+      <remarks> In contrast to GDI+, the smoothing mode does effect text. This follows from the fact that the PDF decoder
+ draws text as bezier curves. </remarks>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfDecoder.RenderSettings">
+      <summary> Used to indicate how to render the PDF.  For example, whether to show Annotations and which ones to show.
+ </summary>
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.PdfImageInfo">
+      <summary> Includes information about an image that is created from a PDF page using the <c>PdfDecoder</c>.
+ </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfImageInfo.Author">
+      <value> The person who authored this document. </value>
+      <summary> Gets the person who authored this document. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfImageInfo.Creator">
+      <value> The application that created this document before it was converted to PDF. </value>
+      <summary> Gets the application that created this document before it was converted to PDF. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfImageInfo.Keywords">
+      <value> The keywords of this document. </value>
+      <summary> Gets the keywords of this document. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfImageInfo.Producer">
+      <value> The application or module that created this PDF document. </value>
+      <summary> Gets the application or module that created this PDF document. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfImageInfo.Subject">
+      <value> The subject of this document. </value>
+      <summary> Gets the subject of this document. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.PdfImageInfo.Title">
+      <value> The title of this document. </value>
+      <summary> Gets the title of this document. </summary>
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.RenderSettings">
+      <summary> Encapsulates all settings that control the render process. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.RenderSettings.AnnotationSettings">
+      <summary> All settings related to annotation rendering. </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.RenderSettings.FontSubstitutionMap">
+      <summary> Not used </summary>
+    </member>
+    <member name="P:Atalasoft.Imaging.Codec.Pdf.RenderSettings.ColorSettings">
+      <summary> Not used </summary>
+    </member>
+    <member name="T:Atalasoft.Imaging.Codec.Pdf.Summary">
+      <summary> Provides a summary of the rasterization process. This class is currently empty and has been added for
+ future extension. </summary>
+      <remarks> An instance of this class is returned by the <c>Page.Draw</c> method. </remarks>
+    </member>
+  </members>
+</doc>

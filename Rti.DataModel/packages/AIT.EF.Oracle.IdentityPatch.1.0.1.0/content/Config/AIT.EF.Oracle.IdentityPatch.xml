@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<IdentityRoot>
+  <!-- Add identity entries here. Syntax:
+  <EDMX Name="path_to_edmx_file_relative_to_project_folder_without_leading_backslash">
+    <IdentityEntry Table="table_name" Column="column_name"/>
+  </EDMX>
+  -->
+</IdentityRoot>

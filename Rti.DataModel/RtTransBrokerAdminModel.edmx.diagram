@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="66da888ea25b4ad39376186b60206786" Name="Diagram1" ZoomLevel="69" >
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ALERT" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ATTACHMENT" Width="1.5" PointX="10.75" PointY="5.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.CHANNEL" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.CHANNEL_STATISTICS" Width="1.5" PointX="8" PointY="7.625" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.CODE_TEMPLATE" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.CONFIGURATION" Width="1.5" PointX="5.75" PointY="11.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.CUSTOMIZESEGMENT" Width="1.5" PointX="3" PointY="4.625" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ETL_CONFIG" Width="1.5" PointX="0.75" PointY="3" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ETLDRIVER" Width="1.5" PointX="7.75" PointY="11.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.FILTERHL7" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.RTTRANS_HL7_FTP_CONFIG" Width="1.5" PointX="9.75" PointY="11.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.MESSAGE" Width="1.5" PointX="8" PointY="1.25" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ODSACC" Width="1.5" PointX="11.75" PointY="11.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.PERSON" Width="1.5" PointX="10.75" PointY="1" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.SCRIPT" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.STGACC" Width="1.5" PointX="12.75" PointY="7.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.TEMPLATE" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ALERT_EMAIL" Width="1.5" PointX="3" PointY="11.375" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.CHANNEL_ALERT" Width="1.5" PointX="3" PointY="9" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.CHANNEL_RUN_STATUS" Width="1.5" PointX="2.75" PointY="13.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ENCRYPTION_KEY" Width="1.5" PointX="13.75" PointY="11.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.HCA_CONVERSION_REF" Width="1.5" PointX="13.75" PointY="13.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.HL7_EDLOG" Width="1.5" PointX="14.75" PointY="4.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.HL7_MSG" Width="1.5" PointX="4.75" PointY="14.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ODSEVN" Width="1.5" PointX="14.75" PointY="8.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ODSGT1" Width="1.5" PointX="6.75" PointY="15.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ODSIN1" Width="1.5" PointX="15.75" PointY="11.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ODSMSH" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ODSNK1" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ODSPID" Width="1.5" PointX="17.75" PointY="6.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ODSPV1" Width="1.5" PointX="17.75" PointY="13.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.PREFERENCE" Width="1.5" PointX="13" PointY="1.875" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.STGEVN" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.STGGT1" Width="1.5" PointX="2.75" PointY="18.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.STGIN1" Width="1.5" PointX="8.75" PointY="18.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.STGMSH" Width="1.5" PointX="10.75" PointY="18.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.STGNK1" Width="1.5" PointX="19.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.STGPID" Width="1.5" PointX="19.75" PointY="9.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.STGPV1" Width="1.5" PointX="12.75" PointY="19.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.TEST_DESTINATION" Width="1.5" PointX="19.75" PointY="16.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.TEST_IDFILTER" Width="1.5" PointX="19.75" PointY="19.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.TEST_SOURCE" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ODS_HL7MSG" Width="1.5" PointX="21.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RtTransBrokerAdminModel.ODS_HL7MSG_FLAT" Width="1.5" PointX="17.75" PointY="21.75" />
+        <AssociationConnector Association="RtTransBrokerAdminModel.SYS_C0010979" />
+        <AssociationConnector Association="RtTransBrokerAdminModel.SYS_C0010980" />
+        <AssociationConnector Association="RtTransBrokerAdminModel.SYS_C0010977" />
+        <AssociationConnector Association="RtTransBrokerAdminModel.SYS_C0010978" />
+        <AssociationConnector Association="RtTransBrokerAdminModel.FK_CUSTOMIZESEGMENTS" />
+        <AssociationConnector Association="RtTransBrokerAdminModel.FK_FILTERHL7" />
+        <AssociationConnector Association="RtTransBrokerAdminModel.SYS_C0010981" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

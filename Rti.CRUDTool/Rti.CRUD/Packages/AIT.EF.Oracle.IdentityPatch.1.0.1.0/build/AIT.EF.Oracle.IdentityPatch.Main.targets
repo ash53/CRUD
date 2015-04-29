@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="$(ExtensionTasksPath)MSBuild.ExtensionPack.tasks" Condition="Exists('$(ExtensionTasksPath)MSBuild.ExtensionPack.tasks')"/>
+
+  <Target Name="Patch">
+    <Error Text="[AIT.EF.Oracle.IdentityPatch] Cannot find MSBuild Extension Pack file $(ExtensionTasksPath)MSBuild.ExtensionPack.tasks" Condition="!Exists('$(ExtensionTasksPath)MSBuild.ExtensionPack.tasks')"/>
+    <Error Text="[AIT.EF.Oracle.IdentityPatch] Cannot find Identity config file $(IdentityConfigFile)" Condition="!Exists('$(IdentityConfigFile)')"/>
+    <!-- Read all edmx file names -->
+    <MSBuild.ExtensionPack.Xml.XmlFile
+      TaskAction="ReadElements"
+      File="$(IdentityConfigFile)"
+      XPath="//EDMX">
+      <Output TaskParameter="Elements" ItemName="EdmxFiles"/>
+    </MSBuild.ExtensionPack.Xml.XmlFile>
+    <Error Text="[AIT.EF.Oracle.IdentityPatch] Cannot find edmx file $(ProjectDir)%(EdmxFiles.Name)" Condition="!Exists('$(ProjectDir)%(EdmxFiles.Name)')"/>
+    <MSBuild Projects="$(MSBuildThisFile)"
+             Properties="EdmxFile=$(ProjectDir)%(EdmxFiles.Name);EdmxFileTagName=%(EdmxFiles.Name)"
+             Targets="PatchWork" />
+  </Target>
+
+  <Target Name="PatchWork" Condition="Exists('$(EdmxFile)')">
+    <!-- Read all identity entries from the predefined file. -->
+    <MSBuild.ExtensionPack.Xml.XmlFile
+      TaskAction="ReadElements"
+      File="$(IdentityConfigFile)"
+      XPath="//EDMX[@Name='$(EdmxFileTagName)']/IdentityEntry">
+      <Output TaskParameter="Elements" ItemName="IdentityEntries"/>
+    </MSBuild.ExtensionPack.Xml.XmlFile>
+    <!-- Add the identity attribute to the StorageModels entries. -->
+    <MSBuild.ExtensionPack.Xml.XmlFile
+      TaskAction="AddAttribute"
+			File="$(EdmxFile)"
+			XPath="/*[name()='edmx:Edmx']/*[name()='edmx:Runtime']/*[name()='edmx:StorageModels']/*[name()='Schema']/*[name()='EntityType' and @Name='%(IdentityEntries.Table)']/*[name()='Property' and @Name='%(IdentityEntries.Column)']"
+      Key="StoreGeneratedPattern"
+			Value="Identity"/>
+    <!-- Currently the namespace is hard coded. If necessary, create a C# task using XElement.GetNamespaceOfPrefix() to dynamically get the namespace. -->
+    <ItemGroup>
+      <Namespaces Include="AnnotationNamespace">
+        <Prefix>annotation</Prefix>
+        <Uri>http://schemas.microsoft.com/ado/2009/02/edm/annotation</Uri>
+      </Namespaces>
+    </ItemGroup>
+    <!-- Add the identity annotation attribute to the ConceptualModels entries. -->
+    <MSBuild.ExtensionPack.Xml.XmlFile
+      TaskAction="AddAttribute"
+      Namespaces="@(Namespaces)"
+			File="$(EdmxFile)"
+			XPath="/*[name()='edmx:Edmx']/*[name()='edmx:Runtime']/*[name()='edmx:ConceptualModels']/*[name()='Schema']/*[name()='EntityType' and @Name='%(IdentityEntries.Table)']/*[name()='Property' and @Name='%(IdentityEntries.Column)']"
+      Key="StoreGeneratedPattern"
+      Prefix="annotation"
+			Value="Identity"/>
+  </Target>
+</Project>
