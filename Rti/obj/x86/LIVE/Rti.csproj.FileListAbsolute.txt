@@ -1,5 +1,0 @@
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\DeployLive\Rti.dll.config
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\DeployLive\Rti.dll
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\DeployLive\Rti.pdb
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\obj\x86\LIVE\Rti.dll
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\obj\x86\LIVE\Rti.pdb

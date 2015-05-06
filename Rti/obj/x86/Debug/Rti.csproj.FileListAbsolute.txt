@@ -1,9 +1,0 @@
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Debug\Rti.dll.config
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Debug\Rti.dll
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Debug\Rti.pdb
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Debug\EntityFramework.dll
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Debug\log4net.dll
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Debug\EntityFramework.xml
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\bin\Debug\log4net.xml
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\obj\x86\Debug\Rti.dll
-C:\Users\sadzaman\Documents\Visual Studio 2013\trial\Rti\obj\x86\Debug\Rti.pdb
